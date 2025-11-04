@@ -1,0 +1,46 @@
+.item-label {
+  display: inline-block;       /* allows padding and background color */
+  padding: 6px 10px;           /* spacing inside the label */
+  margin: 2px 0;               /* vertical spacing between labels */
+  cursor: pointer;             /* hand cursor on hover */
+  border-radius: 4px;          /* optional: rounded corners */
+  transition: background-color 0.2s; /* smooth hover transition */
+  font-size: small;
+  
+}
+
+.item-label:hover {
+  background-color: #3b5275;   /* light gray hover background */
+  color: azure;
+}/* You can add global styles to this file, and also import other style files */
+
+
+.fancy-btn {
+    position: absolute;
+    left: 0.75%;
+    top: 19%;
+    z-index: 91000;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: #fff;
+    font-size: 28px; /* bigger satellite icon */
+    border: none;
+    border-radius: 8px; /* small rounding for square look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fancy-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+
+  .fancy-btn:active {
+    transform: scale(0.95);
+  }

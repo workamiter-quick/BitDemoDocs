@@ -1,0 +1,77 @@
+<div style="padding-top: 5px" class="container">
+  <div class="row" style="margin-top: 3px; margin-bottom: 3px">
+    <div class="col-sm">
+      <button
+        type="button"
+        class="btn btn-secondary btn-sm"
+        (click)="OnActiveAddPanel()"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+  <div id="pnlAddNewBookMark">
+    <div class="row" style="margin-top: 3px; margin-bottom: 3px">
+      <div class="col-sm">
+        <input
+          type="text"
+          class="form-control"
+          id="txtBookmarkName"
+          placeholder="Bookmark Name"
+          [(ngModel)]="BookmarkName"
+        />
+      </div>
+    </div>
+    <div class="row" style="margin-top: 3px; margin-bottom: 3px">
+      <div class="col-sm-6">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          style="width: 100%"
+          (click)="OnSaveNewBookmark()"
+        >
+          Save
+        </button>
+      </div>
+      <div class="col-sm-6">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          style="width: 100%"
+          (click)="OnActiveHidePanel()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+    style="
+      margin-top: 1px;
+      margin-bottom: 1px;
+    "
+  >
+    <table
+      class="table"
+      id="tblTown"
+      style="display: block; width: 100%;"
+    >
+      <tr *ngFor="let tsod of bookmarkData; index as i">
+        <td style="width: 90%;">
+          <button type="button" class="btn btn-primary" style="width: 100%" (click)="ZoomToBookmark(tsod.URL)">
+            {{ tsod.CAPTION }}
+          </button>
+        </td>
+        <td>
+          <img
+            src="assets/Icon/Delete_Bookmark.png"
+            class="me-2"
+            style="width: 14px; cursor: pointer"
+            (click)="DeleteBookmark(tsod.BRK_ID)"
+          />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

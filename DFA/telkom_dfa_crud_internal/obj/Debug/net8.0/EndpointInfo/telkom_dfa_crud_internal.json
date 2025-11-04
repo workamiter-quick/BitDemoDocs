@@ -1,0 +1,1736 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "telkom_dfa_crud_internal",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Apps": {
+      "get": {
+        "tags": [
+          "Apps"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Apps"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiKeyInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Apps/{email}": {
+      "get": {
+        "tags": [
+          "Apps"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Apps/sendapprovalemailtouser": {
+      "post": {
+        "tags": [
+          "Apps"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Apps/getfeasibility": {
+      "get": {
+        "tags": [
+          "Apps"
+        ],
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "latitude_y",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "longitude_x",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          {
+            "name": "bandwidth",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "term",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "products",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "NA"
+            }
+          },
+          {
+            "name": "all_products",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "use_max_distance",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          {
+            "name": "include_pop",
+            "in": "query",
+            "schema": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Bookmark": {
+      "get": {
+        "tags": [
+          "Bookmark"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Bookmark"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookmarkInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Bookmark/{UID}": {
+      "get": {
+        "tags": [
+          "Bookmark"
+        ],
+        "parameters": [
+          {
+            "name": "UID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Bookmark/{id}": {
+      "delete": {
+        "tags": [
+          "Bookmark"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/CaptureData": {
+      "post": {
+        "tags": [
+          "CaptureData"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Config": {
+      "get": {
+        "tags": [
+          "Config"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/ExportCSV": {
+      "get": {
+        "tags": [
+          "ExportCSV"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding": {
+      "get": {
+        "tags": [
+          "Geocoding"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetCoordinates2": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetCoordinates": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetAddress": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "coordinates": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "coordinates": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetRoute": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetRouteBothSide": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoutInputCoord"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Geocoding/GetAddressData": {
+      "post": {
+        "tags": [
+          "Geocoding"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Identify": {
+      "post": {
+        "tags": [
+          "Identify"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentifyInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LM": {
+      "get": {
+        "tags": [
+          "LM"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LM"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GroupBeans"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GroupBeans"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GroupBeans"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GroupBeans"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LM/GetGroup/{IDs}": {
+      "get": {
+        "tags": [
+          "LM"
+        ],
+        "parameters": [
+          {
+            "name": "IDs",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LM/GetAllWMS/{ID}": {
+      "get": {
+        "tags": [
+          "LM"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetDM/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetLM/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetAR/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetRegionByAR/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetRegionByDMMetro/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetRegionByLM/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetLocationByID/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetTownByID/{ID}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Location/GetLocationsID/{IDs}": {
+      "get": {
+        "tags": [
+          "Location"
+        ],
+        "parameters": [
+          {
+            "name": "IDs",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LocationSpatialQuery": {
+      "get": {
+        "tags": [
+          "LocationSpatialQuery"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "LocationSpatialQuery"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LOCATION_ARR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LOCATION_ARR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LOCATION_ARR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LOCATION_ARR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/LPIData/{LPI}": {
+      "get": {
+        "tags": [
+          "LPIData"
+        ],
+        "parameters": [
+          {
+            "name": "LPI",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/PropertySelector/{XY}": {
+      "get": {
+        "tags": [
+          "PropertySelector"
+        ],
+        "parameters": [
+          {
+            "name": "XY",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Search": {
+      "get": {
+        "tags": [
+          "Search"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Search"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/SpatialQuery": {
+      "get": {
+        "tags": [
+          "SpatialQuery"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SpatialQuery"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPIS_ARR"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPIS_ARR"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPIS_ARR"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LPIS_ARR"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Street/{StreetObjectID}": {
+      "get": {
+        "tags": [
+          "Street"
+        ],
+        "parameters": [
+          {
+            "name": "StreetObjectID",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Street": {
+      "post": {
+        "tags": [
+          "Street"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StreetLineCenterInput"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StreetLineCenterInput"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StreetLineCenterInput"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StreetLineCenterInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/User": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/User/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/VectorSpatial/GetSiteDetail": {
+      "post": {
+        "tags": [
+          "VectorSpatial"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/VectorSpatial/GetSiteDetailGreen": {
+      "post": {
+        "tags": [
+          "VectorSpatial"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GoogleCoord"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/VectorSpatial/GetAddressData": {
+      "post": {
+        "tags": [
+          "VectorSpatial"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressSearch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/VectorSpatial/GetPostGressTool": {
+      "post": {
+        "tags": [
+          "VectorSpatial"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddressSearch": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiKeyInput": {
+        "type": "object",
+        "properties": {
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookmarkInput": {
+        "type": "object",
+        "properties": {
+          "caption": {
+            "type": "string",
+            "nullable": true
+          },
+          "url": {
+            "type": "string",
+            "nullable": true
+          },
+          "userID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GoogleCoord": {
+        "type": "object",
+        "properties": {
+          "longitude_X": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude_Y": {
+            "type": "string",
+            "nullable": true
+          },
+          "bandwidth": {
+            "type": "string",
+            "nullable": true
+          },
+          "contractTerm": {
+            "type": "string",
+            "nullable": true
+          },
+          "longitude_X_Green": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude_Y_Green": {
+            "type": "string",
+            "nullable": true
+          },
+          "ddMaxDistance": {
+            "type": "string",
+            "nullable": true
+          },
+          "useMaxDistance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GroupBeans": {
+        "type": "object",
+        "properties": {
+          "groupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userID": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IdentifyInput": {
+        "type": "object",
+        "properties": {
+          "xCoord": {
+            "type": "string",
+            "nullable": true
+          },
+          "yCoord": {
+            "type": "string",
+            "nullable": true
+          },
+          "lstVisibleLayer": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LOCATION_ARR": {
+        "type": "object",
+        "properties": {
+          "locationID1": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationID2": {
+            "type": "string",
+            "nullable": true
+          },
+          "bufferValue": {
+            "type": "string",
+            "nullable": true
+          },
+          "lpIs": {
+            "type": "string",
+            "nullable": true
+          },
+          "actions": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LPIS_ARR": {
+        "type": "object",
+        "properties": {
+          "lpIs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoutInputCoord": {
+        "type": "object",
+        "properties": {
+          "startLat_Y": {
+            "type": "string",
+            "nullable": true
+          },
+          "startLng_X": {
+            "type": "string",
+            "nullable": true
+          },
+          "endLat_Y": {
+            "type": "string",
+            "nullable": true
+          },
+          "endLng_X": {
+            "type": "string",
+            "nullable": true
+          },
+          "route_Mode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchInput": {
+        "type": "object",
+        "properties": {
+          "provinceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "searchType": {
+            "type": "string",
+            "nullable": true
+          },
+          "dmCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "lmCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "arCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "searchCriteria": {
+            "type": "string",
+            "nullable": true
+          },
+          "farmName": {
+            "type": "string",
+            "nullable": true
+          },
+          "townByName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sgNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "lpi": {
+            "type": "string",
+            "nullable": true
+          },
+          "region": {
+            "type": "string",
+            "nullable": true
+          },
+          "parcel": {
+            "type": "string",
+            "nullable": true
+          },
+          "portion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StreetLineCenterInput": {
+        "type": "object",
+        "properties": {
+          "xCoord": {
+            "type": "string",
+            "nullable": true
+          },
+          "yCoord": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

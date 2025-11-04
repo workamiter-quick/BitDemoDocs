@@ -1,0 +1,855 @@
+<nav class="navbar navbar-expand-sm navbar-light navbar-custom">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="navbar-brand" href="#" ngbTooltip="Reset Feasibility tool" placement="right">
+          <img src="assets/Icon/MapRefresh.png" alt="Reset Feasibility tool" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick_FeasibilityTool('resetFeasibilitytool'); " />
+        </a>
+        <a class="navbar-brand" href="#" ngbTooltip="Base Map" placement="right">
+          <img src="assets/Icon/Header_BaseLayer.png" alt="Backdrop" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick('boxBasemap')" />
+        </a>        
+        <a class="navbar-brand" href="#" ngbTooltip="Layer Manager" placement="right">
+          <img src="assets/Icon/Header_OverLayer.png" alt="Layers Viewed Selection" width="30" height="24"
+            class="header_OverLayer" (click)="OnHeaderButtonClick('boxLayerManager')" />
+        </a>
+        <!-- Hide 
+        <a class="navbar-brand" href="#" ngbTooltip="Map Tools" placement="right">
+          <img src="assets/Icon/Maptools.png" alt="Map Tools" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick('boxMapTools')" />
+        </a>
+        <a class="navbar-brand" href="#" ngbTooltip="Map Legend" placement="right">
+          <img src="assets/Icon/Header_Legend.png" alt="Map Legend" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick('boxMapLegend')" />
+        </a>
+        <a class="navbar-brand" href="#" ngbTooltip="Identify" placement="right">
+          <img src="assets/Icon/Identify.png" alt="Identify" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick('boxIdentify')" />
+        </a> -->
+        <a class="navbar-brand" href="#" ngbTooltip="Bulk Feasibility" placement="left">
+          <img src="assets/Icon/BulkUpload.png" alt="Bulk Feasibility" width="30" height="24" class="header_OverLayer"
+            (click)="openBulkFeasibility(); " />
+        </a>
+        <a class="navbar-brand" href="#" ngbTooltip="Feasibility tool" placement="left">
+          <img src="assets/Icon/FeasibilityToolIcon.png" alt="Feasibility tool" width="30" height="24" class="header_OverLayer"
+            (click)="OnHeaderButtonClick('boxSearchByDrawing'); " />
+        </a>        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<button 
+  id="ESRIUp"
+  class="fancy-btn"
+  (click)="OnBasemapButtonClick('ESRIWorldImagery')"
+  title="Switch to Satellite View">
+  🛰️
+</button>
+<button 
+  id="ESRIUp"
+  class="fancy-btn" style="top: 24%;"
+  (click)="OnBasemapButtonClick('ESRIStreets')"
+  title="Switch to Street View">
+  🛣️
+</button>
+
+
+
+      
+
+<img src="assets/Icon/MAPTec_Logo.jpeg"
+  style="position: absolute; z-index: 91000; width: 100px; height: 100px; right: 1%; bottom: 1%; opacity: 0.75;">
+
+
+<div id="map"></div>
+<div id="boxBasemap" class="card toolContainerbox">
+  <div class="toolContainerboxHeader">
+    <table class="toolContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Base Map</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxBasemap')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="card-body" style="background-color: white">
+    <input type="button" id="OSM" value="Open Street Map" class="basemapbutton"
+      (click)="OnBasemapButtonClick('OSM')" /><br />
+    <input type="button" id="AerialWithLabelsOnDemand" value="Streets" class="basemapbutton"
+      (click)="OnBasemapButtonClick('ESRIStreets')" /><br />
+    <input type="button" id="ESRI" value="Satellite" class="basemapbutton"
+      (click)="OnBasemapButtonClick('ESRIWorldImagery')" /><br />
+    <input type="button" id="CDNGI_Imagery_50cm_MOSAIC" value="NGI Satellite Imagery" class="basemapbutton"
+      (click)="OnBasemapButtonClick('CDNGI_Imagery_50cm_MOSAIC')" /><br />
+  </div>
+</div>
+
+<div id="boxLayerManager" class="card toolLMContainerbox">
+  <div class="toolLMContainerboxHeader">
+    <table class="toolLMContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Layer Manager</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolLMContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxLayerManager')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="ctrlLM" class="toolLMContainerMain"></div>
+</div>
+
+<div id="boxMapTools" class="card toolMapToolsContainerbox">
+  <div class="toolMapToolsContainerboxHeader">
+    <table class="toolMapToolsContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Map Tools</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolMapToolsContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxMapTools')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <table style="width: 95%">
+      <tr>
+        <td>
+          <img src="assets/Icon/Header_Scale.png" alt="Zoom To Scale" width="22" height="18" title="Zoom To Scale"
+            class="header_OverLayer" (click)="this.maptool.OnMapToolsButtonClick('ctrlToolMapScaleBox')" />
+        </td>
+        <td>
+          <img src="assets/Icon/ZoomToXY.png" title="Zoom To XY" alt="Zoom To XY" width="22" height="18"
+            class="header_OverLayer" (click)="
+              this.maptool.OnMapToolsButtonClick('ctrlToolZoomtoCoordinates')
+            " />
+        </td>
+        <td>
+          <img src="assets/Icon/AreaMeasure.png" title="Area Measurement" alt="Area Measurement" width="22" height="18"
+            class="header_OverLayer" (click)="
+              this.maptool.OnMapToolsButtonClick('ctrlToolAreaMeasureBox')
+            " />
+        </td>
+        <td>
+          <img src="assets/Icon/DistanceMeasure.png" alt="Distance Measurement" title="Distance Measurement" width="22"
+            height="18" class="header_OverLayer" (click)="
+              this.maptool.OnMapToolsButtonClick('ctrlToolDistanceMeasureBox')
+            " />
+        </td>
+        <td>
+          <img src="assets/Icon/PerimeterMeasure.png" title="Perimeter Measurement" alt="Perimeter Measurement"
+            width="22" height="18" class="header_OverLayer" (click)="
+              this.maptool.OnMapToolsButtonClick('ctrlToolPerimeterMeasureBox')
+            " />
+        </td>
+        <!-- <td>
+          <img src="assets/Icon/ShareView.png" title="Share Map View" alt="Share Map View" width="22" height="18"
+            class="header_OverLayer" (click)="this.maptool.OnMapToolsButtonClick('ctrlToolShareViewBox')" />
+        </td>
+        <td>
+          <img src="assets/Icon/AddressSearch.png" title="Address Search" alt="Address Search" width="22" height="18"
+            class="header_OverLayer" (click)="
+              this.maptool.OnMapToolsButtonClick('ctrlToolAddressSearch')
+            " />
+        </td> -->
+      </tr>
+    </table>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolMapScaleBox">
+    <hr />
+    <h6>Zoom To Scale</h6>
+    <hr />
+    1 :
+    <input type="text" value="" id="txtMapScale" style="width: 50%; margin-right: 3px" /><input type="button"
+      value="Zoom" (click)="this.maptool.onZoomToScale()" style="width: 25%; margin-right: 3px" />
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolAreaMeasureBox">
+    <hr />
+    <h6>Area Measurement Result</h6>
+    <hr />
+    <div id="dMeasureArea" class="dMeasureWindow"></div>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolDistanceMeasureBox">
+    <hr />
+    <h6>Distance Measurement Result</h6>
+    <hr />
+    <div id="dMeasureDistace" class="dMeasureWindow"></div>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolPerimeterMeasureBox">
+    <hr />
+    <h6>Perimeter Measurement Result</h6>
+    <hr />
+    <div id="dMeasurePerimeter" class="dMeasureWindow"></div>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolZoomtoCoordinates">
+    <hr />
+    <h6>Zoom to Coordinates</h6>
+    <hr />
+    <div style="font-size: small">
+      <table style="width: 90%">
+        <tr>
+          <td>
+            <b>Input Coordinate System<br /> </b>
+            <select name="ddlCoordinate" id="ddlCoordinate" style="width: 100%"
+              (change)="this.maptool.OnChangeCoordinatesDropDown($event)">
+              <option value="WGS84">EPSG:4326 WGS 84</option>             
+              <option selected="selected" value="DMS">
+                Degrees Minutes Seconds
+              </option>
+            </select>
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td><b>Input coordinates</b></td>
+        </tr>
+        <tr>
+          <td>
+            <div id="pnlDMS" style="display: block">
+              <table>
+                <tr>
+                  <td style="font-size: x-small">
+                    Degrees Minutes Seconds latitude&nbsp;&nbsp;
+                  </td>
+                  <td>
+                    <input name="txtLATDegrees" type="text" id="txtLATDegrees" Placeholder="Degrees"
+                      style="width: 30px" />&nbsp;<input name="txtLATMin" type="text" id="txtLATMin"
+                      Placeholder="Minutes" style="width: 30px" />&nbsp;<input name="txtLATSec" type="text"
+                      id="txtLATSec" Placeholder="Seconds" style="width: 30px" />&nbsp;<span id="lblS"
+                      style="font-weight: bold">S</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-size: x-small">
+                    Degrees Minutes Seconds longitude&nbsp;&nbsp;
+                  </td>
+                  <td>
+                    <input name="txtLONDegrees" type="text" id="txtLONDegrees" Placeholder="Degrees"
+                      style="width: 30px" />&nbsp;<input name="txtLONMin" type="text" id="txtLONMin"
+                      Placeholder="Minutes" style="width: 30px" />&nbsp;<input name="txtLONSec" type="text"
+                      id="txtLONSec" Placeholder="Seconds" style="width: 30px" />&nbsp;<span id="lblE"
+                      style="font-weight: bold">E</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="pnlNonDMS" style="display: none">
+              <table>
+                <tr>
+                  <td>
+                    <span id="lblXcoord">Longitude</span>
+                    <br />
+                    <input name="txtXCoord" type="text" id="txtXCoord" />&nbsp;&nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span id="lblYcoord">Latitude</span>
+                    <br />
+                    <input name="txtYCoord" type="text" id="txtYCoord" />&nbsp;&nbsp;
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" (click)="this.maptool.onZoomToCoordinate()" name="btnZoom" value="Zoom" id="btnZoom" />
+            <span id="lblOPT"></span>
+            <input type="hidden" name="hdnMapXY" id="hdnMapXY" value="0" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolShareViewBox">
+    <hr />
+    <h6>
+      Share Map Current View&nbsp;&nbsp;&nbsp;<img src="assets/Icon/Refresh.png" title="Get Updated Link"
+        onclick="GetLinkForLatestView()" />
+    </h6>
+    <hr />
+    <div style="font-size: x-small">
+      <table style="width: 100%">
+        <tr>
+          <td>
+            <b>Current View Link</b>
+            <textarea id="txtMapCurrentViewLink" name="txtMapCurrentViewLink" rows="2" cols="50" disabled></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Email Address</b>
+            <input type="text" placeholder="abc@test.co.za; xyz@test.co.za" style="width: 100%" id="txtEmailUser" />
+          </td>
+        </tr>
+        <tr>
+          <td style="float: right">
+            <img src="assets/Icon/Email.png" title="Send Email" onclick="GetLinkSendMail();" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      display: none;
+    " id="ctrlToolAddressSearch">
+    <hr />
+    <h6>Address Search</h6>
+    <hr />
+    <div style="font-size: small">
+      <input type="text" id="txtAddressGoogle" placeholder="Address" style="width: 80%"
+        (keydown)="this.maptool.GetBingAddressSearch()" />&nbsp;&nbsp;<input type="button" value="Search"
+        (click)="this.maptool.GetBingAddressSearch()" />
+      <br />
+      <br />
+      <div id="ctrlAddrssSearchResult" style="font-size: xx-small; color: blue"></div>
+      <br />
+    </div>
+  </div>
+</div>
+
+<div id="boxMapLegend" class="card toolMapLegendContainerbox">
+  <div class="toolMapLegendContainerboxHeader">
+    <table class="toolMapLegendContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Map Legend</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolMapLegendContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxMapLegend')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="ctrlLegend" class="toolMapLegendContainerMain"></div>
+</div>
+
+<div id="boxMapPrint" class="card toolMapPrintContainerbox">
+  <div class="toolMapPrintContainerboxHeader">
+    <table class="toolMapPrintContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Map Print</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolMapPrintContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxMapPrint')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="ctrlMP" class="toolMapPrintContainerMain">
+    <table style="width: 100%; background-color: transparent">
+      <tr>
+        <td>Page Size</td>
+        <td>
+          <select id="ddlPageSize" style="width: 90%; margin-bottom: 3px">
+            <option value="A4">A4</option>
+            <option value="A3">A3</option>
+            <option value="A2">A2</option>
+            <option value="A1">A1</option>
+            <option value="A0">A0</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Orientation</td>
+        <td>
+          <select id="ddlOrentation" style="width: 90%; margin-bottom: 3px">
+            <option value="L">Landscape</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Format</td>
+        <td>
+          <select id="ddlFormat" style="width: 90%; margin-bottom: 3px">
+            <option value="PNG">PNG</option>
+            <option value="PDF">PDF</option>
+            <option value="JPG">JPG</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Projection</td>
+        <td>
+          <select id="ddlProjection" style="width: 90%; margin-bottom: 3px">
+            <option value="WGS84">WGS84</option>
+            <option value="LO15">LO15</option>
+            <option value="LO17">LO17</option>
+            <option value="LO19">LO19</option>
+            <option value="LO21">LO21</option>
+            <option value="LO23">LO23</option>
+            <option value="LO25">LO25</option>
+            <option value="LO27">LO27</option>
+            <option value="LO29">LO29</option>
+            <option value="LO31">LO31</option>
+            <option value="LO33">LO33</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Map Title</td>
+        <td>
+          <input type="text" value="Cadastral Spatial Data Report" id="txtTitle"
+            style="width: 90.5%; margin-bottom: 3px" />
+        </td>
+      </tr>
+      <tr>
+        <td>Map Scale</td>
+        <td>
+          <input type="text" value="1000" id="txtPrintMapScale" style="width: 90.5%; margin-bottom: 3px" />
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <img src="assets/Icon/Download_Print_PDF.png" onclick="ExportMap()" title="Download" />&nbsp;
+          <img src="assets/Icon/Header_Print.png" onclick="PrintScreen()" title="Print Map" />&nbsp;
+          <img src="assets/Icon/ShareView.png" onclick="ShareMapPrint()" title="Share Print Map" />
+        </td>
+      </tr>
+    </table>
+    <div style="display: none" id="trEmail">
+      <input type="text" id="txtEmailAddPrint" style="width: 80.9%; margin-bottom: 3px"
+        placeholder="Email Address" />&nbsp;<img src="assets/Icon/Email.png" title="Send Email"
+        onclick="sendEmailShareMapPrint();" />
+    </div>
+  </div>
+</div>
+
+<div id="boxSearch" class="card toolSearchContainerbox">
+  <div class="toolSearchContainerboxHeader">
+    <table class="toolSearchContainerboxHeaderTable">
+      <tr>
+        <td style="width: 90%">Search</td>
+        <td style="width: 10%; float: right">
+          <img src="assets/Icon/Close.png" class="toolSearchContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxSearch')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <app-search-attribute [mmap]="mmap"></app-search-attribute>
+</div>
+
+<div id="boxSearchByDrawing" class="card toolSearchByDrawingContainerbox">
+  <div class="toolSearchByDrawingContainerboxHeader">
+    <table class="toolSearchByDrawingContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Feasibility tool</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolSearchByDrawingContainerboxHeaderClose" (click)="
+              OnContainerClosed('boxSearchByDrawing');
+              this.searchbydrawing.drawingStart('none'); OnAllButtonClickBoxBottom();
+            " />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="ctrlSBD" class="toolSearchByDrawingContainerMain">
+    <div>
+      <table style="background-color: transparent; width: 90%;">
+        <tr>
+          <td colspan="2" style="margin: 5px; padding: 20px;">
+            <div class="search-feasibility-box">
+              <input type="text" placeholder="Enter an address or XY (latitude, longitude)" autocomplete="off"
+                id="txtAddressGoogleSearch" (keyup)="this.feasibilitytool.searchAddressOnKeyUp($event)" />
+              <button type="button" id="btnAddressOnSearchClick"
+                (click)="this.feasibilitytool.searchAddressOnSearchClick()">🔍</button>
+            </div>
+            <div id="divSuggetion"
+              style="z-index: 1300099; background-color: white; width: auto; border-radius: 5px; position: absolute;">
+            </div>
+          </td>
+        </tr>
+        <tr style="font-size: small;">
+          <td>
+            <div style="margin-left: 23px;">
+              <input type="radio" id="chkWalking" checked="true" name="DriveModeOption" />
+              <label for="showGrid" style="padding: 5px;">Walking</label>
+            </div>
+          </td>
+          <td>
+            <div style="margin-left: 23px;">
+              <input type="radio" id="chkDriving" name="DriveModeOption" />
+              <label for="showGrid" style="padding: 5px;">Driving</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><select id="ddlBandwidth" class="custom-dropdown">
+              <option value="0" disabled selected>Bandwidth</option>
+              <option value="10">10mbps</option>
+              <option value="20">20mbps</option>
+              <option value="25">25mbps</option>
+              <option value="30">30mbps</option>
+              <option value="40">40mbps</option>
+              <option value="50">50mbps</option>
+              <option value="100">100mbps</option>
+              <option value="200">200mbps</option>
+              <option value="300">300mbps</option>
+              <option value="400">400mbps</option>
+              <option value="500">500mbps</option>
+              <option value="600">600mbps</option>
+              <option value="700">700mbps</option>
+              <option value="800">800mbps</option>
+              <option value="900">900mbps</option>
+              <option value="1000">1000mbps</option>
+              <option value="2000">2000mbps</option>
+              <option value="4000">4000mbps</option>
+              <option value="6000">6000mbps</option>
+              <option value="8000">8000mbps</option>
+              <option value="10000">10000mbps</option>
+            </select></td>
+          <td><select id="ddlContractTerm" class="custom-dropdown">
+              <option value="0" disabled selected>Contract Term</option>
+              <option value="1">Month to Month</option>
+              <option value="12">12 Months</option>
+              <option value="24">24 Months</option>
+              <option value="36">36 Months</option>
+              <option value="60">60 Months</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td>
+            <table style="font-size: small;">
+              <tr>
+                <td>
+                  <div style="margin-top: 1px; margin-left: 23px;">
+                    <input type="radio" id="chkUseMaxDistance" name="distanceOption" />
+                    <label for="showGrid" style="padding: 5px;">Use Max Dist</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="margin-top: 1px; margin-left: 23px;">
+                    <input type="radio" id="chkDDMaxDistance" name="distanceOption" />
+                    <label for="showGrid" style="padding: 5px;">DD Max Dist</label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table style="font-size: small;">
+              <tr>
+                <td>
+                  <div style="margin-top: 1px; margin-left: 23px;">
+                    <input type="checkbox" id="addressByMap" (change)="onlyOneAddressByMap('addressByMap')" />
+                    <label for="showGrid" style="padding: 5px;">Select Map Pin<img
+                        src="assets/Icon/AddressSearch_Marker.png" style="width: 20px; margin-left: 3px" /></label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="margin-top: 1px; margin-left: 23px;">
+                    <input type="checkbox" id="addressByMapGreenPin"
+                      (change)="onlyOneAddressByMap('addressByMapGreenPin')" />
+                    <label for="showGrid" style="padding: 5px;">Select Map Pin<img
+                        src="assets/Icon/AddressSearch_Marker_Green.png"
+                        style="width: 20px; margin-left: 3px;" /></label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="boxBookmark" class="card toolBookmarkContainerbox">
+  <div class="toolBookmarkContainerboxHeader">
+    <table class="toolBookmarkContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Bookmark</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolBookmarkContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxBookmark')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <app-user-bookmark [mmap]="mmap"></app-user-bookmark>
+</div>
+
+<div id="boxCaptureData" class="card toolDataCaptureContainerbox">
+  <div class="toolDataCaptureContainerboxHeader">
+    <table class="toolDataCaptureContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Captured Data list</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolDataCaptureContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxCaptureData')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <app-feature-capture [mmap]="mmap"></app-feature-capture>
+</div>
+
+<div id="boxIdentify" class="card toolIdentifyContainerbox">
+  <div class="toolIdentifyContainerboxHeader">
+    <table class="toolIdentifyContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Results</td>
+        <td style="width: 5%">
+          <img src="assets/Icon/Close.png" class="toolIdentifyContainerboxHeaderClose"
+            (click)="OnContainerClosed('boxIdentify'); OnInfoContainerClosed()" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id="divInitialMassage">Click on the map for data</div>
+  <div id="divResults" style="display: none">
+    <select id="ddlInfoLayers" style="width: 98%; margin: 5px; padding: 5px; font-size: small" class="form-select"
+      (change)="OnChangeInfoLayer($event)" aria-label="Default select example"></select>
+    <br />
+    <div id="divLyrResult" style="font-size: x-small; padding-left: 20px"></div>
+  </div>
+</div>
+
+<div id="boxBottomGrid" class="card toolBottomGridContainerbox">
+  <div class="toolBottomGridContainerboxHeader">
+    <table class="toolBottomGridContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">Data Table</td>
+        <td style="width: 5%">
+          <img style="display: none" src="assets/Icon/Close.png" class="toolBottomGridContainerboxHeaderClose"
+            (click)="OnContainerClosedBoxBottom('boxBottomGrid')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="ctrlBG" class="toolBottomGridContainerMain">
+    <div class="lm_result" id="featureResults">
+      <table class="table table-striped" id="tblFeaData" style="display: none; font-size: smaller">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Network</th> -->
+            <th scope="col">Product</th>
+            <!-- <th scope="col">PoP</th> -->
+            <!-- <th scope="col">Distance in Meters</th> -->
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+            <th scope="col">Link Afric MRC</th>
+            <th scope="col">Link Afric NRC</th>
+            <th scope="col">Wayleave NRC</th>
+            <th scope="col">Special Build NRC</th>
+            <th scope="col">3rd Party Provider</th>
+            <th scope="col">3rd Party MRC</th>
+            <th scope="col">3rd Party NRC</th>
+            <th scope="col">Total MRC</th>
+            <th scope="col">Total NRC</th>
+            <!-- <th scope="col">Notes</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="!FE.fesDataForDocker || FE.fesDataForDocker.length === 0">
+            <td colspan="16" class="text-center text-muted" >
+              <div style="color: red; font-size: medium;">
+                Kindly contact the Link Africa Pre Sales Team by emailing <b>"Presales@linkafrica.co.za"</b> to conduct a desktop feasibility and further analysis of the selected site
+              </div>
+            </td>
+          </tr>
+          <tr *ngFor="let tsod of FE.fesDataForDocker; index as i">
+            <!-- <td>{{ tsod.Network_Type }}</td> -->
+            <td>{{ tsod.Product }}</td>
+            <!-- <td>{{ tsod.PoP }}</td> -->
+            <!-- <td>{{ tsod.Distance_Meters }}</td> -->
+            <td>{{ GetDecimal4Digit(tsod.Latitude_Y) }}</td>
+            <td>{{ GetDecimal4Digit(tsod.Longitude_X) }}</td>
+            <td>{{ tsod.MRC }}</td>
+            <td>{{ tsod.NRC }}</td>
+            <td>{{
+              CalculateWayleaveNRC(tsod)
+              }}
+            </td>
+            <td>{{
+              CalculateSpecialBuildNRC(tsod)
+              }}
+            </td>
+            <td>{{ tsod.Party_Provider_3rd }}</td>
+            <td>{{ GetDecimal4Digit(tsod.Party_MRC_3rd) }}</td>
+            <td>{{ GetDecimal4Digit(tsod.Party_NRC_3rd) }}</td>
+            <td>{{
+              GetTotalMRC(tsod)
+              }}</td>
+            <td>{{ GetTotalNRC(tsod) }}</td>
+            <!-- <td>{{ tsod.Notes }}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="boxSplitGrid" class="card toolSPGridContainerbox">
+  <div class="toolSPGridContainerboxHeader">
+    <table class="toolSPGridContainerboxHeaderTable">
+      <tr>
+        <td style="width: 95%">New Voting District Details</td>
+        <td style="width: 5%">
+          <img style="display: none" src="assets/Icon/Close.png" class="toolSPGridContainerboxHeaderClose"
+            (click)="OnContainerClosedBoxBottom('boxSplitGrid')" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="ctrlSPBG" class="toolSPGridContainerMain">
+    <div class="SP_result" id="featureResults">
+      <table class="table table-striped" id="tblSPPoly" style="display: block; font-size: smaller">
+        <thead>
+          <tr>
+            <th scope="col">Voting District</th>
+            <th scope="col">Ward ID</th>
+            <th scope="col">Ward Number</th>
+            <th scope="col">Reg Pop&nbsp;<input type="text" id="lblRegPopReminder"
+                style="color: green; font-size: medium; border: none; outline: none; box-shadow: none;" readonly></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" id="txtVDID_A" placeholder="Voting Distric A" disabled></td>
+            <td><input type="text" id="txtWardID_A" placeholder="Ward ID" disabled></td>
+            <td><input type="text" id="txtWardNumber_A" placeholder="Ward Number"></td>
+            <td><input type="text" id="txtRegPop_A" placeholder="Reg Pop"
+                (keyup)="this.searchbydrawing.KeyDownRegPop($event);"></td>
+          </tr>
+          <tr>
+            <td><input type="text" id="txtVDID_B" placeholder="Voting Distric B" disabled></td>
+            <td><input type="text" id="txtWardID_B" placeholder="Ward ID" disabled></td>
+            <td><input type="text" id="txtWardNumber_B" placeholder="Ward Number"></td>
+            <td><input type="text" id="txtRegPop_B" placeholder="Reg Pop"
+                (keyup)="this.searchbydrawing.KeyDownRegPop($event);"></td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <button type="button" id="btnSaveSplit" class="btn btn-secondary btn-sm" style="margin-left: 2px"
+                disabled="true" (click)="this.searchbydrawing.SaveSplitedPolygon();">
+                Save
+              </button>
+              <button type="button" class="btn btn-secondary btn-sm" style="margin-left: 10px"
+                (click)="this.searchbydrawing.CancelSplitedPolygon();">
+                Cancel
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="divZoom" class="zoom_level_loction"></div>
+<div id="divErrorMsg" class="err_Msg_Div">
+  <label id="lblErr"></label>
+  <img src="assets/Icon/Close.png" class="err_Msg_Div_Close" (click)="closedivErrMsg('divErrorMsg')" />
+</div>
+<div id="divInfoMsg" class="info_Msg_Div">
+  <label id="lblInfo"></label>
+  <img src="assets/Icon/Close.png" class="info_Msg_Div_Close" (click)="closedivErrMsg('divInfoMsg')" />
+</div>
+<img src="assets/Icon/Loading.gif" id="imgLoader" class="info_Loader_Div" />
+<input type="hidden" id="hdnUID" value="0" />
+<input type="hidden" id="hdnYear" value="2019" />
+<input type="hidden" id="hdnLocation" value="0" />
+<input type="hidden" id="hdnLocationLevel" value="0" />
+<input type="hidden" id="hdnLocationLevelCurrent" value="0" />
+<input type="hidden" id="hdnIsFeatureSelectOn" value="FALSE" />
+
+<input type="hidden" id="hdnDraftID" value="0" />
+<input type="hidden" id="hdnStepID" value="0" />
+<input type="hidden" id="hdnLPIs" value="0" />
+<input type="hidden" id="hdnStreetObjectID" value="0" />
+<input type="hidden" id="hdnLocationID" value="0" />
+<input type="hidden" id="hdnReasonType" value="0" />
+<input type="hidden" id="hdnStreetObjectID" value="0" />
+
+<input type="hidden" id="hdnEXM_OVERLAY_RecordID" value="0" />
+<input type="hidden" id="hdnEXM_OVERLAY_ParentID" value="0" />
+
+<input type="hidden" id="hdnUserID" value="0" />
+<input type="hidden" id="hdnUAM" value="0" />
+<input type="hidden" id="hdnWT" value="0" />
+
+<input type="hidden" id="hdnInternalSetting" value="0" />
+<input type="hidden" id="hdnExternalSetting" value="0" />
+
+<input type="hidden" id="hdnRequest" value="0" />
+<input type="hidden" id="hdnNewLocationID" value="0" />
+<input type="hidden" id="hdnBuffer" value="0" />
+
+
+<div id="divGreen">
+  <button id="GreenClick" (click)="this.FE.searchAddresGreen()"></button>
+  <input type="hidden" id="hdngreenPin" value="0" />
+</div>
+<div>
+<button id="PropIdClick" (click)="parentStartIdentifyData()"></button>
+  <input type="hidden" id="hdnMapPoint" value="0" />
+  <button id="VectorPropIdClick" (click)="VectorFeatureSelect()"></button>
+  <input type="hidden" id="hdnVectorMapPoint" value="0" />
+
+   <input type="hidden" id="hdnVectorMapPointBluePin" value="0" />
+</div>
+<div>
+  <button id="PropCaptureIdClick" (click)="parentStartCaptureData()"></button>
+  <input type="hidden" id="hdnMapPointForCapture" value="0" />
+
+  <input type="hidden" id="hdnSelectedLM" value="0" />
+  <input type="hidden" id="hdnSelectedWardID" value="0" />
+
+  <button id="AfterApplyChangesClick" (click)="afterApplyChangeseData()"></button>
+
+  <button id="AfterSplitPolygonClick" (click)="afterGettingSplitedData()"></button>
+  <input type="hidden" id="hdnSplitedPolygons" value="0" />
+
+</div>

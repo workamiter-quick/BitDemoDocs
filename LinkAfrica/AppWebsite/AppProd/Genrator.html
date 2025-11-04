@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Request for Link Africa API Access</title>
+    <style>
+        body {
+            font-family: Arial,Helvetica,sans-serif;
+            padding: 24px;
+            background: #f7f7f8;
+            color: #111
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(20,20,20,0.06)
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 12px
+        }
+
+        p.lead {
+            color: #444;
+            margin: 6px 0 18px
+        }
+
+        form {
+            display: grid;
+            gap: 12px
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 13px
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d0d4d9;
+            border-radius: 6px;
+            font-size: 14px
+        }
+
+        textarea {
+            min-height: 100px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 0;
+            cursor: pointer
+        }
+
+        .btn-primary {
+            background: #0b6efd;
+            color: #fff
+        }
+
+        .btn-secondary {
+            background: #e6e9ee;
+            color: #111
+        }
+
+        footer {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #666
+        }
+
+        a {
+            color: #0b6efd
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Request for Link Africa API Access</h1>
+        <p class="lead">Please complete the form below if access is required to the Link Africa Support Application. Fields marked with * are required.</p>
+
+        <form>            
+
+            <div>
+                <label for="company">Company Name *</label>
+                <input id="company" type="text" placeholder="Your company name">
+            </div>
+
+            <div>
+                <label for="requestor">Requestor's Name & Surname *</label>
+                <input id="requestor" type="text" placeholder="Full name of requestor">
+            </div>
+
+            <div>
+                <label for="email2">Email Address *</label>
+                <input id="email2" type="email" placeholder="requestor@example.com">
+            </div>
+
+            <div class="row">
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Submit</button>
+                    <button type="reset" class="btn-secondary">Clear form</button>
+                </div>
+            </div>
+        
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // prevent default form submission
+            
+            let company = document.getElementById('company').value.trim();
+            let requestor = document.getElementById('requestor').value.trim();
+            let email = document.getElementById('email2').value.trim();
+            let errors = [];
+
+            if (!company) errors.push("Company Name is required.");
+            if (!requestor) errors.push("Requestor's Name & Surname is required.");
+            if (!email) {
+                errors.push("Email Address is required.");
+            } else {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    errors.push("Please enter a valid email address.");
+                }
+            }
+
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return;
+            }
+
+            // Call .NET endpoint to save data (example)
+            fetch('http://tectonicstechnologysaprod.dedicated.co.za/LAAPI/Apps', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ companyName: company, requestorName: requestor, emailAddress: email })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Form submitted successfully!');
+                } else {
+                    alert('Error submitting form.');
+                }
+            })
+            .catch(err => {
+                alert('An error occurred: ' + err);
+            });
+        });
+    </script>
+</form>
+
+    </div>
+</body>
+</html>

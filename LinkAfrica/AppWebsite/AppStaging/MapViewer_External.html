@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Map Viewer</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        iframe {
+            border: none;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const users = [
+            { username: 'testuser', password: 'test@2025' },
+            { username: 'adminuser', password: 'admin@2025' }
+        ];
+
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        const isValidUser = users.some(u => u.username === storedUsername && u.password === storedPassword);
+
+        if (isValidUser) {
+            const iframe = document.createElement('iframe');
+            iframe.src = 'http://tectonicsstaging.dedicated.co.za:8080/ai_mapview_external/#/mapview';
+            document.body.appendChild(iframe);
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

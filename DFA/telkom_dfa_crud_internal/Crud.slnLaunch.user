@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Crud.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "AppWebsite\\",
+        "Action": "Start"
+      }
+    ]
+  }
+]

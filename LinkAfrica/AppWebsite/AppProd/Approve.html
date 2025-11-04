@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Request for Link Africa API Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            background: #f7f7f8;
+            color: #111;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(20,20,20,0.06)
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 12px
+        }
+
+        .lead {
+            color: #444;
+            margin: 6px 0 18px
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 13px
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d0d4d9;
+            border-radius: 6px;
+            font-size: 14px
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 0;
+            cursor: pointer
+        }
+
+        .btn-primary {
+            background: #0b6efd;
+            color: #fff
+        }
+
+        .btn-secondary {
+            background: #e6e9ee;
+            color: #111
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Request for Link Africa API Access</h1>
+        <p class="lead">Review request details below.</p>
+
+        <form id="reviewForm">
+            <div>
+                <label for="company">Company Name *</label>
+                <input id="company" type="text" readonly>
+            </div>
+
+            <div>
+                <label for="requestor">Requestor's Name & Surname *</label>
+                <input id="requestor" type="text" readonly>
+            </div>
+
+            <div>
+                <label for="email2">Email Address *</label>
+                <input id="email2" type="email" readonly>
+            </div>
+
+            <div class="actions">
+                <!-- New buttons -->
+                <button type="button" id="approveBtn" class="btn-primary">Approve</button>
+                <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancel</button>
+                <input id="hdnApiKey" type="hidden" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get email from query string
+        const params = new URLSearchParams(window.location.search);
+        const email = params.get("em");
+
+        if (email) {
+            // Call API to fetch details by email
+            fetch(`http://tectonicstechnologysaprod.dedicated.co.za/LAAPI/Apps/${encodeURIComponent(email)}`)
+                .then(res => res.json())
+                .then(data => {
+                    // Assuming API returns { companyName, requestorName, emailAddress }
+                    document.getElementById('company').value = data.CompanyName || "";
+                    document.getElementById('requestor').value = data.RequestorName || "";
+                    document.getElementById('email2').value = data.EmailAddress || email;
+                    document.getElementById('hdnApiKey').value = data.ApiKey || "";
+                })
+                .catch(err => console.error("Error loading data:", err));
+        }
+
+        // Approve button click
+        document.getElementById("approveBtn").addEventListener("click", function () {
+            // Call .NET endpoint to save data (example)
+            const requestOptions = {
+                method: "POST",
+                redirect: "follow"
+            };
+
+            fetch("http://tectonicstechnologysaprod.dedicated.co.za/LAAPI/Apps/sendapprovalemailtouser?email=" + email, requestOptions)
+                .then((response) => response.text())
+                .then((result) => alert('Request has been approved, and the user has been notified.'))
+                .catch((error) => console.error(error));
+        });
+
+        // Cancel button click
+        document.getElementById("cancelBtn").addEventListener("click", function () {
+            alert("Cancelled!");
+            // you can call your API here to mark as cancelled
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<div id="divSearchControl" style="display: block">
+  <div class="container body_container">
+    <div class="row">&nbsp;&nbsp;<b>Province</b></div>
+    <div class="row">
+      <select
+        id="ddProvince"
+        (change)="OnChangeProvince($event)"
+        style="width: 98%; margin: 5px; padding: 5px"
+        class="form-select"
+        aria-label="Default select example"
+      ></select>
+    </div>
+    <div class="row search_type">
+      <div class="col-4 form-check">
+        <input
+          (change)="OnChangeType('MN')"
+          class="form-check-input"
+          type="radio"
+          name="search_type"
+          id="ddlTypeMunic"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          Municipality
+        </label>
+      </div>
+      <div class="col-8 form-check">
+        <input
+          (change)="OnChangeType('AR')"
+          class="form-check-input"
+          type="radio"
+          name="search_type"
+          id="ddlTypeAdmin"
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Administrative District / Registration Division
+        </label>
+      </div>
+    </div>
+    <div class="row search_B_type">
+      <div id="pnlMun" class="col-sm">
+        <b>District and Metropolitan Municipalities</b><br />
+        <select
+          id="ddlDM_Metro"
+          (change)="OnChangeDM($event)"
+          style="width: 98%; margin: 5px; padding: 5px"
+          class="form-select"
+          aria-label="Default select example"
+        ></select>
+        <br />
+        <b>Local Municipalities</b><br />
+        <select
+          id="ddlLM"
+          (change)="OnChangeLM($event)"
+          style="width: 98%; margin: 5px; padding: 5px"
+          class="form-select"
+          aria-label="Default select example"
+        ></select>
+      </div>
+      <div id="pnlAR" class="col-sm">
+        <b>Admin Region</b><br />
+        <select
+          id="ddlAdminRegion"
+          (change)="OnChangeAR($event)"
+          style="width: 98%; margin: 5px; padding: 5px"
+          class="form-select"
+          aria-label="Default select example"
+        ></select>
+      </div>
+    </div>
+    <div id="pnlSearchCriteria" class="row">
+      <select
+        id="ddlSearchCriteria"
+        (change)="OnChangeSearchCriteria($event)"
+        style="width: 98%; margin: 5px; padding: 5px"
+        class="form-select"
+        aria-label="Default select example"
+      >
+        <option value="Farm_Name">Farm Name</option>
+        <option value="Town_Name">Town Name</option>
+        <option value="SG_Number">SG Number</option>
+        <option value="LPI">LPI</option>
+        <option value="RPP">Region Parcel Portion</option>
+      </select>
+    </div>
+    <div class="row">
+      <div ID="pnlFarmByName" style="width: 100%; display: block">
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Farm</span>
+          <input
+            type="text"
+            class="form-control"
+            id="txtFarmByName"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="FarmName"
+          />
+        </div>
+      </div>
+      <div ID="pnlTownByName" Style="width: 100%; display: none;">
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Town</span>
+          <input
+            type="text"
+            class="form-control"
+            id="txtTownByName"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="TownByName"
+          />
+        </div>
+      </div>
+      <div ID="pnlSGNumber" Style="width: 100%; display: none;">
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >SG Number</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="txtSGNumber"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="SGNumber"
+          />
+        </div>
+      </div>
+      <div ID="pnlLPI" Style="width: 100%; display: none;">
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">LPI</span>
+          <input
+            type="text"
+            class="form-control"
+            id="txtLPI"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="LPI"
+          />
+        </div>
+      </div>
+      <div ID="pnlRPP" Style="width: 100%; display: none;">
+        <select
+          id="ddlRegion"
+          style="width: 98%; margin: 5px; padding: 5px"
+          class="form-select"
+          aria-label="Default select example"
+          (change)="OnChangeRPP($event)"
+        ></select>
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Parcel</span>
+          <input
+            type="text"
+            class="form-control"
+            id="txtParcel"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="Parcel"
+          />
+        </div>
+        <div class="input-group input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Portion</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="txtPortion"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            [(ngModel)]="Portion"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-5"></div>
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          style="margin-right: 2px"
+          (click)="OnSearch()">
+          Search
+        </button>
+      </div>
+      <div class="col-4"></div>
+    </div>
+    <!-- <button type="button" class="btn btn-secondary btn-sm" (click)="BindProvince()" >Reset</button> -->
+  </div>
+</div>
+<div id="divResult" style="display: none">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="alert alert-success" role="alert" id="divRecordCount"></div>
+      </div>
+      <div class="col">
+        <button
+          type="button"
+          class="btn btn-link btn-sm"
+          (click)="ShowSearchControl()"
+        >
+          Back to search
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="search_result" id="SearchResults">
+    <table class="table table-striped" id="tblTown" style="display: none">
+      <thead>
+        <tr>
+          <th scope="col">Action</th>
+          <th scope="col">TAG_VALUE</th>
+          <th scope="col">TAG_X</th>
+          <th scope="col">TAG_Y</th>
+          <th scope="col">TAG_JUST</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tsod of townsSearchOutputData; index as i">
+          <td>
+            <img src="assets/Icon/Globe.png" class="me-2" style="width: 20px; cursor: pointer;" (click)="ZoomToTownData(tsod.WKT)" />
+          </td>
+          <td>{{ tsod.TAG_VALUE }}</td>
+          <td>{{ tsod.TAG_X }}</td>
+          <td>{{ tsod.TAG_Y }}</td>
+          <td>{{ tsod.TAG_JUST }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped" id="tblOther" style="display: block">
+      <thead style="position: sticky">
+        <tr>
+          <th scope="col">Action</th>
+          <th scope="col">FARMNAME</th>
+          <th scope="col">LSTATUS</th>
+          <th scope="col">WSTATUS</th>
+          <th scope="col">TAG_VALUE</th>
+          <th scope="col">LPI</th>
+          <th scope="col">SG_NUMBER</th>
+          <th scope="col">TOWN_CODE</th>
+          <th scope="col">REGION</th>
+          <th scope="col">PARCEL</th>
+          <th scope="col">PORTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let osod of othersSearchOutputData; index as i">
+          <td>
+            <img src="assets/Icon/Globe.png" class="me-2" style="width: 20px; cursor: pointer;" (click)="ZoomToLPIData(osod.WKT)" />
+          </td>
+          <td>{{ osod.FARMNAME }}</td>
+          <td>{{ osod.LSTATUS }}</td>
+          <td>{{ osod.WSTATUS }}</td>
+          <td>{{ osod.TAG_VALUE }}</td>
+          <td>{{ osod.LPI }}</td>
+          <td>{{ osod.SG_NUMBER }}</td>
+          <td>{{ osod.TOWN_CODE }}</td>
+          <td>{{ osod.REGION }}</td>
+          <td>{{ osod.PARCEL }}</td>
+          <td>{{ osod.PORTION }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

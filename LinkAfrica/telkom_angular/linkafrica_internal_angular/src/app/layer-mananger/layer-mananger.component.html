@@ -1,0 +1,332 @@
+<div runat="server" id="divLayerMan" class="box-body">
+    <div class="panel-heading">
+      <h4 class="heading">WMS Layer Configuration</h4>
+    </div>
+    <div class="box" id="dvParConglayers">
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Layer Alias Name</label>
+            <input
+              class="form-control"
+              runat="server"
+              data-val="true"
+              id="txtLayerAliasName"
+              name="txtLayerAliasName"
+              placeholder="Enter Alias Name"
+              required="required"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Layer WMS URL</label>
+            <input
+              class="form-control"
+              runat="server"
+              data-val="true"
+              id="txtLayerWMSURL"
+              name="LayerWMSURL"
+              placeholder="Enter WMS URL"
+              required="required"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Layer Name</label>
+            <input
+              class="form-control"
+              runat="server"
+              data-val="true"
+              id="txtLayerName"
+              name="LayerName"
+              placeholder="Enter Layer Name"
+              required="required"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Fomart</label>
+            <select
+              id="ddlFormat"
+              runat="server"
+              class="form-control"
+              name="Format"
+            >
+              <option value="image/jpeg">image/jpeg</option>
+              <option value="image/png">image/png</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Transparent</label>
+            <select
+              id="ddlTransparent"
+              runat="server"
+              class="form-control"
+              name="Transparent"
+            >
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Tiled</label>
+            <select
+              id="ddlTiled"
+              runat="server"
+              class="form-control"
+              name="Tiled"
+            >
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Buffer</label>
+            <input
+              runat="server"
+              class="form-control"
+              data-val="true"
+              id="txtLayerBuffer"
+              name="LayerBuffer"
+              placeholder="Enter Layer Buffer"
+              required="required"
+              type="text"
+            />
+          </div>
+        </div>
+  
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Display OutsideMax Extent</label>
+            <select
+              id="ddldisplayOutsideMaxExtent"
+              runat="server"
+              class="form-control"
+              name="DisplayOutsideMaxExtent"
+            >
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>IsBaseLayer</label>
+            <select
+              id="ddlIsBaseLayer"
+              runat="server"
+              class="form-control"
+              name="IsBaseLayer"
+            >
+              <option value="false">False</option>
+              <option value="true">True</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>DisplayInLayerSwitcher</label>
+            <select
+              id="ddldisplayInLayerSwitcher"
+              runat="server"
+              class="form-control"
+              name="DisplayInLayerSwitcher"
+            >
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Visibility</label>
+            <select
+              id="ddlVisibility"
+              runat="server"
+              class="form-control"
+              name="IsBaseLayer"
+            >
+              <option value="false">False</option>
+              <option value="true">True</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-lg-5 individual">
+          <div class="form-group">
+            <label>Select Group</label>
+            <div class="row">
+              <div class="col-md-8">
+                <select
+                  id="ddlGroupLayer"
+                  runat="server"
+                  class="form-control"
+                  name="IsBaseLayer"
+                >                
+                </select>
+              </div>
+              <div class="col-md-4">
+                <button
+                  type="button"
+                  class="btn btn-info Buttons"
+                  style="width: 100% !important; height: 100%; margin-top: 0px"
+                  id="btnGrpupLayers"
+                  placeholder="Add Group"
+                  (click)="this.fnOpenAddGroupWindow();"
+                >
+                Add Group
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 individual">
+          <input
+            id="btnSave"
+            type="button"
+            value="Save"
+            style="width: 25%; float: right;"
+          />        
+        </div>
+        <div class="col-lg-5 individual">        
+          <input
+            id="btnCancel"
+            type="button"
+            value="Reset"
+            style="width: 25%;"
+            (click)="fnResetUpdate()"
+          />
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px; margin-left: 20px">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"></div>
+      </div>
+      <div style="height: 20px"></div>
+      <input type="hidden" id="HdnEditSelectedObjectID" value="0" />
+      <input type="hidden" id="HdnIsUpdate" value="False" />
+      <input type="hidden" id="HiddenGrpID" value="0" />
+    </div>
+    <div id="dvTable" style="max-width: 100%; overflow-x: auto; ">
+      <table class="table table-striped" id="tblWMS" style="display: block;font-size: small;">
+        <thead>
+          <tr>
+            <th scope="col">Action</th>
+            <th scope="col">GROUP_NAME</th>
+            <th scope="col">LAYER_ALIAS_NAME</th>
+            <th scope="col">LAYER_WMS_URL</th>
+            <th scope="col">LAYER_NAME</th>
+            <th scope="col">FOMART</th>
+            <th scope="col">TRANSPARENT</th>
+            <th scope="col">TILED</th>
+            <th scope="col">BUFFER</th>
+            <th scope="col">DISPLAY_OUTSIDE_MAX_EXTENT</th>
+            <th scope="col">BASELAYER</th>
+            <th scope="col">DISPLAY_IN_LAYERSWITCHER</th>
+            <th scope="col">VISIBILITY</th>
+            <th scope="col">LAYER_INDEX</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tsod of wmsData; index as i">
+            <td>
+              <img src="assets/Icon/Globe.png" class="me-2" style="width: 20px; cursor: pointer;" (click)="fnGridActionClick(tsod.OBJECTID)" />
+            </td>
+            <td>{{ tsod.GROUP_NAME }}</td>
+            <td>{{ tsod.LAYER_ALIAS_NAME }}</td>
+            <td>{{ tsod.LAYER_WMS_URL }}</td>
+            <td>{{ tsod.LAYER_NAME }}</td>
+            <td>{{ tsod.FOMART }}</td>
+            <td>{{ tsod.TRANSPARENT }}</td>
+            <td>{{ tsod.TILED }}</td>
+            <td>{{ tsod.BUFFER }}</td>
+            <td>{{ tsod.DISPLAY_OUTSIDE_MAX_EXTENT }}</td>
+            <td>{{ tsod.BASELAYER }}</td>
+            <td>{{ tsod.DISPLAY_IN_LAYERSWITCHER }}</td>
+            <td>{{ tsod.VISIBILITY }}</td>
+            <td>{{ tsod.LAYER_INDEX }}</td>
+          </tr>
+        </tbody>
+      </table>
+    
+    </div>
+    <div style="height: 40px"></div>
+  
+    <div
+      id="ctrlOverLays"    
+      class="box-body-group"
+    >
+    <div class="panel-heading-group">
+      <h4 class="heading-group">Add Group</h4>
+    </div>
+      
+      <div id="childOverLaysCtrl">
+        <div class="Ctrl-Ctrl-ChildBody">
+          <div class="row">
+            <div class="col-lg-12 individual pull-right">
+              <div class="form-group">
+                <label>Group Name</label>
+                <input
+                  runat="server"
+                  class="form-control"
+                  id="txtGroupLayer"
+                  type="text"
+                  placeholder="Enter Group Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 individual pull-right">
+              <div class="form-group">
+                <input
+                  id="btnAddGrpupLayers"
+                  type="button"
+                  value="Save"
+                  style="width: 25%; margin-right: 3px"
+                  (click)="this.fnSaveNewGroup()"
+                />
+                <input
+                id="btnCloseGrpupLayers"
+                type="button"
+                value="Close"
+                style="width: 25%; margin-right: 3px"
+                (click)="this.fnOpenAddGroupWindow()"
+              />
+              </div>
+            </div>
+          </div>
+          <div>
+            <label runat="server" id="lblMessage"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

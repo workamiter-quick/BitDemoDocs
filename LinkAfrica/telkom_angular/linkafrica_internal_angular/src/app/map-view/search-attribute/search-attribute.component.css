@@ -1,0 +1,22 @@
+.body_container {
+  font-size: small;
+  height: 450px;
+}
+.search_type {
+  font-size: small;
+  background-color: rgb(211, 210, 210);
+  border-radius: 5px;
+  padding: 5px;
+}
+.search_B_type {
+  font-size: small;
+  background-color: rgb(240, 238, 238);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.search_result {
+  font-size: small;
+  height: 450px;
+  overflow: scroll;
+}

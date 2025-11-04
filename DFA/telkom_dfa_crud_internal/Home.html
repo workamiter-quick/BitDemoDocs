@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script type="text/javascript">
+        function Redirect() {
+            //window.open("http://localhost:4200/#/mapview?DraftID=1842&stepID=203&From=LDG");
+            //window.open("http://10.1.15.220:8088/ang_mapview/#/mapview?DraftID=422&stepID=203&From=LDG");
+
+            //window.open("http://localhost:4200/#/ang_mapview?DraftID=1374&stepID=1274");
+            window.open("http://localhost:4200/#/mapview?DraftID=1842&stepID=1801")
+             //window.open("http://localhost:4200/#/mapview?DraftID=1207&stepID=1088&Type=STREET&OBJECTID=1926")
+            //window.open("http://localhost:4200/#/mapview?DraftID=1493&stepID=1427&Type=STREET&OBJECTID=15922")
+            //window.open("http://10.1.15.220:8088/ang_mapview/#/mapview?DraftID=1374&stepID=1274&Type=STREET&OBJECTID=1926");
+            
+            //window.open("http://10.1.15.220:8088/ang_mapview/#/mapview?DraftID=1493&stepID=1441&Type=STREET&OBJECTID=93961");
+            //window.open("http://10.10.20.210:8087/#/mapview?DraftID=1207&stepID=1088&Type=STREET&OBJECTID=1926")
+
+        }
+
+        function LoadDateTime(){
+
+        	var date = new Date();
+        	var currentTime = date.toISOString().substring(11,16);
+			document.getElementById("divDtaeTime").innerHTML = date;
+        }
+    </script>
+</head>
+<body onload="LoadDateTime()">
+
+
+   <h1><div id="divDtaeTime"></div></h1>
+    <input type="button" onclick="Redirect()" value="Open GIS" />
+</body>
+</html>

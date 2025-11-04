@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+            /* Background image */
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: url('http://localhost:50083/AppProd/Images/MapBackGround.png') no-repeat center center;
+                background-size: contain; /* better than cover if image is low-res */
+                filter: brightness(0.6) saturate(0.8) hue-rotate(-20deg) blur(2px);
+                /* brightness/dark reduces green dominance */
+                z-index: -2;
+            }
+
+            /* Dark overlay for better contrast */
+            body::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: -1;
+            }
+
+        /* Login container */
+        .login-container {
+            width: 350px;
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+            .login-container input::placeholder {
+                color: #ddd;
+            }
+
+            .login-container input:focus {
+                box-shadow: 0 0 8px #00d4ff;
+                background: rgba(255,255,255,0.3);
+            }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+            .login-container button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            }
+
+        .error {
+            color: #ff6b6b;
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>🔒 Secure Login</h2>
+        <input type="text" id="username" placeholder="Enter Username" />
+        <input type="password" id="password" placeholder="Enter Password" />
+        <button onclick="login()">Login</button>
+        <div class="error" id="error">❌ Invalid credentials. Try again!</div>
+    </div>
+
+    <script>
+        const users = [
+            { username: 'testuser', password: 'test@2025' },
+            { username: 'adminuser', password: 'admin@2025' }
+        ];
+
+        function login() {
+            const inputUsername = document.getElementById('username').value.trim();
+            const inputPassword = document.getElementById('password').value;
+
+            const userFound = users.find(u => u.username === inputUsername && u.password === inputPassword);
+
+            if (userFound) {
+                localStorage.setItem('username', userFound.username);
+                localStorage.setItem('password', userFound.password);
+                window.location.href = 'Mapviewer.html';
+                // for external: Mapviewer_External.html
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
