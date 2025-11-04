@@ -1,7 +1,0 @@
-update Location set BOUNDARY_TYPE_ID = 52 where category = 'AR'
-update Location set BOUNDARY_TYPE_ID = 61 where category = 'M'
-update Location set BOUNDARY_TYPE_ID = 64 where category = 'P'
-update Location set BOUNDARY_TYPE_ID = 57 where category = 'D'
-update Location set BOUNDARY_TYPE_ID = 67 where category = 'N'
-update Location set BOUNDARY_TYPE_ID = 59 where category = 'L'
-update Location set BOUNDARY_TYPE_ID = 73 where category = 'T'

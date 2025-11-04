@@ -1,8 +1,0 @@
-Android Development JAVA
-
-
-Eclipse is a very popular development environment (IDE) for Java and the preferred IDE for Android development.
-https://developer.android.com/studio/index.html
-
-
-
