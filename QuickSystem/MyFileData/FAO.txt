@@ -1,0 +1,147 @@
+204772465
+295fix
+
+204772465 
+1713
+
+X = 35.464276
+Y = 2.7862818
+
+
+Animal Disease Report Map
+
+Parameter name : Action, guid, tentativediagnosis, animalcount, observationdate, latitude, longitude, speciesname
+
+1- check Action (insert or update) if nothing throw message "Action Requird for Insert or Update"
+2-fire insert or update method
+
+Insert 
+1- 	first insert guid, tentativediagnosis, animalcount, observationdate(format is DD-MM-YYYY), latitude in 4326, longitude in 4326, speciesname against new bid
+2-  	update regionid with this query "select polyfeat.ogc_fid as regionid from kerra_regions_wgs84 polyfeat where ST_contains(polyfeat.wkb_geometry, (ST_GeomFromText('POINT(latitude longitude)', 4326))) = true"
+3-  	update sublocationid with this query "select polyfeat.ogc_fid as sublocationid from keadmin6 polyfeat where ST_contains(polyfeat.wkb_geometry, (ST_GeomFromText('POINT(latitude longitude)', 4326))) = true"
+4-	update the_geom column. "update animaldisease set the_geom = (select ST_GeomFromText('POINT(latitude latitude)', 4326)) where bid = 1"
+
+Update
+1- 	get bid against guid
+1- 	update tentativediagnosis, animalcount, observationdate(format is DD-MM-YYYY), latitude in 4326, longitude in 4326, speciesname against bid
+2-  	update regionid with this query "select polyfeat.ogc_fid as regionid from kerra_regions_wgs84 polyfeat where ST_contains(polyfeat.wkb_geometry, (ST_GeomFromText('POINT(latitude longitude)', 4326))) = true"
+3-  	update sublocationid with this query "select polyfeat.ogc_fid as sublocationid from keadmin6 polyfeat where ST_contains(polyfeat.wkb_geometry, (ST_GeomFromText('POINT(latitude longitude)', 4326))) = true"
+4-	update the_geom column. "update animaldisease set the_geom = (select ST_GeomFromText('POINT(latitude latitude)', 4326)) where bid = 1"
+
+
+
+
+
+?key=guid&value=620e4437-7dcb-4e38-a38d-ab9549e41688
+
+if latitude and longitude is null then 
+
+
+
+
+
+delete from animaldisease
+
+select * from animaldisease
+
+select btrim(tentativediagnosis, ' ') as tentativediagnosis from (select distinct tentativediagnosis from animaldisease) as a where tentativediagnosis != '' order by tentativediagnosis
+
+insert into animaldisease(bid, guid, centrioid, tentativediagnosis)
+values(1, '620e4437-7dcb-4e38-a38d-ab9549e41688', '35.464276:-2.7862818', 'abc')
+
+select ST_GeomFromText('POINT(35.464276 -2.7862818)', 4326)
+
+
+update animaldisease set the_geom = (select ST_GeomFromText('POINT(35.464276 -2.7862818)', 4326)) where bid = 1
+
+
+update animaldisease
+set camel = 1
+where bid = 1
+
+update animaldisease
+set speciesname = 'camel'
+where bid = 1
+
+update animaldisease
+set regionid = 43
+where bid = 1
+
+update animaldisease
+set observationdate = '25-05-2013' // DD-MM-YYYY
+where bid = 1
+
+select ST_astext(b.the_geom), count(a.bid) as animalcount from animaldisease a,regionpoint b where a.regionid=b.regionid group by b.the_geom
+select * from regionpoint
+select polyfeat.ogc_fid from kerra_regions_wgs84 polyfeat where ST_contains(polyfeat.wkb_geometry, (ST_GeomFromText('POINT(35.464276 2.7862818)', 4326))) = true
+
+
+
+string Guid, 
+string tentativeDiagnosis, 
+int AnimalCount, 
+DateTime ObservationDate, 
+string GPS, 
+double Latitude, 
+double Longitude, 
+string SpeciesName, 
+string District, 
+string Finaldiagnosis, 
+string County, 
+string Sublocation, 
+string TypeOfSamples
+
+
+197C06B6-52B1-41E0-8EF8-AFFDAA46E197
+LFLU
+5
+12/1/2013
+{X=35.464276, Y=2.7862818}
+35.464276
+2.7862818
+DOG
+""
+""
+""
+LOITANIT
+TypeOfSamples1
+
+
+######################################################################
+LiveStockMovement
+######################################################################
+
+
+
+
+
+Animal Disease Report Map 
+http://62.24.111.12/FAO_GIS/fao1/main.aspx
+http://62.24.111.12/FAO_GIS/fao1/main.aspx?Key=GUID&Value=ac9742f4-2549-4259-902a-c424bfd0c42a
+
+
+Animal Disease Status map 
+http://62.24.111.12/fao_gis/fao2/mainpage.aspx
+http://62.24.111.12/fao_gis/fao2/mainpage.aspx?Key=GUID&Value=ac9742f4-2549-4259-902a-c424bfd0c42a
+
+
+Live Stock Report Map 
+http://62.24.111.12/fao_gis/fao/livestockpage.aspx
+
+
+Web Service
+http://62.24.111.10/fao_gis/fao_webservice/FAOService.asmx
+
+
+
+
+livestock
+http://192.168.50.30/faoapp/livestock/LiveStockPage.aspx
+AnimalDiseaseReport
+http://192.168.50.30/faoapp/AnimalDiseaseReport/Main.aspx
+AnimalDiseaseStatus
+http://192.168.50.30/faoapp/AnimalDiseaseStatus/MainPage.aspx
+AnimalDiseaseReport
+http://192.168.50.30/faoapp/AnimalDiseaseReport/FAOService.asmx
+
+

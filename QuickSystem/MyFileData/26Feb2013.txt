@@ -1,0 +1,26 @@
+7000 SBI
+4850 rent
+500 electricity
+223 Upendra nymgo
+500 Rajesh ji petrol
+---------------------------------
+40 shukla
+4750 Shavi School
+300 dstv
+600 shweta
+2000 loan home
+
+
+select * from MapViewer where lmname is not null order by appid
+
+select * from MapViewer where provincename is not null order by appid
+
+select * from MapViewer where appstatus is not null order by appid
+
+select * from MapViewer where lmname = 'Mpumalanga'
+
+update MapViewer set appstatus = 'GRANTED', apptype = 'Mining Right' where appid= 176250
+
+update MapViewer set lmname = null, lmnamecenter = null where lmname = 'Mpumalanga'
+
+select map.appid, st.Caption as Status, at.Caption as apptype from MapViewer map inner join Application app on map.appid = app.AppID inner join AppStatus st on st.StatusID = app.StatusID inner join AppType at on at.AppTypeID = app.AppTypeID where  map.appid = {0}

@@ -1,0 +1,181 @@
+============================================
+Client UAT
+http://10.10.80.207:8080/gisservice/web/?0
+
+
+ng build --base-href=/ang_mapview/
+
+
+
+
+
+
+
+===========================================
+http://10.10.80.203/phpmyadmin/index.php?route=/&route=%2F
+root
+Welcome@2025#
+
+
+/home/dworld-admin/Downloads
+
+sudo mv /home/dworld-admin/Downloads/CIS/CIS-Portal-Main/wp-includes /var/www/html/CIS-Portal/wp-includes
+
+sudo mv /home/dworld-admin/Downloads/CIS/wp-config.php /var/www/html/CIS-Portal/wp-config.php
+
+sudo mv /home/dworld-admin/Downloads/CIS/CIS-Portal /var/www/html/CIS-Portal
+
+user: dworld-admin
+password: dw-rem_$25
+
+
+sudo nano /var/www/html/CIS-Portal/wp-config.php
+Use arrow keys to move.
+
+Edit text.
+
+Save: CTRL + O, press Enter.
+
+Exit: CTRL + X.
+
+============================================
+
+
+sudo useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+
+
+http://10.10.80.207:8080
+
+ping -c 4 localhost:8080
+
+ping -c 4 10.10.80.207:8080
+
+
+sudo systemctl stop tomcat
+sudo systemctl restart tomcat
+sudo systemctl start tomcat
+sudo systemctl status tomcat
+
+sudo chown tomcat:tomcat /opt/tomcat/latest/webapps/mapserver.war
+sudo chmod -R 755 /opt/tomcat/latest/webapps
+
+sudo chmod -R 777 /opt/tomcat
+
+
+/opt/tomcat/latest/webapps/gisservice/WEB-INF/lib
+
+sudo cp ~/Downloads/CIS/*.jar /opt/tomcat/latest/webapps/gisservice/WEB-INF/lib/
+sudo rm -rf /opt/tomcat/latest/webapps/gisservice
+java -version
+Tomcat/9.0.109
+
+openjdk version "1.8.0_262"
+
+sudo rm -rf /opt/tomcat/latest/webapps/mapserver.war
+sudo rm -rf /opt/tomcat/latest/webapps/gisservice
+
+
+wget https://sourceforge.net/projects/geoserver/files/GeoServer/2.22.2/geoserver-2.22.2-war.zip -P /tmp
+
+sudo yum install unzip -y   # if not already installed
+unzip /tmp/geoserver-2.22.2-war.zip -d /tmp/geoserver-war
+cd /tmp/geoserver-war
+mv geoserver.war gisservice.war
+sudo cp gisservice.war /opt/tomcat/latest/webapps/
+====================================================================================================
+mysql -u root -p
+
+CREATE DATABASE wordpress;
+CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'Welcome@2025#';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+======================
+Server Oracle VM name
+
+IP address
+
+UAT-Alfresco-Elastic-Search
+
+10.10.80.200
+
+UAT-Word-Press-Portal
+
+10.10.80.203
+
+UAT-GIS-GeoServer
+
+10.10.80.207
+
+UAT-Security-CAS
+
+10.10.80.208
+
+UAT-MySQL
+
+10.10.80.209
+=====================================================
+
+sudo rm -rf /tmp/*
+sudo rm -rf /tmp/.[!.]* 
+
+dw-rem_$25
+
+sudo lsof -i :8080
+
+
+sudo kill -9 12997 
+
+i am using linux 
+
+sudo systemctl stop tomcat
+sudo systemctl restart tomcat
+sudo systemctl start tomcat
+sudo systemctl status tomcat
+
+stop command is not working but other command is working, why
+
+/opt/tomcat/latest/webapps
+dw-rem_$25
+
+Edit file
+sudo nano /opt/tomcat/conf/server.xml
+sudo vi /opt/tomcat/conf/server.xml
+Save changes
+In nano: press CTRL+O → Enter → CTRL+X
+In vi: press ESC, then type :wq and hit Enter
+
+sudo mv gisserver.war /opt/tomcat/latest/webapps/
+sudo mv geoserver.war gisserver.war
+sudo mv om.war gis.war
+
+cp /tmp/gisserver.war /opt/tomcat/webapps/
+
+
+sudo chown tomcat:tomcat /opt/tomcat/webapps/gisserver.war
+sudo chmod 644 /opt/tomcat/webapps/gisserver.war
+sudo chmod 777 /opt/tomcat/webapps/geoserver.war
+sudo chmod 777 /opt/tomcat/webapps/gisserver/WEB-INF/lib/
+
+sudo chmod 777 /opt/tomcat/webapps/gisserver/data/workspaces/UAT
+
+
+ls -l /geo
+geoserver-2.19.7-oracle-plugin.zip
+sudo unzip geoserver-2.19.7-oracle-plugin.zip -d /geo
+
+ls -l terragis.war
+ls -ld .
+ls -l /tmp/geo
+
+sudo unzip om.war -d om
+sudo chown -R tomcat:tomcat om
+sudo cp *.jar /opt/tomcat/webapps/gisserver/WEB-INF/lib
+sudo systemctl restart tomcat
+
+sudo rm -rf gis.war
+
+
+/opt/tomcat/webapps/gisserver
+
+sqlplus GISUAT/GISUAT12@'//10.10.80.213:1521/ORCLPDB1'

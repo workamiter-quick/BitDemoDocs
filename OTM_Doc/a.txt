@@ -1,0 +1,28 @@
+UPDATE sales_consultent_target_v2 SET 
+otmstoretargetvalue=0, incentivestoretargetvalue=0, capturedate=NOW()
+WHERE sctargetid = ? and productid = ? and storeid = ? and salesconsultentid= ? and targetyear = ?
+
+select * from m_store
+
+
+select * from m_salesconsultent
+
+select * from sales_consultent_target_v2 where storeid = 4 order by salesconsultentid
+
+
+	delete from sales_consultent_target_v2 where sctargetid > 0
+	
+	
+	UPDATE sales_consultent_target_v2 SET otmstoretargetvalue = 99999, incentivestoretargetvalue = 9, capturedate=NOW() 
+	WHERE 
+	--sctargetid = 1 and 
+	productid = 7 and storeid = 4 and salesconsultentid = 70 and targetyear = 2021
+	
+	
+	select tv2.*, vpc.productcategorycaption from sales_consultent_target_v2 tv2 inner join v_productcategory vpc
+	on tv2.productid = vpc.id
+	WHERE 
+	--sctargetid = 1 and 
+	tv2.productid = 7 and storeid = 4 and salesconsultentid = 70 and targetyear = 2021
+	
+	

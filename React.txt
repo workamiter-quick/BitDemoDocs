@@ -1,0 +1,12 @@
+virtual dom vs dom
+
+hook
+
+manage state (redux, contex api)
+
+hooks rule
+
+
+5
+
+

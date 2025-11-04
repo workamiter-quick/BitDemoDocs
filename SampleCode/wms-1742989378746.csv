@@ -1,0 +1,6 @@
+"objectid","layer_alias_name","layer_wms_url","layer_name","fomart","transparent","tiled","buffer","display_outside_max_extent","baselayer","display_in_layerswitcher","visibility","isdeleted","groupid","userid","layer_index"
+1,"Province","http://102.210.249.30:8080/GisMDB/MDBLayers/wms","MDBLayers:Provinces","image/png","true","false","0","true","false","true","false",0,0,"",1
+4,"Wards","http://102.210.249.30:8080/GisMDB/MDBLayers/wms","MDBLayers:Wards","image/png","true","false","0","true","false","true","false",0,0,"",4
+2,"District Municipality","http://102.210.249.30:8080/GisMDB/MDBLayers/wms","MDBLayers:District Municipality","image/png","true","false","0","true","false","true","false",0,0,"",2
+3,"Local Municipalities","http://102.210.249.30:8080/GisMDB/MDBLayers/wms","MDBLayers:Local Municipalities","image/png","true","false","0","true","false","true","false",0,0,"",3
+5,"Voting Districts","http://102.210.249.30:8080/GisMDB/MDBLayers/wms","MDBLayers:VotingDistricts","image/png","true","false","0","true","false","true","false",0,0,"",5

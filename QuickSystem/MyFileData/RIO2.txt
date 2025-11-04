@@ -1,0 +1,188 @@
+--select uniqueid, Province from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 order by Province
+
+declare @S bigint
+DECLARE @Pro INT;
+DECLARE @GG geometry;
+DECLARE @Cnt INT;
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 4662;
+declare @TBBL table(Uniqueid bigint, Province int, G geometry, id int identity(1,1)) 
+insert into @TBBL select uniqueid, Province, Geom.MakeValid() from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 and Province = 4 order by Province
+--select * from @TBBL
+
+WHILE @sP <= @tP
+BEGIN
+	BEGIN TRY 
+		print '1'
+		select @S = Uniqueid, @Pro = Province, @GG = G  from @TBBL where id = @sP
+		IF @Pro = 4
+			BEGIN
+			print '2'
+				select @Cnt = count(TID) from RMS_EC_DwellingPT with (nolock) where @GG.STIntersects(geomwgs84) = 1	
+				print '3'
+				update AutomatedClustersFinal_WGS84 set DwellingPT = @Cnt where UniqueID = @S
+				print '4'
+			END
+	END TRY  
+	BEGIN CATCH  
+
+	END CATCH
+	print @sP
+	print @S
+	print GetDate()
+	set @sP = @sP + 1
+END
+--------------------------------------
+
+
+--select uniqueid, Province from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 order by Province
+
+declare @S bigint
+DECLARE @Pro INT;
+DECLARE @GG geometry;
+DECLARE @Cnt INT;
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 2908;
+declare @TBBL table(Uniqueid bigint, Province int, G geometry, id int identity(1,1)) 
+insert into @TBBL select uniqueid, Province, Geom.MakeValid() from AutomatedClustersFinal_WGS84 with (nolock) where  dwellingPT = 0 and Province = 7 order by Province
+--select * from @TBBL
+
+WHILE @sP <= @tP
+BEGIN
+	BEGIN TRY 
+		print '1'
+		select @S = Uniqueid, @Pro = Province, @GG = G  from @TBBL where id = @sP
+		IF @Pro = 7
+			BEGIN
+			print '2'
+				select @Cnt = count(TID) from RMS_KZN_DwellingPT with (nolock) where @GG.STIntersects(geomwgs84) = 1	
+				print '3'
+				update AutomatedClustersFinal_WGS84 set DwellingPT = @Cnt where UniqueID = @S
+				print '4'
+			END
+	END TRY  
+	BEGIN CATCH  
+
+	END CATCH
+	print @sP
+	print @S
+	print GetDate()
+	set @sP = @sP + 1
+END
+
+==========================================
+
+
+--select uniqueid, Province from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 order by Province
+
+declare @S bigint
+DECLARE @Pro INT;
+DECLARE @GG geometry;
+DECLARE @Cnt INT;
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 4552;
+declare @TBBL table(Uniqueid bigint, Province int, G geometry, id int identity(1,1)) 
+insert into @TBBL select uniqueid, Province, Geom.MakeValid() from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 and Province = 6 order by Province
+--select * from @TBBL
+
+WHILE @sP <= @tP
+BEGIN
+	BEGIN TRY 
+		print '1'
+		select @S = Uniqueid, @Pro = Province, @GG = G  from @TBBL where id = @sP
+		IF @Pro = 6
+			BEGIN
+			print '2'
+				select @Cnt = count(TID) from RMS_WC_DwellingPT with (nolock) where @GG.STIntersects(geomwgs84) = 1					
+				print '3'
+				update AutomatedClustersFinal_WGS84 set DwellingPT = @Cnt where UniqueID = @S
+				print '4'
+			END
+	END TRY  
+	BEGIN CATCH  
+
+	END CATCH
+	print @sP
+	print @S
+	print GetDate()
+	set @sP = @sP + 1
+END
+
+===============================================
+
+--select uniqueid, Province from AutomatedClustersFinal_WGS84 where  dwellingPT = 0 order by Province
+
+declare @S bigint
+DECLARE @Pro INT;
+DECLARE @GG geometry;
+DECLARE @Cnt INT;
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 2279;
+declare @TBBL table(Uniqueid bigint, Province int, G geometry, id int identity(1,1)) 
+insert into @TBBL select uniqueid, Province, Geom.MakeValid() from AutomatedClustersFinal_WGS84 with (nolock) where  dwellingPT = 0 and Province = 3 order by Province
+--select * from @TBBL
+
+WHILE @sP <= @tP
+BEGIN
+	BEGIN TRY 
+		print '1'
+		select @S = Uniqueid, @Pro = Province, @GG = G  from @TBBL where id = @sP
+		IF @Pro = 3
+			BEGIN
+			print '2'
+				select @Cnt = count(TID) from RMS_LIM_DwellingPT with (nolock) where @GG.STIntersects(geomwgs84) = 1	
+				print '3'
+				update AutomatedClustersFinal_WGS84 set DwellingPT = @Cnt where UniqueID = @S
+				print '4'
+			END
+	END TRY  
+	BEGIN CATCH  
+
+	END CATCH
+	print @sP
+	print @S
+	print GetDate()
+	set @sP = @sP + 1
+END
+
+===============================================
+
+
+declare @CID  int
+set @CID = 39
+
+declare @TBL1 table(SettID bigint, id int identity(1,1))
+insert into @TBL1 select distinct SettID from __TempDistanceCalculate25OCT_39 with (nolock) where MSID = 0 and CategoryID = @CID
+print 'READY BABA 22'
+DECLARE @sP INT;
+DECLARE @tP INT;
+declare @SID  bigint
+
+set @sP = 1
+--set @tP = 4233
+select @tP = count(*) from @TBL1
+
+
+
+			WHILE @sP <= @tP
+			BEGIN
+				
+					select @SID = SettID from @TBL1 where  ID = @sP
+					print @SID
+					print @sP
+					print @tP
+					update __TempDistanceCalculate25OCT_39
+					set MSID = 2
+					where ID = (select top 1 ID from __TempDistanceCalculate25OCT_39 with (nolock) where Distance = (select min(Distance) from 
+					__TempDistanceCalculate25OCT_39 with (nolock) where SettID = @SID and CategoryID = @CID ) and SettID = @SID and CategoryID = @CID)
+				
+					set @sP = @sP + 1
+			END

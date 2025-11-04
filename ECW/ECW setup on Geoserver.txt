@@ -1,0 +1,22 @@
+Steps for ECW Image format
+Installing GDAL extension
+1.	Download http://sourceforge.net/projects/geoserver/files/GeoServer/2.6.1/extensions/geoserver-2.6.1-gdal-plugin.zip
+2.	Extract the files to C:\Program Files (x86)\GeoServer 2.6.1\webapps\geoserver\WEB-INF\lib
+
+Installing GDAL native library
+Setup GDAL Data
+1.	Download http://demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.10/native/gdal/gdal-data.zip
+2.	Extract this archive to C:\Program Files\GDAL\gdal-data
+3.	Create a GDAL_DATA environment variable to C:\Program File\GDAL\gdal-data
+Setup GDAL
+4.	Download http:// demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.10/native/gdal/windows/MSVC2010/gdal-1.9.2-MSVC2010.zip
+5.	Extract this archive to C:\Program Files (x86)\GDAL\gdal-1.9.2-MSVC2010
+6.	Add C:\Program Files (x86)\GDAL\gdal-1.9.2-MSVC2010 to your PATH.
+7.	Open command prompt, you should now be able to execute gdalinfo. If you can't there is something wrong with your PATH, or do a restart.
+Update GeoServer Wrapper
+8.	Open and edit C:\Program Files (x86)\GeoServer 2.6.1\wrapper\wrapper.conf.
+9.	Add the following line wrapper.java.library.path.2=C:\Program Files (x86)\GDAL\gdal-1.9.2-MSVC2010 just after the wrapper.java.library.path1=bin/wrapper/lib line.
+Install ECW Extension
+10.	Download http:// demo.geo-solutions.it/share/github/imageio-ext/releases/1.1.X/1.1.10/native/gdal/windows/MSVC2010/gdal-19-1600-ecw.msi
+11.	Install the package, which should installed to C:\Program Files (x86)\GDAL\gdalplugins
+12.	Create a GDAL_DRIVER_PATH environment variable to C:\Program Files (x86)\GDAL\gdalplugins

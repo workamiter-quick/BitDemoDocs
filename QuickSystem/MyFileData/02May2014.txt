@@ -1,0 +1,70 @@
+http://Valuematrix.net/DWSolrClient/
+
+
+http://valuematrix.net/eservices/bcmm
+
+DWJHBAPPSERVER\SQLSERVER2008_2
+
+
+http://192.168.50.30/ValueMatrix_NewCastle/
+
+
+DW_LM_SPATIAL
+
+
+
+18152
+
+
+worked on land matrix(BCMM)
+
+
+Explane to Muvhuso Nekhubvi
+
+
+
++919759809994
+
+
+20308677
+
+
+10353169
+
+295
+127.0.0.1
+
+197C06B6-52B1-41E0-8EF8-AFFDAA46E199
+
+http://62.24.111.10/fao_gis/fao/livestockpage.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA46E199
+http://62.24.111.10/fao_gis/fao/livestockpage.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA47E199
+
+
+http://62.24.111.10/fao_gis/fao1/main.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA46E199
+http://62.24.111.10/fao_gis/fao1/main.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA47E199
+
+
+http://62.24.111.10/fao_gis/fao2/mainpage.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA46E199
+http://62.24.111.10/fao_gis/fao2/mainpage.aspx?Key=guid&Value=197C06B6-52B1-41E0-8EF8-AFFDAA47E199
+
+
+http://192.168.50.30/bcmm2/
+
+
+select SGCODE, COUNT(SGCODE) from polokwanecad_4feb_dd group by SGCODE having COUNT(*)>1
+
+select * from polokwanecad_4feb_dd where SGCODE='T0LS00030000013100000'
+
+
+
+Objection Outcome letter
+New building plan control
+Fao webservice
+New Castel Valumatrix
+Polockwane Valumatrix
+Sample For editing open layer using geoserver
+
+
+
+
+https://www.youtube.com/watch?v=Le-Hwpd55Dg

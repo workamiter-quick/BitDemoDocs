@@ -1,0 +1,320 @@
+
+http://10.10.20.204/CIS-Portal/wp-login.php
+
+UN: CIS-Admin2
+
+PW: @^1dVEoP%64E^#J8kI%aIHkk
+
+
+root
+N0tSPARC_OVMN
+-----------------
+192.96.1.66
+------------------------
+10.10.80.205   window server
+--------------------------------
+Amit
+AmitS
+NewPass@1234
+
+chiefsg.gov.za\ASinha
+pass.123
+
+chiefsg\mganeshan
+Cis@Ngms01
+P@ssw0rd
+
+======================================
+
+Schema Name: GISUAT
+
+Password: GISUAT12
+
+TNS entries details
+
+ORCLPDB1 =
+
+  (DESCRIPTION =
+
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.10.80.213)(PORT = 1521))
+
+    (CONNECT_DATA =
+
+      (SERVER = DEDICATED)
+
+      (SERVICE_NAME = ORCLPDB1)
+
+    )
+
+  )
+
+=======================================
+UAT-Word-Press-Portal
+10.10.80.203
+
+UAT-GIS-GeoServer-Linux
+10.10.80.207
+UAT-GIS-GeoServer-Window
+10.10.80.205
+
+user: dworld-admin
+password: dw-rem_$25
+
+#############VPN###############
+196.96.1.66
+
+Username        : Amit Sinha
+Password         : Amy@VPN
+
+Username : Mduduzi Khathi
+Password   :  Ace@351
+
+Username: 	Marilyn Pillay
+Password :	Fire@618
+
+
+Username        : Yuhrandra Visram 
+Password         : Rand@VPN
+
+############################
+
+
+Server: India2022
+IP: 10.1.15.81
+User: 10.1.15.81\Amit
+AMit Password: Terr@2022!
+Password: DW@2022!
+
+
+Username: Adhir Nursayhe
+Password: Adhir@12
+
+
+10.10.20.210
+chiefsg\mganeshan
+P@ssw0rd
+
+DBerver
+155.240.99.149
+UserName : Splumappsvr\administrator
+Password : 
+
+//This server is bridge server to connect GIS server
+AppServer
+155.240.99.119
+
+Please receive below VM details:
+Username: Administrator
+Password: Power@1
+Anydesk: 1958059225 
+Anydesk password: Power@11
+IP Address: 155.240.103.38
+
+
+$#############################
+
+
+http://localhost/CSGService/DataUpdate.aspx
+http://10.10.20.210/CSGService/CSG_Help/lighten/index.html
+http://10.10.20.210/CSGService/DataUpdate.aspx
+http://10.10.20.210/CSGService/CsgGIS.asmx
+http://10.10.20.210/CSGGIS/InfoMap.aspx
+http://10.10.20.210/CSGGIS/stat/MapInbox.html
+http://10.10.20.210/CSGGIS/stat/MapStat.html
+http://10.10.20.210/CSGGIS/CSGTIF
+
+
+http://10.10.20.210/CSGGIS/InfoMap.aspx?UserID=1540&uam=http://10.10.20.201:8089/api/v1/&wt=http://10.10.20.201:8091/
+http://10.10.20.210/CSGGIS/EDITING/DRDLR/Mapviewer.html
+http://10.10.20.210/CSGGIS/Wmsconfig3.aspx
+
+
+http://10.10.20.210/CSGGIS/DRDLR/Mapviewer.html
+
+http://10.10.20.210:8087/geoserver/web
+http://10.10.20.210:8087/CSG/web
+
+http://10.10.20.210:8087/csg/web
+
+
+http://10.10.20.204/phpmyadmin/#PMAURL-0:index.php?db=&table=&server=1&target=&token=a532be723afca2bbc204ba4d7bf8b69d
+
+http://10.10.20.210:8087/
+http://10.10.20.210:8087/csg/web/;jsessionid=A63C7767591D040C8DC1AEC0A63029CD
+
+http://10.10.20.210/CSGMAP/Default.aspx?Z=14&X=27.07148361206022&Y=-26.753474934283165&L=O4|O42|O1|O21|&B=OSM1&Proj=WGS84&PS=A4&O=L&T=Cadastral%20Spatial%20Data%20Report&F=PNG&MS=166973
+
+
+http://10.10.20.210/CSGGIS/DownloadData.aspx?L=GISBEACON2%7cGISGeneralPlan%7cGISPARCEL_ERF%7cGISPARCEL_FARMPORTION%7cGISPARCEL_SECTIONALTITLE%7cGISPARCEL_PUBLICPLACE%7cGISPARCEL_PARENTFARM%7cGISPARCEL_UNALIENATEDSTATELAND%7cGISPARCEL_UNALIENATEDRIVERBED%7cGISPARCEL_SURVEYEDINFORMALERF%7cGISPARCEL_HOLDING&G=GEOMETRYCOLLECTION(POLYGON((30.977015972136286+-29.859605397012196%2c+30.97796010970973+-29.8597170516861%2c+30.97783136367703+-29.860945244854744%2c+30.97632932662914+-29.860610284580467%2c+30.977015972136286+-29.859605397012196)))&F=Shp&T=0
+
+
+
+Internal : http://10.10.20.201:8090/oauth/token    
+External: http://10.10.20.201:8089/oauth/token
+
+http://10.10.20.204/CIS-Portal/wp-admin/
+http://10.10.20.204/CIS-Portal/
+http://10.10.20.201/cis-external/                ---mathunjwanontokozo@gmail.com   ----dzgqr5PB
+http://10.10.20.201/cis-internal/
+
+http://10.10.20.201/cis-external/#/track-order
+http://10.10.20.201/cis-external/#/raise-query
+
+
+
+ogr2ogr -append -f "OCI" OCI:gisdevuat/gisdevuat12@//10.10.20.200:1521/gisdev "C:\DataWorld\ProjectDescription\CSG\Cadastral_Client_APRIL_2019\Temp\GISBEACONS.shp" -skip-failures
+
+http://localhost/CSGService/DataUpdate.aspx?S=33268
+
+
+
+
+insert into  GISDEVUAT.GISPARCEL(OGR_FID,ORA_GEOMETRY,GID,PRCL_KEY,PRCL_TYPE,LSTATUS,WSTATUS,GEOM_AREA,COMMENTS,TAG_X,TAG_Y,TAG_VALUE,TAG_SIZE,TAG_ANGLE,TAG_JUST,ID,DATE_STAMP,SG_NUMBER,PARCEL_TYPE_DESC,FARMNAME,TOWN_CODE,TOWN_NAME,REGION,PARCEL,PORTION,FILENAME,LMID,DMID,PROVINCEID,PARCEL_TYPE_ID,ADMINREGION)
+
+select OGR_FID,ORA_GEOMETRY,GID,PRCL_KEY,PRCL_TYPE,LSTATUS,WSTATUS,GEOM_AREA,COMMENTS,TAG_X,TAG_Y,TAG_VALUE,TAG_SIZE,TAG_ANGLE,TAG_JUST,ID,DATE_STAMP,SG_NUMBER,PARCEL_TYPE_DESC,FARMNAME,TOWN_CODE,TOWN_NAME,REGION,PARCEL,PORTION,null as FILENAME,0 as LMID,0 as DMID,PROVINCEID,0 as PARCEL_TYPE_ID,null as ADMINREGION from GISPARCEL
+
+
+delete from GISDEVUAT.GISPARCEL where ogr_fid = 6498389
+
+
+
+alter table GISPARCEL add PROVINCEID integer
+
+select max(OGR_FID) from GISDEVUAT.GISPARCEL
+
+select * from GISPARCEL
+
+update GISPARCEL set PROVINCEID = 9 where PCODE = 'WC'
+
+delete from GISDEVUAT.GISPARCEL where PROVINCEID = 5
+
+truncate table GISDEVUAT.GISPARCEL
+
+select OGR_FID from GISPARCEL  order by OGR_FID
+
+
+select PROVINCEID, count(PROVINCEID) from GISDEVUAT.GISPARCEL group by PROVINCEID
+
+
+
+update GISPARCEL set LMID = 192
+where REGION in (
+select distinct x.REGION from 
+(select * from GISPARCEL where provinceid = 3 and REGION is not null) x,  
+( select b.Boundaryid, a.ORA_GEOMETRY, b.CAPTION,a.TAG_VALUE, b.MDBCODE  from gisBoundary a 
+inner join Location b on a.TAG_VALUE = b.MDBCODE 
+where a.Boundary_Type_ID = 59 and b.Boundaryid = 192 ) c 
+where sdo_anyinteract(x.ORA_GEOMETRY, c.ORA_GEOMETRY) = 'TRUE'
+)
+
+
+
+
+select b.Boundaryid, a.ORA_GEOMETRY, b.CAPTION,a.TAG_VALUE, b.MDBCODE  from gisBoundary a 
+inner join Location b on a.TAG_VALUE = b.MDBCODE 
+where a.Boundary_Type_ID = 59 and MDBCODE like 'GT%' order by b.Boundaryid
+
+
+
+
+//Dataworld Environment
+http://dwappdemo.co.za:9192/ - Internal
+ 
+http://dwappdemo.co.za:9191/ - External
+
+
+Internal
+Terratest4
+Terr@2021!
+Information manager
+
+Terratest5
+Terr@2021!
+Information officer
+
+Terratest6
+Terr@2021!
+Information scrutinizer
+
+
+
+External Below
+*Banker
+-Username : testingappsdw@gmail.com
+-Password :  bGqpk4ea
+
+
+
+//Dataworld Environment
+
+//New VPN
+Username: Amit
+Password: S!nH@23%$
+
+
+
+========================= Client CSG Portal==================
+ssh root@10.10.20.204
+
+Password : N0tSPARC_OVMN
+
+cd /opt/lampp/htdocs/CIS-Portal/
+
+http://10.10.20.204/CIS-Portal/wp-login.php
+===========================================
+
+
+========================= Trra CSG Portal==================
+ssh root@10.1.15.94
+
+VNC : 10.1.15.94:5902
+
+User: root
+Pw: root@wp
+
+
+I created a new user for SSH login:
+Username: admin
+PW: @dm!n2023$
+
+I have allowed root user for vnc connection.
+Username: root
+PW: root@wp
+Port: 5902
+
+mysql password : password#1
+
+cd /opt/lampp/htdocs/CIS-Portal/
+
+
+
+===========================================
+
+mysql -u root -p -h 10.1.15.94
+
+mysql -u root -p
+
+GRANT ALL PRIVILEGES ON TestDb TO 'root'@'10.1.15.94' IDENTIFIED BY password#1;
+
+
+
+systemctl status httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo systemctl stop httpd
+
+
+===========MySql Command on putty========================
+mysql -u root -p
+mysql password : password#1
+
+SHOW DATABASES;
+USE TestDb;
+
+For workbench
+remoteuser
+Pass@123
+
+for 
+root
+password#1

@@ -1,0 +1,107 @@
+
+
+http://atlas.co.za.dedi672.jnb1.host-h.net/wp-admin/
+
+username: 	thulani@dataworld.co.za
+password: 		dbnadmin#321
+Link to login:	http://atlas.co.za.dedi672.jnb1.host-h.net/wp-login.php
+
+http://atlas.dataworld.co.za/atlas/wp-login.php
+
+Username: amit
+p/d: dbnadmin#321
+
+http://196.33.120.51/atlas/wp-admin/
+
+Username: thulani@dataworld.co.za
+p/d: dbnadmin#321
+
+http://196.33.120.51/atlas/wp-content/uploads/2016/02/logo.png
+
+
+For Startup Page
+App_Start/RouteConfig.cs
+defaults: new { controller = "statistics_data", action = "index", id = UrlParameter.Optional }
+
+
+For Data Json
+StatisticsApiController.cs
+
+TOPO Json
+
+
+http://192.168.50.224/NeoAtlas
+
+
+appData.js		Change the base URL
+baseUrls.js		Change the base URL
+
+Indicator
+http://196.33.120.51/NeoAtlas/statistics_data/index
+
+Economic Opportunity Model
+http://196.33.120.51/NeoAtlas/model/economicmodel
+
+Regression Model
+http://196.33.120.51/NeoAtlas/model/regressionmodel
+
+Indicator Trend
+http://196.33.120.51/NeoAtlas/model/trends
+
+Compare
+http://196.33.120.51/NeoAtlas/profile/compare
+
+Library/Data
+http://196.33.120.51/NeoAtlas/documentLib/Datadownload 
+
+
+http://196.33.120.51/NeoAtlas/documentLib/index
+
+
+
+http://196.33.120.51/NeoAtlas/Content/SVG/munics.json
+
+
+Take care of loading.gif on every pages
+
+
+
+Indicator Page
+
+select top 5 * from [Statistics]
+select top 5  * from Indicators
+select top 5  * from Jurisdictions
+select top 5  * from Timelines
+
+
+
+add-migration newChanges
+update-database -script
+update-database
+
+
+
+
+select count(*) from [Midvaal_LandUseCapture].[dbo].[Cadastral]
+
+
+select distinct TOWNSHIP_N from [Midvaal_LandUseCapture].[dbo].[Cadastral]
+select distinct PLANINTERP from [Midvaal_LandUseCapture].[dbo].[Cadastral]
+
+select distinct PLANINTERP from [Midvaal_LandUseCapture].[dbo].[Cadastral]
+select distinct PLANINTERP as ID, PLANINTERP as Caption from [Midvaal_LandUseCapture].[dbo].[Cadastral] order by PLANINTERP
+
+
+select * from (select distinct PLANINTERP, count(PLANINTERP) as cnt from [Midvaal_LandUseCapture].[dbo].[Cadastral] group by PLANINTERP) as a order by cnt 
+
+select * from (select bidd as ID, PIN as PIN, Geom.STAsText() as Geom, SGCode as LPKey from [Midvaal_LandUseCapture].[dbo].[Cadastral] where PLANINTERP = 'Residential' and Geom is not null) as a where PIN > 207089
+
+
+Wordpress
+Tablepress plugins
+Avada
+
+
+
+-----------------------------
+http://196.33.120.51/NeoAtlas/Screens/NeoModel.aspx

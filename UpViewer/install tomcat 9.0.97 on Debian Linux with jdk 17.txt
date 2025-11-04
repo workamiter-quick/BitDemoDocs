@@ -1,0 +1,98 @@
+Here’s how to install Tomcat 9.0.97 on Debian Linux with JDK 17:
+Step 1: Update the System and Install Prerequisites
+
+sudo apt update
+sudo apt install -y curl unzip
+
+Step 2: Install OpenJDK 17
+
+sudo apt install -y openjdk-17-jdk
+
+Verify the installation:
+
+java -version
+
+Step 3: Download Tomcat 9.0.97
+
+Navigate to the /tmp directory and download the specific version of Tomcat:
+
+cd /tmp
+curl -O https://downloads.apache.org/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.tar.gz
+
+Step 4: Extract and Move Tomcat Files
+
+    Extract the downloaded file:
+
+tar -xzvf apache-tomcat-9.0.97.tar.gz
+
+Move the extracted Tomcat folder to /opt/tomcat:
+
+    sudo mv apache-tomcat-9.0.97 /opt/tomcat
+
+Step 5: Set Permissions
+
+    Create a tomcat user and group:
+
+sudo groupadd tomcat
+sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+
+Set permissions for the tomcat user:
+
+    sudo chown -R tomcat:tomcat /opt/tomcat
+    sudo chmod +x /opt/tomcat/bin/*.sh
+
+Step 6: Create a Systemd Service File for Tomcat
+
+Create a new file for the Tomcat service:
+
+sudo nano /etc/systemd/system/tomcat.service
+
+Add the following configuration:
+
+[Unit]
+Description=Apache Tomcat Web Application Container
+After=network.target
+
+[Service]
+Type=forking
+
+Environment=JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINA_BASE=/opt/tomcat
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+User=tomcat
+Group=tomcat
+UMask=0007
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+Step 7: Start and Enable the Tomcat Service
+
+Reload the systemd daemon to recognize the new service file:
+
+sudo systemctl daemon-reload
+
+Start and enable the Tomcat service:
+
+sudo systemctl start tomcat
+sudo systemctl enable tomcat
+
+Step 8: Verify the Installation
+
+Check the status of the Tomcat service:
+
+sudo systemctl status tomcat
+
+Step 9: Access Tomcat
+
+Once Tomcat is running, you can access it through your browser at:
+
+http://<your-server-ip>:8080
+
+Tomcat 9.0.97 should now be installed and running with JDK 17 on your Debian system!

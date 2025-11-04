@@ -1,0 +1,60 @@
+Landing Page with dashboard links
+
+1 FMS Dashbaord
+Shape file and CSV 
+Load into database (SQL Server)
+Dashboard (either only Power BI or PowerBI + ArcGIS or Only ArcGIS)
+
+Reference:
+
+https://app.powerbi.com/view?r=eyJrIjoiNmU0OGRmZTgtYTAyMC00MzgwLWIzNTgtYTJlYmI5Yzc3YmE4IiwidCI6IjdkMGVmMGM3LTY5MjYtNGIyNS05M2YxLTk1ZjNlZDU4NzU5ZiJ9
+
+Check Incidents (3.1 to 3.8)
+
+https://proximainsights.maps.arcgis.com/apps/dashboards/4ce0dfe287eb45959b8257b06baba5ed
+
+Road Centerline:
+
+https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/Open_Data_Service/MapServer
+
+2 Volume counts
+
+2021 and 2022 - Database 
+
+Reference
+Dashbaords similar to VDS dashboards (10.1 to 10.5)
+
+
+Rajesh to provide:
+
+- Shapefile (FMS)
+- CSV (FMS)
+- VDS2021 CSV
+- VDS2022 CSV
+
+-----------------------------------
+Proxima Insights - ESRI Credentials
+-------------------------------------
+user name: rajeshgis
+password : rajesh1704
+--------------------------------------
+Asika - Database server credentials
+--------------------------------------
+Host Name: stratahost.dedicated.co.za
+IP Address: 154.0.173.223
+Username: 154.0.173.223\Administrator
+P/d: 0~J(2qw3aW(w
+
+SQL Server: 154.0.173.223
+
+User ID=sa;Password=A$ik@3@1
+----------------------------------------
+
+Proxima Insights - PowerBI credentials
+
+username: rajesh@asika.co.za
+password: Tr@in912
+----------------------------------------
+
+
+https://app.powerbi.com/admin-portal/capacities

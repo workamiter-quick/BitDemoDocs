@@ -1,0 +1,4 @@
+ng build --base-href=/ang_mapview/
+
+
+ng serve

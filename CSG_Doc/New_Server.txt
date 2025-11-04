@@ -1,0 +1,279 @@
+CSG server
+10.1.15.115
+Username: 10.1.15.115\Administrator
+Pw: C!5G!5@dm!n 
+
+102.210.249.28
+102.210.249.28
+http://102.210.249.28:8081/ang_mapview/#/mapview
+http://10.1.15.115:8081/ang_mapview/#/mapview
+
+http://102.210.249.28:8081/CSG/web
+http://10.1.15.115:8081/CSG/web
+
+8081
+http://gisapp.terra.group:8081/
+http://gisapp.terra.group:8081/ang_mapview/#/mapview
+http://102.210.249.28:90/WeatherForecast
+=================
+
+VPN
+Username: Amit
+Password: S!nH@23%$
+
+=================================
+Intertown Print server
+23.88.108.143
+23.88.108.143\Administrator
+TzpZt3F27WRv
+
+
+https://up-modules.intertown.co.il/PrintApi/MapPrint/GetPrintPDF
+=================================
+
+dwjhbgissvr server
+IP: 10.1.15.204
+Username: Administrator 
+Password: G!s@2023%@$
+
+=========SorkotImgMig========================
+VM Name: SorkotImgMig
+IP: 10.1.15.119
+Username: 10.1.15.119\Administrator
+Pwd: S0r!Mg@963$
+=========SorkotImgMig========================
+
+==================TVGIS CAPE Varde=============
+IP: 10.1.15.102
+Username: 10.1.15.102\Administrator
+Pwd: TV@G!s2024$
+
+===============================
+
+Gis.terra.group 
+User : .\administrator 
+Pass: Terr@2021$
+
+
+ 
+geoserver: admin/geoserver_Terr@2021!
+ 
+ 
+mssql
+ 
+gis.terra.group\Caboverde
+port:51449
+username: sa
+password:Terr@cv2023!
+
+
+=============================
+
+GISDEV =
+     (DESCRIPTION =
+     (ADDRESS_LIST =
+     (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.92)(PORT = 1521))
+     )
+     (CONNECT_DATA =
+     (SERVICE_NAME = GISDEV)
+     (UR = A)
+     )
+     )
+
+Username: gisuat
+Password: gisuat12
+===========================================
+SOME NOTES
+
+
+
+
+===========================================
+
+
+server name : gisauth
+102.37.220.110\gisgeoserver
+Allahabad@60feet
+
+
+102.37.220.110
+
+https://medium.com/@awosolat/how-to-install-keycloak-17-on-windows-machine-b2830503751f#:~:text=How%20to%20Install%20KeyCloak%2017%20on%20Windows%20Machine,then%20open%20the%20Readme%20file%20with%20Note%20Pad
+
+http://localhost:8080/
+admin
+geoserverkey
+
+http://localhost:8090/
+admin
+geoservertomcat
+
+===========================================
+
+=============vital-terra==============================
+Windows server login 
+ 
+Server name: WIN-QGIS
+IP: 49.13.61.194
+Username: Amit
+Password: S!nH@2023
+
+
+----------------------------------
+New Geoserver Live
+----------------------------------
+https://gs.vital-terra.com:8443/geoserver/web/
+
+User Name : admin
+Password : nPV9dm2fxE6UqC5tr8jmVNxE
+----------------------------------
+
+New Geoserver Test
+----------------------------------
+https://gs.vital-terra.com:8443/geoserver_test/web
+
+User Name : admin
+Password : geoserver
+----------------------------------
+
+===========================================
+
+
+============Value Matrix Server==================
+Server Details: 10.1.15.141
+UserName: DWJHB\Administrator
+Password: Terr@2023%$#!
+
+
+http://10.1.15.141/EMMGV/User/Inbox.aspx
+http://10.1.15.141/EMMGV/User/TriggerGV.aspx?SOURCE=DIRECT&ID=597213&FORMID=1132&PID=1413
+
+username: Admin
+password : admin123pdw
+
+==============================
+
+=============TimeSheet===========
+https://c.timewatch.co.il/punch/punch.php
+Company Number: 9261
+Employee No.: 21
+Password: Ami8011#
+
+
+
+=================MDB server================
+209.203.44.202 
+10443 
+Delimitation 
+D3l!mitat1on@pp
+
+
+DB server: 192.168.6.139
+App Server: 192.168.6.170
+
+
+DMB\Delimitation
+D3l!mitat1on@pp
+
+
+
+
+
+=================================
+================MDB Server Terra==================
+
+ 
+Server Name: TERRA-MDB
+EXT IP 102.134.121.70
+IP: 10.1.15.113
+User: 10.1.15.113\Administrator
+Pw: Mdb@2023#
+ 
+SQL Server Instance: TERRA-MDB\MDB
+User: sa
+Pw: Mdb@2023$
+ 
+PostgreSQL
+User: postgres
+Pw: Mdb@2023$
+
+
+
+
+ 
+http://102.210.249.30/MDBAPP
+http://10.1.15.113/MDBAPP
+amit@terra.group
+Pass@123
+
+http://10.1.15.113:8080/ang_mapview/#/mapview?UID=9605f729-3da6-449c-b4da-912d6f031bb1&RID=Editor
+http://102.210.249.30:8080/ang_mapview/#/mapview?UID=9605f729-3da6-449c-b4da-912d6f031bb1&RID=Editor
+http://10.1.15.113:8080/GisMDB/web
+http://102.210.249.30:8080/GisMDB/web
+
+
+
+http://102.210.249.30:8080/GisMDB/MDBLayers/wms
+
+######################Backup###################
+CD C:\Program Files\PostgreSQL\16\bin
+
+pg_dump.exe -d MDB -U postgres -f C:/DB_BAckup/MDB_2.sql
+
+pg_restore -d MDB_Test -U postgres C:/DB_BAckup/MDB_2.sql
+
+psql -d MDB_Test -U postgres -f C:/DB_BAckup/MDB_2.sql
+
+#####################################################
+
+============================================
+VPN
+Username: Amit
+Password: S!nH@23%$
+
+================Wordpress_CIS_App=================================
+
+IP: 10.1.15.94
+User: root
+Pw: root@wp
+
+==================================================================
+
+
+
+====================Personal VM==============================================
+13.71.98.14
+13.71.98.14\quickgisserver
+quickgisserver
+Welcome@2023##
+
+==================================================================
+
+
+
+Hello bhai, hope you are well. 
+ 
+Please see login for the Geoserver. 
+ 
+geoserver-layers
+OS: Debian Linux
+RAM: 8GB
+vCPU: 4
+Type: cpx31
+Disk: 160GB
+Public IP Address: 188.245.108.86
+Private IP Address: 10.0.0.5
+Floating IP Address: 116.203.9.20
+Username: root
+Password: scrHTtEkhUqJFRqWfcFE123!
+Authentication: ssh key
+DNS Name: Layers.intertown.co.il
+Use: Geoserver Instance – Layers
+Geoserver URL: https://layers.intertown.co.il/opengis
+Geoserver Login: admin
+Geoserver Password: t3w@aY%x3#elakF*h&n5z3g2ZragVKtc4rCyaeiI
+ 
+GeoServer: Redirecting
+==================================================================
+ 
+ app1.terra.group

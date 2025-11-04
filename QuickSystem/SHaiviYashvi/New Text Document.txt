@@ -1,0 +1,61 @@
+Prescription 1 (Yashvi Sinha)
+Date: 22/03/25
+Patient: Yashvi Sinha
+Diagnosis: Myopia, Control Lenses
+
+Prescription:
+
+Right Eye (R):
+
+Sphere (SPH): -3.00
+
+Cylinder (CYL): -0.25
+
+Axis: 179°
+
+Visual Acuity (V/A): 6/6
+
+Left Eye (L):
+
+Sphere (SPH): -3.50
+
+Cylinder (CYL): -0.25
+
+Axis: 10°
+
+Visual Acuity (V/A): 6/6
+
+PD (Pupillary Distance): 60
+Near Add: (blank)
+
+============================================================================================
+
+Prescription 2 (Shambhavi Sinha)
+Date: 22/03/25
+Patient: Shambhavi Sinha
+Diagnosis: Myopia, Control Lenses
+
+Prescription:
+
+Right Eye (R):
+
+Sphere (SPH): -4.75
+
+Cylinder (CYL): -0.50
+
+Axis: 14°
+
+Visual Acuity (V/A): 6/6
+
+Left Eye (L):
+
+Sphere (SPH): -4.50
+
+Cylinder (CYL): -0.75
+
+Axis: 8°
+
+Visual Acuity (V/A): 6/6
+
+PD (Pupillary Distance): 59
+Near Add: (blank)
