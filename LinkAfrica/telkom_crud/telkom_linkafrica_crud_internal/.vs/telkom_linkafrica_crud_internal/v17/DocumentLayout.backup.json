@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|c:\\project\\telkom_crud\\telkom_linkafrica_crud_internal\\models\\csgbeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|solutionrelative:models\\csgbeans.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|c:\\project\\telkom_crud\\telkom_linkafrica_crud_internal\\controllers\\vectorspatialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|solutionrelative:controllers\\vectorspatialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|c:\\project\\telkom_crud\\telkom_linkafrica_crud_internal\\controllers\\appscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|solutionrelative:controllers\\appscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|c:\\project\\telkom_crud\\telkom_linkafrica_crud_internal\\controllers\\lmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|solutionrelative:controllers\\lmcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|c:\\project\\telkom_crud\\telkom_linkafrica_crud_internal\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F83F6C30-F26C-45F5-824B-2F1BB6EC9315}|Crud.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CSGBeans.cs",
+              "DocumentMoniker": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Models\\CSGBeans.cs",
+              "RelativeDocumentMoniker": "Models\\CSGBeans.cs",
+              "ToolTip": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Models\\CSGBeans.cs",
+              "RelativeToolTip": "Models\\CSGBeans.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAywLEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T18:48:37.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VectorSpatialController.cs",
+              "DocumentMoniker": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\VectorSpatialController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VectorSpatialController.cs",
+              "ToolTip": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\VectorSpatialController.cs",
+              "RelativeToolTip": "Controllers\\VectorSpatialController.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAuwPkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T10:03:08.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppsController.cs",
+              "DocumentMoniker": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\AppsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AppsController.cs",
+              "ToolTip": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\AppsController.cs",
+              "RelativeToolTip": "Controllers\\AppsController.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T19:56:22.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LMController.cs",
+              "DocumentMoniker": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\LMController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LMController.cs",
+              "ToolTip": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\Controllers\\LMController.cs",
+              "RelativeToolTip": "Controllers\\LMController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T18:14:01.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Project\\telkom_crud\\telkom_linkafrica_crud_internal\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-28T17:54:16.148Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,870 @@
+[
+  {
+    "ContainingType": "Crud.Controllers.AppsController",
+    "Method": "Get",
+    "RelativePath": "Apps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.AppsController",
+    "Method": "Post",
+    "RelativePath": "Apps",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BM",
+        "Type": "Crud.Models.ApiKeyInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.AppsController",
+    "Method": "Get",
+    "RelativePath": "Apps/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.AppsController",
+    "Method": "GetFeasibility",
+    "RelativePath": "Apps/getfeasibility",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "latitude_y",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "longitude_x",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "bandwidth",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "term",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "products",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "all_products",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "use_max_distance",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "include_pop",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.AppsController",
+    "Method": "SendApprovalEmailToUser",
+    "RelativePath": "Apps/sendapprovalemailtouser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.BookmarkController",
+    "Method": "Get",
+    "RelativePath": "Bookmark",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.BookmarkController",
+    "Method": "Post",
+    "RelativePath": "Bookmark",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BM",
+        "Type": "Crud.Models.BookmarkInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.BookmarkController",
+    "Method": "Delete",
+    "RelativePath": "Bookmark/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.BookmarkController",
+    "Method": "Get",
+    "RelativePath": "Bookmark/{UID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.CaptureDataController",
+    "Method": "Post",
+    "RelativePath": "CaptureData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IIB",
+        "Type": "Crud.Models.IdentifyInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.ConfigController",
+    "Method": "Get",
+    "RelativePath": "Config",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.ExportCSVController",
+    "Method": "Get",
+    "RelativePath": "ExportCSV",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "Get",
+    "RelativePath": "Geocoding",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetAddress",
+    "RelativePath": "Geocoding/GetAddress",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coordinates",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetAddressData",
+    "RelativePath": "Geocoding/GetAddressData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_Address",
+        "Type": "Crud.Models.AddressSearch",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetCoordinates",
+    "RelativePath": "Geocoding/GetCoordinates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "Crud.Models.AddressSearch",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetCoordinates2",
+    "RelativePath": "Geocoding/GetCoordinates2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "Crud.Models.AddressSearch",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetRoute",
+    "RelativePath": "Geocoding/GetRoute",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coordinates",
+        "Type": "Crud.Models.RoutInputCoord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.GeocodingController",
+    "Method": "GetRouteBothSide",
+    "RelativePath": "Geocoding/GetRouteBothSide",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "coordinates",
+        "Type": "Crud.Models.RoutInputCoord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.IdentifyController",
+    "Method": "Post",
+    "RelativePath": "Identify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IIB",
+        "Type": "Crud.Models.IdentifyInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LMController",
+    "Method": "Get",
+    "RelativePath": "LM",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LMController",
+    "Method": "Post",
+    "RelativePath": "LM",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "GB",
+        "Type": "Crud.Models.GroupBeans",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LMController",
+    "Method": "Get",
+    "RelativePath": "LM/{EXT}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EXT",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LMController",
+    "Method": "GetAllWMS",
+    "RelativePath": "LM/GetAllWMS/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LMController",
+    "Method": "GetGroup",
+    "RelativePath": "LM/GetGroup/{IDs}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IDs",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "Get",
+    "RelativePath": "Location",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "Get",
+    "RelativePath": "Location/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetAR",
+    "RelativePath": "Location/GetAR/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetDM",
+    "RelativePath": "Location/GetDM/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetLM",
+    "RelativePath": "Location/GetLM/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetLocationByID",
+    "RelativePath": "Location/GetLocationByID/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetLocationsID",
+    "RelativePath": "Location/GetLocationsID/{IDs}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IDs",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetRegionByAR",
+    "RelativePath": "Location/GetRegionByAR/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetRegionByDMMetro",
+    "RelativePath": "Location/GetRegionByDMMetro/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetRegionByLM",
+    "RelativePath": "Location/GetRegionByLM/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationController",
+    "Method": "GetTownByID",
+    "RelativePath": "Location/GetTownByID/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationSpatialQueryController",
+    "Method": "Get",
+    "RelativePath": "LocationSpatialQuery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LocationSpatialQueryController",
+    "Method": "Post",
+    "RelativePath": "LocationSpatialQuery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Param",
+        "Type": "Crud.Models.LOCATION_ARR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.LPIDataController",
+    "Method": "Get",
+    "RelativePath": "LPIData/{LPI}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LPI",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.PropertySelectorController",
+    "Method": "Get",
+    "RelativePath": "PropertySelector/{XY}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "XY",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.SearchController",
+    "Method": "Get",
+    "RelativePath": "Search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.SearchController",
+    "Method": "Post",
+    "RelativePath": "Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SI",
+        "Type": "Crud.Models.SearchInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.SpatialQueryController",
+    "Method": "Get",
+    "RelativePath": "SpatialQuery",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.SpatialQueryController",
+    "Method": "Post",
+    "RelativePath": "SpatialQuery",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "LPIs",
+        "Type": "Crud.Models.LPIS_ARR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.StreetController",
+    "Method": "Post",
+    "RelativePath": "Street",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SB",
+        "Type": "Crud.Models.StreetLineCenterInput",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.StreetController",
+    "Method": "Get",
+    "RelativePath": "Street/{StreetObjectID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "StreetObjectID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.UserController",
+    "Method": "Get",
+    "RelativePath": "User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.UserController",
+    "Method": "Post",
+    "RelativePath": "User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "use",
+        "Type": "Crud.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.UserController",
+    "Method": "Put",
+    "RelativePath": "User",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "use",
+        "Type": "Crud.Models.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.UserController",
+    "Method": "Get",
+    "RelativePath": "User/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.VectorSpatialController",
+    "Method": "GetAddressData",
+    "RelativePath": "VectorSpatial/GetAddressData",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_Address",
+        "Type": "Crud.Models.AddressSearch",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.VectorSpatialController",
+    "Method": "GetPostGressTool",
+    "RelativePath": "VectorSpatial/GetPostGressTool",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.VectorSpatialController",
+    "Method": "GetSiteDetail",
+    "RelativePath": "VectorSpatial/GetSiteDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_GoogleCoord",
+        "Type": "Crud.Models.GoogleCoord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.VectorSpatialController",
+    "Method": "GetSiteDetailGreen",
+    "RelativePath": "VectorSpatial/GetSiteDetailGreen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_GoogleCoord",
+        "Type": "Crud.Models.GoogleCoord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Crud.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Crud.WeatherForecast, Crud, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
