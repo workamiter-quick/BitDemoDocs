@@ -1,0 +1,19 @@
+http://41.21.136.33:80/DmrGISApplication/BuffaloDMR/DMRMultipleCommodity.aspx?CommodityCode=C&ProvinceCode=043E915F71C34644A1EC9821F6D91FFD&ApplicationType=prospecting_right&RPL=False&BurrowPits=NO&OffShore=NO&TempAppID=ATATA
+
+http://41.21.136.33/DmrGISApplication/DMR4/DMRVerification/DMRVerifier.aspx?CommodityCode=C&TempAppID=ATATA
+http://41.21.136.33/DmrGISApplication/VerifyLand/DMRVERIFYLand.aspx?TempAppID=ATATA&CommodityCode=C
+
+
+http://196.26.162.36:8080/geoserver/web/
+
+
+ogr2ogr -f "KML" "E:\AOI1.kml" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008;database=DMR_MINERAL;uid=sa;pwd=java;" -sql "select AOI.AppID, AOI.Boundary.STAsBinary(), Application.XMLData.value('(/App/Province)[1]', 'varchar(220)') as province, Application.XMLData.value('(/App/FileRefNumber)[1]', 'varchar(220)') as FileRefNumber from AOI inner join Application on AOI.AppID = Application.AppID order by AOI.AppID desc" -overwrite
+
+
+ogr2ogr -f "KML" "C:\AmitShareFolder\AOIKML\181631.kml" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008;database=DMR_MINERAL;uid=sa;pwd=java;" -sql "select UniqueID, AppID, Boundary.STAsBinary() from AOI where AppID = 181631" -overwrite
+
+
+
+select * from DMR_Group_ListMapping
+select * from ListItem
+select * from ListMaster

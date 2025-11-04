@@ -1,0 +1,89 @@
+https://www.youtube.com/watch?v=TdqZav6_2EQ
+
+
+https://github.com/uvsoftgroup/angular-openlayers/tree/master/src/app/components/map
+
+
+https://github.com/uvsoftgroup/angular-openlayers/tree/master/src/app/components/ol-map
+
+
+ng build --base-href=/csgviewer
+
+ng build --base-href=/ang_mapview/
+ng build --base-href=/ang_propertyselector/
+
+ng build --base-href=/ang_mapview/
+
+
+http://localhost:90/LPIData/N0FU00850001072500000
+
+http://dwapps.co.za:90/LPIData/N0FU00850001072500000
+
+http://dwapps.co.za:90/weatherforecast
+
+http://localhost:90/weatherforecast
+
+
+http://10.1.15.220:8088/ang_mapview/Home.html
+http://dwapps.co.za:8088/ang_mapview/#/mapview?DraftID=342&StepID=282
+http://10.1.15.220:90/LPIData/N0FU00850001072500000
+
+http://10.1.15.220:8088/ang_propertyselector/
+
+http://10.1.15.220:8088/ang_mapview/?id=1
+
+
+http://41.189.71.139:8088/ang_mapview/?id=1
+41.189.71.139
+
+http://41.189.71.139:8088/ang_propertyselector/
+http://41.189.71.139:90/LPIData/N0FU00850001072500000
+
+
+
+-------------- Angular Openlayer Project setup---
+https://www.youtube.com/watch?v=csuEdZZebFs
+https://www.youtube.com/watch?v=Nehk4tBxD4o
+
+cd C:\DataWorld\Projects\CSG_Reservation\angcsg
+ng new prj-csg
+npm install ol
+npm install --save @types/ol@6.5
+ng add @ng-bootstrap/ng-bootstrap
+npm install bootstrap jquery popper.js --save
+
+ng build --base-href=/csg_mapview/
+---------------------------
+ ng generate component feature-capture
+
+http://10.1.15.220:8088/csg_mapview/
+
+
+http://dwapps.co.za:8088/csg_mapview/
+
+
+Amit
+AmitS
+NewPass@1234
+
+http://localhost/CSGService/DataUpdate.aspx
+http://10.10.20.210/CSGService/CSG_Help/lighten/index.html
+http://10.10.20.210/CSGService/DataUpdate.aspx
+http://10.10.20.210/CSGService/CsgGIS.asmx
+http://10.10.20.210/CSGGIS/InfoMap.aspx
+http://10.10.20.210/CSGGIS/stat/MapInbox.html
+http://10.10.20.210/CSGGIS/stat/MapStat.html
+http://10.10.20.210/CSGGIS/CSGTIF
+
+
+http://10.10.20.210/CSGGIS/InfoMap.aspx?UserID=1540&uam=http://10.10.20.201:8089/api/v1/&wt=http://10.10.20.201:8091/
+http://10.10.20.210/CSGGIS/EDITING/DRDLR/Mapviewer.html
+http://10.10.20.210/CSGGIS/Wmsconfig3.aspx
+
+
+20.87.25.31\localamitdev
+amit@shweta@6
+dataworld@1980
+
+
+apps.splum.dalrrd.gov.za

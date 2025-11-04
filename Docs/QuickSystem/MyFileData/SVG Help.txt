@@ -1,0 +1,47 @@
+select
+	  ID as [@id],
+	  '#99CC33' as [@fill],
+	  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Location.STEnvelope().STAsText(),
+	  'POLYGON ((', 'M'),
+	  ')), ((', ' Z M'),
+	  '), (', ' Z M'),
+	  ', ', ' L'),
+	  '))', ' Z') as [@d]
+from
+	  PropertyRegistration
+where
+	  ID = 1
+	  
+
+select	
+	CAST(-AVG(Location.STEnvelope().STCentroid().STX) as DECIMAL(19,10)),
+	CAST(-AVG(Location.STEnvelope().STCentroid().STY) as DECIMAL(19,10))
+from
+	PropertyRegistration
+where
+	ID = 1
+	  
+select Location.STBuffer(0.11).STEnvelope().STAsText() from PropertyRegistration where ID = 1
+select Location.STBuffer(0.00001).STEnvelope().STPointN(1).STX, Location.STEnvelope().STBuffer(0.00001).STPointN(1).STY from PropertyRegistration where ID = 1
+union all
+select Location.STBuffer(0.00001).STEnvelope().STPointN(3).STX, Location.STEnvelope().STBuffer(0.00001).STPointN(3).STY from PropertyRegistration where ID = 1
+
+
+DECLARE @g1 geometry
+DECLARE @g2 geometry
+DECLARE @g3 geometry
+select @g1 = Location from PropertyRegistration where ID = 147500
+select @g2 = Location from PropertyRegistration where ID = 147600
+select @g3 = @g1.STUnion(@g2)
+
+select @g3.STAsText(), @g3.STEnvelope().STPointN(1).STAsText()
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="600" height="600" viewBox="26 32 8 8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<g stroke="blue" fill-rule="evenodd">
+	<polygon points="27.86967258004006,32.976612506987294 27.869917592033744,32.9762735220138 27.869686565012671,32.976154555013636 27.869440566049889,32.976493536989437 27.86967258004006,32.976612506987294"  />
+	</g>
+</svg>

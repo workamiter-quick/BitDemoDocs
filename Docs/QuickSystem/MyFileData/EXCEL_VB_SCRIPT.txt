@@ -1,0 +1,61 @@
+ActiveSheet.Shapes("Graphic 14").Fill.ForeColor.RGB = RGB(0, 0, 255)
+
+
+If ActiveSheet.Range("c2").Value = "YES" Then
+ActiveSheet.Shapes("Graphic 14").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c2").Value = "NO" Then
+ActiveSheet.Shapes("Graphic 14").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+If ActiveSheet.Range("c2").Value = "yes" Then
+ActiveSheet.Shapes("Graphic 14").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c2").Value = "no" Then
+ActiveSheet.Shapes("Graphic 14").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+ActiveSheet.Shapes("Graphic 16").Fill.ForeColor.RGB = RGB(0, 0, 255)
+
+
+If ActiveSheet.Range("c3").Value = "YES" Then
+ActiveSheet.Shapes("Graphic 16").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c3").Value = "NO" Then
+ActiveSheet.Shapes("Graphic 16").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+If ActiveSheet.Range("c3").Value = "yes" Then
+ActiveSheet.Shapes("Graphic 16").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c3").Value = "no" Then
+ActiveSheet.Shapes("Graphic 16").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+
+ActiveSheet.Shapes("Graphic 18").Fill.ForeColor.RGB = RGB(0, 0, 255)
+
+
+If ActiveSheet.Range("c4").Value = "YES" Then
+ActiveSheet.Shapes("Graphic 18").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c4").Value = "NO" Then
+ActiveSheet.Shapes("Graphic 18").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+If ActiveSheet.Range("c4").Value = "yes" Then
+ActiveSheet.Shapes("Graphic 18").Fill.ForeColor.RGB = RGB(255, 0, 0)
+End If
+
+If ActiveSheet.Range("c4").Value = "no" Then
+ActiveSheet.Shapes("Graphic 18").Fill.ForeColor.RGB = RGB(0, 255, 0)
+End If
+
+
+
+

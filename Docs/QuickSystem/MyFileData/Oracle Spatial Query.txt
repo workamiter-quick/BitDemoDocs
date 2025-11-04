@@ -1,0 +1,23 @@
+select * from user_sdo_geom_metadata;
+select * from all_sdo_geom_metadata;
+
+update user_sdo_geom_metadata
+set srid=4326 where table_name='PROVINCETEMP' and column_name='ORA_GEOMETRY';
+
+select * from PROVINCETEMP;
+
+SELECT SDO_CS.MAKE_2D(c.ORA_GEOMETRY).Get_WKT()
+FROM PROVINCETEMP c WHERE c.OGR_FID = 1;
+
+
+SELECT SDO_UTIL.from_wktgeometry('POINT(27.44398108300004 -32.83144327399998)') as d FROM DUAL;
+SELECT SDO_UTIL.from_wktgeometry('POINT(27.44398108300004 -32.83144327399998)').Get_WKT() as d FROM DUAL;
+
+
+
+select * from (select p.ORA_GEOMETRY,L.d,
+sdo_anyinteract(p.ORA_GEOMETRY,L.d) as om
+from PROVINCETEMP p, (SELECT SDO_UTIL.from_wktgeometry('POINT(27.44398108300004 -32.83144327399998)') as d FROM DUAL)  L) jj
+where jj.om = 'TRUE'
+where sdo_anyinteract(p.ORA_GEOMETRY,L.d)='FALSE'; 
+  

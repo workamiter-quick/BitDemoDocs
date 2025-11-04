@@ -1,0 +1,47 @@
+https://dev.virtualearth.net/REST/V1/Imagery/Map/Aerial/17.349,-32,153,19.365,-30.144?mapSize=600,300&format=png&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+
+
+
+http://dev.virtualearth.net/REST/v1/Imagery/Map/imagerySet?mapArea=-27.974,26.111,-23.972,30.114&mapSize=350,350&mapLayer=TrafficFlow&format=jpg&kebingKey
+
+https://dev.virtualearth.net/REST/V1/Imagery/Map/Aerial/-25.9736000000,28.1129000000/16?mapSize=600,300&format=png&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+https://dev.virtualearth.net/REST/V1/Imagery/Map/Aerial/-28.4796009062802,24.6715062868331/16?mapSize=600,300&format=png&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+
+http://dev.virtualearth.net//REST/v1/Imagery/Map/AerialWithLabels?mapArea=17.946789586870125,-76.86079673253036,18.07139741296038,-76.70156443780112&mapSize=1500,1500&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+https://dev.virtualearth.net/REST/V1/Imagery/Map/AerialWithLabels?mapArea=-27.9746267097952,26.1110827277558,-23.9724260611062,30.1143110414405&mapSize=1400,1400&zoomLevel=18&format=png&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+https://dev.virtualearth.net/REST/V1/Imagery/Map/AerialWithLabels/mapArea=-27.974,26.111,-23.972,30.114?mapSize=200,200&format=png&key=ApTJzdkyN1DdFKkRAE6QIDtzihNaf6IWJsT-nQ_2eMoO4PN__0Tzhl2-WgJtXFSp
+45.219,-122.325,47.610,-122.107
+
+18.348,-31.153,18.365,-31.144
+45.219,-122.325,47.610,-122.107
+
+
+
+Lat = Y Long = X
+
+
+
+MinY	MinX	MaxX	MaxX
+-36.83,14.45,-20.12,34.94
+
+
+
+South Latitude, West Longitude, North Latitude, East Longitude
+
+Example: 45.219,-122.325,47.610,-122.107
+
+
+-25.974572, 28.107758
+
+
+https://imagery.esri-southafrica.com/server/rest/services/NGI/RSA_NGI_AERIAL/ImageServer/exportImage?f=image&bbox=2619479.0467926846%2C-3236623.0098307976%2C2619916.768212534%2C-3236273.071560631&imageSR=102100&bboxSR=102100&size=733%2C586
+
+view.ui.add(homeBtn, "top-left");
+        var layer = null,
+        layerUrl = "https://imagery.esri-southafrica.com/server/rest/services/NGI/RSA_NGI_AERIAL/ImageServer",
+        layer = new ImageryLayer({
+            url: "https://imagery.esri-southafrica.com/server/rest/services/NGI/RSA_NGI_AERIAL/ImageServer",
+            format: "jpgpng" // server exports in either jpg or png format
+          });
+https://imagery.esri-southafrica.com/server/rest/services/NGI/RSA_NGI_AERIAL/ImageServer
+http://sampleserver1.arcgisonline.com/arcgis/services/Specialty/ESRI_StateCityHighway_USA/MapServer/WMSServer

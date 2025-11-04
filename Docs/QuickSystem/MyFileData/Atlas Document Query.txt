@@ -1,0 +1,577 @@
+For Munic,  IndicatorID = 1, Indicator = Total Population   (Male+Female)
+
+select temp.MunicID, temp.Val, jd.Boundary, jd.Caption  from
+(select s.MunicID, sum(Value) as Val from SAL_Data sal inner join SAL s on s.Code= SAL.Code and sal.IndicatorID=1 group by MunicId) temp
+inner join JurisdictionList jd on jd.JurisdictionId = temp.MunicID order by temp.Val
+
+ 
+
+7004.0000,5784809.0000
+
+< 10000
+10000 to 100000 1L
+100000 to 3000000 3M
+> 3000000 3M
+######################################################################################
+For Province,  IndicatorID = 1, Indicator = Total Population   (Male+Female)
+
+select temp.ProvinceID, temp.Val, jd.Boundary, jd.Caption  from
+(select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join SAL s on s.Code= SAL.Code and sal.IndicatorID=1 group by ProvinceID) temp
+inner join JurisdictionList jd on jd.JurisdictionId = temp.ProvinceID order by temp.Val
+
+1145525.0000, 12267997.0000
+
+< 2000000 2M
+2000001 2M to 4000000 4M
+4000001 4M to 7000000 7M
+> 7000000 7M
+
+
+#################################################################################
+USE [AtlasDB_2]
+GO
+
+/****** Object:  Table [dbo].[_dummyTable]    Script Date: 11/25/2015 15:59:53 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[_dummyTable](
+	[ProvinceID] [int] NULL,
+	[TotalPopulation] [varchar](100) NULL,
+	[BlackAfrican] [varchar](100) NULL,
+	[Coloured] [varchar](100) NULL,
+	[IndianorAsian] [varchar](100) NULL,
+	[White] [varchar](100) NULL,
+	[Other] [varchar](100) NULL,
+	[Boundary] [geometry] NULL,
+	[Caption] [varchar](100) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+INSERT INTO [AtlasDB_2].[dbo].[_dummyTable]
+           ([ProvinceID]
+           ,[TotalPopulation]
+           ,[Boundary]
+           ,[Caption])
+           
+          select temp.ProvinceID, temp.Val as TotalPopulation, jd.Boundary, jd.Caption  from
+(select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=1 group by ProvinceID) temp
+inner join JurisdictionList jd on jd.JurisdictionId = temp.ProvinceID order by temp.Val
+
+update _dummyTable
+set BlackAfrican = Val
+ from(
+select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=4 
+group by ProvinceID) as temp 
+inner join _dummyTable d on temp.ProvinceID = d.ProvinceID
+
+
+update _dummyTable
+set IndianorAsian = Val
+ from(
+select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=6 
+group by ProvinceID) as temp 
+inner join _dummyTable d on temp.ProvinceID = d.ProvinceID
+
+
+update _dummyTable
+set Coloured = Val
+ from(
+select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=5 
+group by ProvinceID) as temp 
+inner join _dummyTable d on temp.ProvinceID = d.ProvinceID
+
+update _dummyTable
+set White = Val
+ from(
+select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=7 
+group by ProvinceID) as temp 
+inner join _dummyTable d on temp.ProvinceID = d.ProvinceID
+
+update _dummyTable
+set Other = Val
+ from(
+select s.ProvinceID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=8 
+group by ProvinceID) as temp 
+inner join _dummyTable d on temp.ProvinceID = d.ProvinceID
+
+
+
+INSERT INTO [AtlasDB_2].[dbo].[_dummyTable]
+           ([ProvinceID]
+           ,[TotalPopulation]
+           ,[Boundary]
+           ,[Caption])
+           
+select temp.MunicID, temp.Val, jd.Boundary, jd.Caption  from
+(select s.MunicID, sum(Value) as Val from SAL_Data sal inner join SAL s on s.Code= SAL.Code and sal.IndicatorID=1 group by MunicId) temp
+inner join JurisdictionList jd on jd.JurisdictionId = temp.MunicID order by temp.Val
+
+update _dummyTable
+set BlackAfrican = Val
+ from(
+select s.MunicID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=4 
+group by MunicID) as temp 
+inner join _dummyTable d on temp.MunicID = d.ProvinceID
+
+update _dummyTable
+set Coloured = Val
+ from(
+select s.MunicID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=5 
+group by MunicID) as temp 
+inner join _dummyTable d on temp.MunicID = d.ProvinceID
+
+update _dummyTable
+set IndianorAsian = Val
+ from(
+select s.MunicID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=6 
+group by MunicID) as temp 
+inner join _dummyTable d on temp.MunicID = d.ProvinceID
+
+update _dummyTable
+set White = Val
+ from(
+select s.MunicID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=7 
+group by MunicID) as temp 
+inner join _dummyTable d on temp.MunicID = d.ProvinceID
+
+update _dummyTable
+set Other = Val
+ from(
+select s.MunicID, sum(Value) as Val from SAL_Data sal inner join 
+SAL s on s.Code= SAL.Code and sal.IndicatorID=8 
+group by MunicID) as temp 
+inner join _dummyTable d on temp.MunicID = d.ProvinceID
+
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\LM.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2;uid=sa;pwd=java" -sql "SELECT ProvinceID,CAST(TotalPopulation AS DECIMAL(18, 2)) as TotalPopulation,CAST(BlackAfrican AS DECIMAL(18, 2)) as BlackAfrican,CAST(Coloured AS DECIMAL(18, 2)) as Coloured,CAST(IndianorAsian AS DECIMAL(18, 2)) as IndianorAsian,CAST(White AS DECIMAL(18, 2)) as White, CAST(Other AS DECIMAL(18, 2)) as Other,Boundary.STAsBinary() as Boundary,Caption,Category  FROM _dummyTable where Category = 'M'"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Province.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2;uid=sa;pwd=java" -sql "SELECT ProvinceID,CAST(TotalPopulation AS DECIMAL(18, 2)) as TotalPopulation,CAST(BlackAfrican AS DECIMAL(18, 2)) as BlackAfrican,CAST(Coloured AS DECIMAL(18, 2)) as Coloured,CAST(IndianorAsian AS DECIMAL(18, 2)) as IndianorAsian,CAST(White AS DECIMAL(18, 2)) as White, CAST(Other AS DECIMAL(18, 2)) as Other,Boundary.STAsBinary() as Boundary,Caption,Category  FROM _dummyTable where Category = 'P'"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\ProvinceAndLM.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2;uid=sa;pwd=java" -sql "SELECT ProvinceID,CAST(TotalPopulation AS DECIMAL(18, 2)) as TotalPopulation,CAST(BlackAfrican AS DECIMAL(18, 2)) as BlackAfrican,CAST(Coloured AS DECIMAL(18, 2)) as Coloured,CAST(IndianorAsian AS DECIMAL(18, 2)) as IndianorAsian,CAST(White AS DECIMAL(18, 2)) as White, CAST(Other AS DECIMAL(18, 2)) as Other,Boundary.STAsBinary() as Boundary,Caption,Category  FROM _dummyTable"
+
+
+select 'Province['+ convert(varchar(10), ROW_NUMBER() OVER(ORDER BY ProvinceID)) + '] = $'+convert(varchar(10), ProvinceID)+'|'+Caption+'|'+RTRIM(LTRIM(Category))+'|'+Boundary.Reduce(0.01).STAsText()+'$' from _dummyTable where Category = 'P' 
+Union all
+select 'Munic['+ convert(varchar(10), ROW_NUMBER() OVER(ORDER BY ProvinceID)) + '] = $'+convert(varchar(10), ProvinceID)+'|'+Caption+'|'+RTRIM(LTRIM(Category))+'|'+Boundary.Reduce(0.01).STAsText()+'$' from _dummyTable where Category = 'M' 
+Union all
+select 'Ward['+ convert(varchar(10), ROW_NUMBER() OVER(ORDER BY ProvinceID)) + '] = $'+convert(varchar(10), ProvinceID)+'|'+Caption+'|'+RTRIM(LTRIM(Category))+'|'+Boundary.Reduce(0.01).STAsText()+'$' from _dummyTable where Category = 'W' 
+
+
+select 'IndicatorArr['+ convert(varchar(10), ROW_NUMBER() OVER(ORDER BY IndicatorID)) + '] = $'+convert(varchar(10), IndicatorID)+'|'+Caption+'$@' from IndicatorList where ParentId is not null 
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\ATM.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 2"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Bank.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 1"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\PrimarySchool.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 3"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SecondarySchool.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 4"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Creche.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 5"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\FET_ABET.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 6"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Substation.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 7"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\MunicipalOffice.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 8"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\PoliceStation.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 9"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\PostOffice.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 10"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\FireStation.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 11"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Clinics.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 13"
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\AmbulanceService.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 14"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Amenities.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 22"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Cemetery.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 20"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\CommunityHall.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 18"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\LibraryorMuseum.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 17"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\ParksandRecreation.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 23"
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\PensionPayPoint.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 16"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\PublicPlaces.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 24"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SocialGrantPayPoint.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 19"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Sportsfacility.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 21"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\ThusongCentres.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 15"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\RoadHead.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 26"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\TaxiRank.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 25"
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Dam_Pool_Standing Water.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 32"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Borehole_welll.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 31"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\FlowingRiver_Stream.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 33"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\Piped.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 35"
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\RainwaterTank.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 36"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SanitationServices.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 27"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SewageTreatmentPlant.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId =29"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SolidWasteDisposal.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 28"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\StreetTap.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 37"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\WaterSupplySource.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select POIListId as ID, CentrePoint.STAsBinary() as CentrePoint from POIList where POITypeId = 30"
+
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\HDI.shp" "MSSQL:server=(local); database=AtlasDB_21;uid=sa;pwd=java" -sql "select sd.Code, sd.Value, s.CentrePoint.STAsBinary() as CentrePoint from SAL_Data sd inner join SAL s on sd.Code = s.Code where sd.indicatorID = 29 and sd.timelineid = 5 order by sd.Value"
+
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SAL_HighIncomeAreas.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2_Staging;uid=sa;pwd=java" -sql "Select a.Code, b.Boundary.STAsBinary() as geom, a.Value from AtlasDB_2_Staging.dbo._shpIncomeData a inner join BelaBela_Spatial.dbo.SmallPalcePolygon b on a.code = b.[SAL_CODE] where a.IndicatorID=28"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SAL_LowIncomeAreas.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2_Staging;uid=sa;pwd=java" -sql "Select a.Code, b.Boundary.STAsBinary() as geom, a.Value from AtlasDB_2_Staging.dbo._shpIncomeData a   inner join BelaBela_Spatial.dbo.SmallPalcePolygon b   on a.code = b.[SAL_CODE] where IndicatorID=28 and Value>0"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\SAL_HDI.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2_Staging;uid=sa;pwd=java" -sql "Select a.Code, b.Boundary.STAsBinary() as geom, a.Value from AtlasDB_2_Staging.dbo._shpHDI a inner join BelaBela_Spatial.dbo.SmallPalcePolygon b on a.code = b.[SAL_CODE]"
+ogr2ogr -f "ESRI Shapefile" "H:\LiveProject\Atlas-1\ShapeFiles\TempSAL_RacialMix.shp" "MSSQL:server=DWJHBAPPSERVER\SQLSERVER2008; database=AtlasDB_2;uid=sa;pwd=java" -sql "Select a.Code, b.Boundary.STAsBinary() as geom, a.BlackAfrican,a.Coloured,a.[Indian or Asian] as IndianorAsian, a.White,a.Other,a.Predominance   from AtlasDB_2.dbo.Temp_RacialMix_2011 a inner join BelaBela_Spatial.dbo.SmallPalcePolygon b on a.code = b.[SAL_CODE]"
+
+
+
+select Boundary.STEnvelope().STPointN(1).STX,
+Boundary.STEnvelope().STPointN(1).STY,
+Boundary.STEnvelope().STPointN(3).STX,
+Boundary.STEnvelope().STPointN(3).STY
+
+from dbo.JurisdictionList where Code = 'EC'
+
+
+declare @MDB varchar(100)
+set @MDB = 'EC,GT'
+
+declare @FirstMDB varchar(100)
+DECLARE @RecCount INT;
+DECLARE @site_value INT;
+DECLARE @FGeom Geometry;
+SET @site_value = 1;
+select @FirstMDB=Item FROM [AtlasDB_2].[dbo].[DelimitedSplit8K] (@MDB,',') where ItemNumber = 1
+SELECT @RecCount = count(*) FROM [AtlasDB_2].[dbo].[DelimitedSplit8K] (@MDB,',')
+select  @FGeom= Boundary.STEnvelope() from dbo.JurisdictionList where Code = 'EC'
+--select @RecCount,@FirstMDB,@FGeom
+WHILE @site_value <= @RecCount
+BEGIN
+	select @FirstMDB=Item FROM [AtlasDB_2].[dbo].[DelimitedSplit8K] (@MDB,',') where ItemNumber = @site_value
+	select  @FGeom= @FGeom.STUnion(Boundary.STEnvelope()) from dbo.JurisdictionList where Code = @FirstMDB
+	set @site_value = @site_value +1
+End
+
+select @FGeom
+
+
+select 'Ward['+ convert(varchar(10), ROW_NUMBER() OVER(ORDER BY JurisdictionID)) + '] = $'+convert(varchar(10), JurisdictionID)+'|'+Code+'|'+RTRIM(LTRIM(Caption))+'|'+convert(varchar(10), ParentJurisdictionId)+'|'+Boundary.Reduce(0.005).STAsText()+'$' from JurisdictionList where Category = 'W' or Category = 'M'
+
+
+select '<GEOM key=$'+convert(varchar(10), JurisdictionID)+'|'+Code+'|'+RTRIM(LTRIM(Caption))+'|'+convert(varchar(10), ParentJurisdictionId)+'|'+Boundary.Reduce(0.001).STAsText()+'$ ></GEOM>' from JurisdictionList where Category = 'W' union all
+select '<GEOM key=$'+convert(varchar(10), JurisdictionID)+'|'+Code+'|'+RTRIM(LTRIM(Caption))+'|'+convert(varchar(10), ParentJurisdictionId)+'|'+Boundary.Reduce(0.0001).STAsText()+'$ ></GEOM>' from JurisdictionList where Category = 'M' union all
+select '<GEOM key=$'+convert(varchar(10), JurisdictionID)+'|'+Code+'|'+RTRIM(LTRIM(Caption))+'|'+convert(varchar(10), ParentJurisdictionId)+'|'+Boundary.Reduce(0.0001).STAsText()+'$ ></GEOM>' from JurisdictionList where Category = 'L'
+
+
+WILLY
+ogr2ogr -f "ESRI Shapefile" "H:\Atlas-Shp\LM_And_Metro.shp" "MSSQL:server=(local); database=AtlasDB_2;uid=sa;pwd=java" -sql "select JurisdictionID as jid, Code, Caption, ParentJurisdictionId as pjid,Boundary.STAsBinary() as geom from JurisdictionList where JurisdictionID = 11 union all select JurisdictionID as jid, Code, Caption, ParentJurisdictionId as pjid, Boundary.Reduce(0.0001).STAsBinary() as geom from JurisdictionList where Category = 'L' or Category = 'M' and JurisdictionID != 11"
+
+ogr2ogr -f "ESRI Shapefile" "H:\Atlas-Shp\Ward.shp" "MSSQL:server=(local); database=AtlasDB_2;uid=sa;pwd=java" -sql "select JurisdictionID as jid, Code, Caption, ParentJurisdictionId as pjid, Boundary.Reduce(0.0001).STAsBinary() as geom from JurisdictionList where Category = 'W'"
+
+ogr2ogr -f "ESRI Shapefile" "H:\Atlas-Shp\Province.shp" "MSSQL:server=(local); database=AtlasDB_2;uid=sa;pwd=java" -sql "select JurisdictionID as jid, Code, Caption, ParentJurisdictionId as pjid, Boundary.Reduce(0.0001).STAsBinary() as geom from JurisdictionList where Category = 'P'"
+
+
+UserName: dataworldmsn@hotmail.com
+
+Password: fi$ht@nkking$
+
+
+select a.IndicatorID, COUNT(b.ParentId) from IndicatorList a inner join IndicatorList b
+on a.IndicatorID = b.ParentId
+group by a.IndicatorID
+
+
+################################################
+
+
+INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+           ([Code]
+           ,[Boundary]
+           ,[CenterPoint]
+           ,[Area]
+           ,[TimeId]
+           ,[Category])
+           
+    select Code, Boundary, Boundary.STCentroid(), 0.0, 1, 'P' from JurisdictionList1 where Category = 'p'
+    
+    INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+           ([Code]
+           ,[Boundary]
+           ,[CenterPoint]
+           ,[Area]
+           ,[TimeId]
+           ,[Category])
+           
+    select Code, Boundary, Boundary.STCentroid(), 0.0, 1, 'M' from JurisdictionList1 where Category = 'M'
+    
+    INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+           ([Code]
+           ,[Boundary]
+           ,[CenterPoint]
+           ,[Area]
+           ,[TimeId]
+           ,[Category])
+           
+    select Code, Boundary, Boundary.STCentroid(), 0.0, 1, 'L' from JurisdictionList1 where Category = 'L'
+    
+    INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+           ([Code]
+           ,[Boundary]
+           ,[CenterPoint]
+           ,[Area]
+           ,[TimeId]
+           ,[Category])
+           
+    select Code, Boundary, Boundary.STCentroid(), 0.0, 1, 'W' from JurisdictionList1 where Category = 'W'
+    
+    
+    INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+               
+        select Code, Boundary, Boundary.STCentroid(), 0.0, 5, 'P' from JurisdictionList1 where Category = 'p'
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+               
+        select Code, Boundary, Boundary.STCentroid(), 0.0, 5, 'M' from JurisdictionList1 where Category = 'M'
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+               
+        select Code, Boundary, Boundary.STCentroid(), 0.0, 5, 'L' from JurisdictionList1 where Category = 'L'
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+               
+    select Code, Boundary, Boundary.STCentroid(), 0.0, 5, 'W' from JurisdictionList1 where Category = 'W'
+    
+    
+    
+    INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+               
+        select Code, Boundary, Boundary.STCentroid(), 0.0, 10, 'P' from JurisdictionList1 where Category = 'P'
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+           
+        select Cat_B, Boundary, Boundary.STCentroid(), 0.0, 10, 'M' from G_LocalMunicipalities2016 where Category = 'A'       
+    
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+           
+        select Cat_B, Boundary, Boundary.STCentroid(), 0.0, 10, 'L' from G_LocalMunicipalities2016 where Category = 'B'       
+        
+        
+        INSERT INTO [AtlasDB_2].[dbo].[GeometryData]
+               ([Code]
+               ,[Boundary]
+               ,[CenterPoint]
+               ,[Area]
+               ,[TimeId]
+               ,[Category])
+           
+           select WARDID, Boundary, Boundary.STCentroid(), 0.0, 10, 'W'  from G_Ward2016 
+   
+
+
+TRR1677220
+
+
+
+
+--select * from __TownsAmit
+
+--select * from GeometryData
+
+DECLARE @site_value INT;
+DECLARE @RecCount INT;
+SET @site_value = 1;
+SET @RecCount = 57125;--57125
+
+WHILE @site_value <= @RecCount
+BEGIN
+	declare @g geometry
+	DECLARE @C varchar(50);
+	select @g = GEOM from __TownsAmit where GID = @site_value
+	select @C=CODE from GeometryData where Boundary.STIntersects(@g) = 1 and Category= 'P'
+	update __TownsAmit set P = @C where GID = @site_value
+	--print @C
+	set @site_value = @site_value +1
+end
+
+
+
+update __TownsAmit set M =  b.Code from __TownsAmit a, GeometryData b where a.GID between 1000 and 10000 and b.Boundary.STIntersects(a.GEOM) = 1 and b.Category = 'M' 
+
+
+
+declare @temtable table(id int identity(1,1), JID int, cGeom geometry)
+declare @FinalData table(id int identity(1,1), Dataa varchar(max))
+insert into @temtable select j.JurisdictionID, g.Boundary from GeometryData g inner join JurisdictionList j on g.JurisdictionID = j.JurisdictionID where j.ParentJurisdictionId = 9
+DECLARE @sP INT;
+DECLARE @tP INT;
+DECLARE @TEST varchar(max);
+SET @sP = 1;
+select @tP = count(*) from @temtable
+WHILE @sP <= @tP
+BEGIN
+				DECLARE @JID INT;
+				select @JID = JID from @temtable where id = @sP
+				DECLARE @s INT;
+				DECLARE @t INT;
+				DECLARE @Cord varchar(max);
+				set @Cord = '[[';
+				DECLARE @C varchar(max);
+				set @C = '';
+				--select @t = Boundary.STNumPoints() from GeometryData where JurisdictionID = @JID
+				select @t = cGeom.STNumPoints() from @temtable where id = @sP
+				SET @s = 1;
+				WHILE @s <= @t
+					BEGIN
+						DECLARE @G geometry;	
+						DECLARE @C1 varchar(max);
+						--select @G = Boundary from GeometryData where JurisdictionID = @JID	
+						select @G = cGeom from @temtable where id = @sP	
+						select @C1 = '[' + convert(varchar(max), @G.STPointN(@s).STX) + ',' + convert(varchar(max), @G.STPointN(@s).STY) + ']'	
+						if(@s = 1)
+							begin
+								set @C = @C + '' + @C1;	
+							end
+							else
+							begin
+								set @C = @C + ',' + @C1;	
+							end
+						
+					set @s = @s + 1
+				END
+				set @Cord = @Cord + @C + ']]';	
+				--select @Cord
+				--select '{$type$:$Feature$,$id$:$' + Code + '$,$properties$:{$name$:$' + Caption + '$,$fill$:$rgb(19,157,72)$},$geometry$:{$type$:$Polygon$,$coordinates$:' + @Cord + '}},' from GeometryData where JurisdictionID = @JID	
+				insert into @FinalData select '{"type":"Feature","id":"' + convert(varchar(max), JurisdictionID) + '","properties":{"name":"' + Caption + '","mdbcode":"' + Code + '","fill":"rgb('+convert(varchar(max), ABS(Checksum(NewID()) % 255))+','+convert(varchar(max), ABS(Checksum(NewID()) % 255))+','+convert(varchar(max), ABS(Checksum(NewID()) % 255))+')"},"geometry":{"type":"Polygon","coordinates":' + @Cord + '}},' from GeometryData where JurisdictionID = @JID					
+				set @sP = @sP + 1;
+		
+END
+delete @temtable
+select '{"type":"FeatureCollection","features":[' union all
+select Dataa from @FinalData union all
+select ']}'
+delete @FinalData
+
+
+####DISTANCE CALCULATION#######
+DECLARE @tP1 geometry;
+DECLARE @tP2 geometry;
+select @tP1 = Parcel.STCentroid() from DC10_Temp Where Code = 'EC101'
+select @tP2 = Parcel.STCentroid() from DC10_Temp Where Code = 'EC102'
+select @tP1.STDistance(@tP2) * 111128 AS 'DistanceInMeters'
+
+
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 1123;
+
+WHILE @sP <= @tP
+BEGIN
+	declare @FinalData table(Name varchar(max), DistanceInMeter DECIMAL(18, 4))
+	DECLARE @g geometry;
+	DECLARE @N varchar(max);
+	DECLARE @dd DECIMAL(18, 4);
+	--print @sP
+	select @g = geometry::STGeomFromText('POINT ('+X+' '+Y+')', 4326) from Clubs_R where ID =@sP
+	--print @g.STAsText()
+	insert into @FinalData select top 1 Name, geom.STDistance(@g) * 111128 as d from Hospitals2014 order by d
+	select @N=Name, @dd=DistanceInMeter from @FinalData
+	update Clubs_R set Distance = @dd, HospitalName = @N where ID =@sP
+	set @sP = @sP + 1;
+	delete @FinalData
+END
+
+DECLARE @sP INT;
+DECLARE @tP INT;
+SET @sP = 1;
+SET @tP = 448;
+
+WHILE @sP <= @tP
+BEGIN
+	declare @FinalData table(Name varchar(max), DistanceInMeter DECIMAL(18, 4))
+	DECLARE @g geometry;
+	DECLARE @N varchar(max);
+	DECLARE @dd DECIMAL(18, 4);
+	--print @sP
+	select @g = geometry::STGeomFromText('POINT ('+CAST(X AS varchar(255))+' '+CAST(Y AS varchar(255))+')', 4326) from Schools_R where ID =@sP
+	--print @g.STAsText()
+	insert into @FinalData select top 1 Name, geom.STDistance(@g) * 111128 as d from Hospitals2014 order by d
+	select @N=Name, @dd=DistanceInMeter from @FinalData
+	update Schools_R set Distance = @dd, HospitalName = @N where ID =@sP
+	set @sP = @sP + 1;
+	delete @FinalData
+END
+
+
+Count Number Of Polygon Query
+select Geom.STNumGeometries() from Provinces2016_2 where DID= 9
+select Geom.STGeometryN(11) from Provinces2016_2 where DID= 9
+select Geom.STGeometryN(11).Reduce(0.005).STNumPoints(), Geom.STGeometryN(11).Reduce(0.005) from Provinces2016_2 where DID= 9
+
+
+
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Education\Education\Schools.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, OFFICIALNA as Caption, Geom.STAsBinary() as geom, SCHOOLTYPE, P, L, M, D, W from _Schools"
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Education\Education\TertiaryInstitutions.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, DESCRIP as Caption, Geom.STAsBinary() as geom, P,L,M,D,W from __TertiaryInstitutions"
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Education\Education\Universities.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, Descrip as Caption, Geom.STAsBinary() as geom, P, L, M, D, W from __Universities"
+
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Boundaries&Places\TraditionalAuthorities.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, TA_NAME as Caption, MAG_DIST, CHIEF_NAME, GAZETTE, Geom.STAsBinary() as geom, P, L, M, D, W from __TraditionalAuthorities where Geom.STNumGeometries() = 1"
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Boundaries&Places\TBVC.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, Name as Caption, Geom.STAsBinary() as geom, P, L, M, D, W from __TBVC"
+
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Biodiversity\ProtectedAreas.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, NAME as Caption, Categ, Geom.STAsBinary() as geom, P, L, M, D, W from __ProtectedAreas"
+ogr2ogr -f "ESRI Shapefile" "H:\ProjDesc\Atlas\EconomicAtlas\BaseData\Biodiversity\ConservationAreas.shp" "MSSQL:server=(local); database=SouthAfricaGeometry;uid=sa;pwd=java" -sql "select DID, NAME as Caption, Categ, Geom.STAsBinary() as geom, P, L, M, D, W from __ConservationAreas"
+
+
+
+
+All Column name
+
+select Column_Name
+FROM GV_DC_APP.INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'SalesData'

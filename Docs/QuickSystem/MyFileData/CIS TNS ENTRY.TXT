@@ -1,0 +1,296 @@
+Below are updated Lancher Alphanumberic connection string along with credentials for all the Eight Provinces.
+
+KZNORACL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = KZNORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+
+PTAORACL =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = PTAORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+BFNORACL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = BFNORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+
+MPUORACL =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = MPUORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+WCORACL =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = WCORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+LIMORACL =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = LIMORACL)
+    )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+
+NWORACL =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+      (CONNECT_DATA =
+        (SERVER = DEDICATED)
+        (SERVICE_NAME = NWORACL)
+      )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+ECORAL =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+      (CONNECT_DATA =
+        (SERVER = DEDICATED)
+        (SERVICE_NAME = ECORAL)
+      )
+  )
+
+User name : sguser
+Password : sguser12
+
+User name : sgaltris
+Password : sgaltris12
+
+############################################################################################################################
+Below are updated Spatial connection string along with credentials for all the Seven Provinces.
+############################################################################################################################
+
+KZNORASP =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = KZNORASP)
+    )
+  )
+  
+  User name : cfspatials
+  Password : cfspatials12
+  
+  User name : national_sg_kz
+  Password : national_sg_kz12
+
+
+PTAORASP =
+    (DESCRIPTION =
+    (SDU=32768)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+      (CONNECT_DATA =
+        (SERVER = DEDICATED)
+       (SERVICE_NAME = PTAORASP)
+      )
+   )
+
+
+User name : cfspatials
+Password : cfspatials12
+
+User name : national
+Password : national12
+
+
+
+
+BFNORASP =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = BFNORASP)
+    )
+  )
+
+User name : NATIONAL_SG_FS
+password : NATIONAL_SG_FS12
+
+User name : NATIONAL_SG_NC
+password : NATIONAL_SG_NC12
+
+User name : CFSPATIALS
+password : CFSPATIALS12
+
+
+
+MPUORASP =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = MPUORASP)
+    )
+  )
+
+User name : NATIONAL_SG_MP
+Password : NATIONAL_SG_MP12
+
+User Name : CFSPATIALS
+Password :  CFSPATIALS12
+
+
+WCORASP =
+  (DESCRIPTION =
+  (SDU=32768)
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = WCORASP)
+    )
+  )
+
+User Name : NATIONAL_SG_WC
+Password : NATIONAL_SG_WC12
+
+User Name : CFSPATIALS
+Password :  CFSPATIALS12
+
+
+
+LIMORASP =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = LIMORASP)
+    )
+  )
+
+User Name : NATIONAL_SG_LP
+Password : NATIONAL_SG_LP12
+
+User Name : CFSPATIALS
+Password :  CFSPATIALS12
+
+
+ECORACSP =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+      (CONNECT_DATA =
+        (SERVER = DEDICATED)
+        (SERVICE_NAME = ECORACSP)
+      )
+  )
+
+User Name :  NATIONAL_SG_EC
+Password : NATIONAL_SG_EC12
+
+User Name : CFSPATIALS
+Password :  CFSPATIALS12
+
+
+
+NWSP =
+      (DESCRIPTION =
+        (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+        (CONNECT_DATA =
+          (SERVER = DEDICATED)
+          (SERVICE_NAME = NWSP)
+        )
+    )
+
+
+Username: NATIONAL_SG_NW
+Password: NATIONAL_SG_NW12
+
+User name: CFSPATIALS
+password: CFSPATIALS12
+
+
+
+#######################################################################
+
+
+gisdev =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.15.219)(PORT = 1521))
+      (CONNECT_DATA =
+        (SERVER = DEDICATED)
+        (SERVICE_NAME = gisdev)
+      )
+  )
+
+User Name: gisdev
+Password: gisdev12
+

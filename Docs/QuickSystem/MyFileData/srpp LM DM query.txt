@@ -1,0 +1,34 @@
+LMFinal
+
+select * from LM inner join LMNULL on LM.Code = LMNULL.Code
+
+select UPPER(Caption) from LMNULL order by Caption
+select UPPER(Caption) from LM order by Caption
+
+insert into LMFinal
+select Distinct code, caption from 
+(select LTRIM(RTRIM(Code)) as code, LTRIM(RTRIM(Caption)) as caption from LMNULL 
+union all
+select LTRIM(RTRIM(Code)) as code, LTRIM(RTRIM(Caption)) as caption from LM) as a order by Caption
+
+select * from LMFinal where Code  = 'NULL'
+
+select * from LMFinal  where code is null
+
+#########################################
+select * from LMFinal
+select * from LMFinalData
+
+select distinct lm_code, loc_munic from Location order by lm_code
+
+
+select CodeSQL,CaptionSQL, CaptionPGSQL, CodePGSQL  from 
+(select dm.Code as CodeSQL,dm.Caption as CaptionSQL, l.dm_code as CodePGSQL, l.dis_munic as CaptionPGSQL  
+from LMFinal dm right outer join 
+(select distinct lm_code, loc_munic from Location) as l on l.dm_code = dm.Code) as d order  by CodeSQL
+
+insert into LMFinalData
+select CodeSQL,CaptionSQL, CaptionPGSQL, CodePGSQL  from 
+(select lm.Code as CodeSQL,lm.Caption as CaptionSQL, loc.lm_code as CodePGSQL, loc.loc_munic as CaptionPGSQL
+from LMFinal lm left outer join 
+(select distinct lm_code, loc_munic from Location) as loc on loc.lm_code = lm.Code) as d order  by CodeSQL

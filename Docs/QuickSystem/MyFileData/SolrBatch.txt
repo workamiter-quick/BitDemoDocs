@@ -1,0 +1,12 @@
+
+
+http://localhost:8080/solr/UserDetails/dataimport?command=full-import&clean=true
+http://localhost:8080/solr/collection1/dataimport?command=full-import
+
+http://localhost:8080/solr/collection3/dataimport?command=full-import&clean=true
+
+
+AB4392015000033
+
+
+WILGES

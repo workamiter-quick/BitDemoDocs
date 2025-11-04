@@ -1,0 +1,29 @@
+ 425 Upendra
+ 220 Arvind
+
+19/12/2015 - 22 ltr 			Pay By Me  (Arvind )
+		Upendra 10, arvind 3, Amit 7, Dada 2
+
+23/12/2015 - 20 ltr			Pay By Me (Arvind, Upendra)
+		Upendra 10, arvind 3, Amit 7
+		
+26/12/2015 - 18 ltr			Pay By Me (Arvind, Upendra)
+		Upendra 8, arvind 3, Amit 7
+		
+29/12/2015 - 22 ltr			Pay By Me  (Arvind, Upendra)
+		Upendra 12, arvind 3, Amit 7
+		
+02/01/2016 - 22 ltr			Pay By Me  (Arvind, Upendra, Dada)
+		Upendra 10, arvind 3, Amit 7, Dada 2
+		
+06/01/2016 - 12 ltr			Pay By Me  (Arvind, Upendra, Dada)
+arvind 3, Amit 8, Upendra 10
+
+09/01/2016 - 12 ltr			Pay By Upendra  (Arvind, Dada)
+arvind 3, Amit 7, Dada 2
+
+12/01/2016 - 12 ltr			Pay By Upendra  (Arvind, Dada)
+arvind 3, Amit 7, Dada 2
+
+Date 		Quantity	 	Pay By		Upendra 		Amit			Arvind		Dada
+19/12/2015	22 ltr

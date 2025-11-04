@@ -1,0 +1,21 @@
+GIS App deployed:-
+ 
+ 
+
+
+
+
+Project Edit
+https://172.23.1.18:93/V3/Index.html?UserID=cap1&ProjectID=2400028042&OffsetID=3730002&Action=Project&ViewMode=Edit
+
+Project Read
+https://172.23.1.18:93/V3/index.html?UserID=capqq1&ProjectID=112223&OffsetID=0&Action=Project&ViewMode=Read
+
+
+OffSet Edit
+https://172.23.1.18:93/V3/index.html?UserID=cap1&ProjectID=2400028042&OffsetID=3730001&Action=Offset&ViewMode=Edit
+
+OffSet Read 
+https://172.23.1.18:93/V3/index.html?UserID=cap1&ProjectID=123&OffsetID=373&Action=Offset&ViewMode=Read
+
+

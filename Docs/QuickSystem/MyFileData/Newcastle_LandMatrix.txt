@@ -1,0 +1,13 @@
+http://newcastle.evaluations.co.za/VM/Default.aspx
+http://newcastle.evaluations.co.za/PublicWebsite/Default.aspx?ReturnUrl=%2fpublicwebsite
+
+C:\Bak\New folder
+c:\Program Files\Microsoft SQL Server\MSSQL10.SQLEXPRESS\MSSQL\DATA\BCMM_DW_MATRIX_PUBLIC.mdf
+
+
+<add key="ACL" value="Data Source=EVALUATIONS_ION\MSSQL2008R2;Initial Catalog=DW_MATRIX_ACL;Persist Security Info=True;User ID=sa;Password=Coj$040213" />
+<add key="PUBLIC" value="Data Source=EVALUATIONS_ION\MSSQL2008R2;Initial Catalog=DW_MATRIX_PUBLIC_NC;Persist Security Info=True;User ID=sa;Password=Coj$040213" />
+<add key="LIVE" value="Data Source=EVALUATIONS_ION\MSSQL2008R2;Initial Catalog=DW_VM_LIVE;Persist Security Info=True;User ID=sa;Password=Coj$040213" />
+<add key="SPATIAL" value="Data Source=EVALUATIONS_ION\MSSQL2008R2;Initial Catalog=DW_LM_SPATIAL;Persist Security Info=True;User ID=sa;Password=Coj$040213" />
+<add key="CAMA" value="Data Source=DWJHBAPPSERVER\BCMM;Initial Catalog=VM_CAMA;Persist Security Info=True;User ID=sa;Password=java" />
+<add key="LOAD" value="Data Source=DWJHBAPPSERVER\BCMM;Initial Catalog=VM_LOAD;Persist Security Info=True;User ID=sa;Password=java" />

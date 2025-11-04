@@ -1,0 +1,316 @@
+
+--GET WKT from Oracle Table
+select  SDO_UTIL.to_wktgeometry(GEOM), NAME from amit_test
+
+
+
+
+0D geometries are not supported by geometry WKB/WKT generation
+
+
+
+select sdo_cs.make_2d(c.SHAPE).GET_DIMS() from NC_KN446 c
+select SHAPE.GET_DIMS() from NC_KN446
+select sdo_cs.make_2d(c.SHAPE).GET_DIMS(), c.SHAPE.GET_GTYPE() from NC_KN446 c
+select SDO_UTIL.GETVERTICES(SHAPE) from NC_KN446
+select SDO_UTIL.to_wktgeometry(SHAPE) from NC_KN446
+select c.SHAPE.GET_WKT() from NC_KN446 c
+ SELECT c.shape.GET_DIMS(), c.shape.GET_GTYPE() FROM NC_KN446 c 
+select * from NC_KN446 c
+select * from SDO_DATASET
+
+select SDO_UTIL.GETVERTICES(c.SHAPE) from NC_KN446 c where c.SDO_GID = 73095823
+
+
+Password : Dbnorc2016
+
+SGSPDB =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = DWJHBORCDESK.dataworld.co.za)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = SGSPDB)
+    )
+  )
+
+Schema : CFSPATIALS  
+Password : cfspatials12
+
+Schema : NATIONAL_SG_KZ
+Password : national12
+
+
+For Spatial Layer Name
+select sdo_table_name, sdo_column_name,sdo_srid from mdsys.sdo_geom_metadata_table where sdo_owner = 'NATIONAL_SG_KZ'
+
+
+
+
+
+
+
+
+SP_AD_EASELINE
+SP_AD_EASEPOLY
+SP_AD_EASEPOLYTXT
+SP_AD_PARCEL
+SP_AD_TOWN
+SP_AIR_TRANSPORT
+SP_BARRIER
+SP_BLOCK
+SP_BOUNDARY
+SP_BOUNDARY_AREA
+SP_COASTAL
+SP_DAM
+SP_DRAINAGE_LINE
+SP_EASELINE
+SP_EASELINETXT
+SP_ELDUCT
+SP_ELNODE
+SP_INLAND_WATER
+SP_LAND_USE
+SP_LOCAL_MUNICIPALITIES
+SP_NAVIGATIONAL_AID
+SP_RDCL
+SP_RDEDGE
+SP_RDNOTE
+SP_RELIEF
+SP_RIVER
+SP_RIVERPOLY
+SP_ROAD
+SP_SEWDIM
+SP_SEWGPIPE
+SP_SEWNODE
+SP_SEWNOTE
+SP_SEWRESPIPE
+SP_SEWSERV
+SP_SEWSYM
+SP_SEWVPIPE
+SP_SL_RURAL
+SP_STRADDR
+SP_STRTXT
+SP_SWCHANNEL
+SP_SWDIM
+SP_SWNOTE
+SP_TEXT
+SP_TOPO_LINE
+SP_TOPO_POINT
+SP_TOWN_POINTS
+SP_TP_ZONING
+SP_VEGETATION
+SP_WARD
+SP_WATER_SOURCE
+SP_WATNODE
+SP_WATNOTE
+SP_WATSERV
+SP_WATSYM
+SP_WATZONE
+
+
+select COLUMN_NAME from ALL_TAB_COLUMNS where TABLE_NAME='MyTableName';
+
+select count(*)
+from all_tables 
+--where table_name = 'SP_BOUNDARY'
+where tablespace_name like '%MUNDATA%' and NUM_ROWS != 0 --and OWNER = 'NATIONAL_SG_KZ'
+order by NUM_ROWS desc
+
+368 tables has data
+
+
+KZ_SPATIAL
+NATIONAL_SG_KZ
+SPATIAL_KZ
+SPATIAL_ND
+SPATIAL_TEST
+
+
+select *
+from all_tables 
+--where table_name = 'SP_BOUNDARY'
+where tablespace_name like '%MUNDATA%' and NUM_ROWS != 0 --and OWNER = 'NATIONAL_SG_KZ'
+order by NUM_ROWS desc
+
+select table_name from all_tables where tablespace_name like '%MUNDATA%' and NUM_ROWS > 0  order by NUM_ROWS desc, table_name
+select 'select * from ' || table_name as QUERYForMe,OWNER, NUM_ROWS, table_name from all_tables where tablespace_name like '%MUNDATA%' and NUM_ROWS > 0  order by NUM_ROWS desc, table_name
+
+
+select * from ALL_TAB_COLUMNS 
+where TABLE_NAME in (select table_name from all_tables where tablespace_name like '%MUNDATA%' and NUM_ROWS > 0  order by NUM_ROWS desc, table_name)
+and COLUMN_NAME like '%GEOM%'
+
+
+select * from 
+(select distinct a.TABLE_NAME from ALL_TAB_COLUMNS  a inner join all_tables b on a.TABLE_NAME = b.TABLE_NAME
+where b.tablespace_name like '%MUNDATA%' and b.NUM_ROWS > 0 and a.DATA_TYPE = 'SDO_GEOMETRY')-- as d
+order by TABLE_NAME 
+
+
+
+select * from GID_BACKUP
+select * from MUNSYS_GSC
+select * from SP_AD_BEACON
+select * from SP_AD_BOUNDARY
+select * from SP_AD_EASELINE
+select * from SP_AD_EASEPOLY
+
+select * from SP_AD_PARCEL
+select * from SP_AD_TOWN
+select * from SP_BEACON
+
+select * from SP_BEACON_MATATIELE
+select * from SP_BOUNDARY
+select * from SP_BOUNDARY_30_10_15
+select * from SP_BOUNDARY_MATATIELE
+select * from SP_CMSNOTE
+select * from SP_CMSNOTE_30_10_15
+select * from SP_CMSNOTE_MATATIELE
+select * from SP_EASELINE
+select * from SP_EASELINETXT
+select * from SP_EASELINETXT_30_10_15
+select * from SP_EASELINE_30_10_15
+select * from SP_EASELINE_MATATIELE
+select * from SP_EASEPOLY
+select * from SP_EASEPOLYTXT
+select * from SP_EASEPOLYTXT_30_10_15
+select * from SP_EASEPOLYTXT_MATATIELE
+select * from SP_EASPOLY_30_10_15
+select * from SP_EASPOLY_MATATIELE
+select * from SP_FLOODLINE
+select * from SP_PARCEL
+select * from SP_PARCEL_30_10_15
+select * from SP_PARCEL_MATATIELE
+select * from SP_PARCEL_TEST
+select * from SP_PARCEL_TEST1
+select * from SP_PROVINCES_BAK
+select * from SP_SL_RURAL
+select * from SP_STRTXT
+select * from SP_TOWN
+select * from SP_TOWN_30_10_15
+select * from SP_TOWN_BAK
+select * from SP_TOWN_MATATIELE
+select * from SP_TP_LANDUSE
+select * from SP_TP_ZONING
+select * from TEMP_SP_PARCEL
+
+
+
+select * from 
+(select distinct a.TABLE_NAME, b.NUM_ROWS from ALL_TAB_COLUMNS  a inner join all_tables b on a.TABLE_NAME = b.TABLE_NAME
+where b.NUM_ROWS > 0 and a.DATA_TYPE = 'SDO_GEOMETRY' and a.owner = 'CFSPATIALS')-- as d
+order by NUM_ROWS desc
+
+
+select * from 
+(select distinct a.TABLE_NAME, b.NUM_ROWS from ALL_TAB_COLUMNS  a inner join all_tables b on a.TABLE_NAME = b.TABLE_NAME
+where b.NUM_ROWS > 0 and a.DATA_TYPE = 'SDO_GEOMETRY' and a.owner = 'NATIONAL_SG_KZ')-- as d
+order by NUM_ROWS desc
+
+
+
+select count(*) from dba_Tables where owner = 'NATIONAL_SG_KZ'
+select count(*) from all_tables where owner = 'NATIONAL_SG_KZ'
+
+select * from dba_objects where owner = 'NATIONAL_SG_KZ'
+select * from ALL_TAB_COLUMNS where owner = 'NATIONAL_SG_KZ'
+
+
+select * from TPAGE where DOCUMENTNO = '4314/1996'
+
+select * from FIELDD0100 where DOCUMENTNO = '4314/1996'
+
+
+
+CREATE table new_table_name AS(Select OGR_FID, SG_NUMBER from SP_PARCEL_KZN)
+
+drop table USER2
+  
+alter table USER2 drop column USER_ID;
+alter table USER2 add USER_ID NUMBER(*,0) generated always as identity;
+     
+     insert into USER2(USER_NAME) VALUES('avb')
+
+CREATE TABLE "CISUSER"."USER2" 
+(              
+"USER_ID" NUMBER(*,0) generated always as identity, 
+"USER_NAME" VARCHAR2(200 BYTE) NOT NULL ENABLE   
+)
+  
+  
+  select * from USER2
+  insert into USER2(USER_NAME) VALUES('avsssb')
+  
+  
+
+---LOOPING
+declare a number  := 1;
+begin
+WHILE (a<3)
+LOOP
+
+      update GISPARCEL a
+      set a.FARMNAME = (
+      select b.FARMNAMEOM
+      from FARMNAME2 b
+      where b.GID=(select GID from FARMNAME2 where OGR_FID = a)
+      )
+      where a.GID=(select GID from FARMNAME2 where OGR_FID = a);
+   a := a + 1;
+END LOOP;
+end;
+
+
+
+///
+
+select * from SP_TOWN_KZN where TAG_VALUE = 'KWAMASHU F'
+select * from FARMNAME5
+
+Select GID, FARMNAMEOM from FARMNAME2 where  ROWNUM <= 10 and GID not in (select GID from GISPARCEL where farmname is null)
+CREATE table FARMNAME5 AS(Select GID, FARMNAMEOM from FARMNAME2 where  ROWNUM <= 10 and GID not in (select GID from GISPARCEL where farmname is null))
+
+
+drop table FARMNAME5
+select * from FARMNAME5
+
+select * from GISPARCEL a inner join FARMNAME5 b on a.GID = b.GID
+
+
+
+
+update GISPARCEL x set x.FARMNAME = (select U.FARMNAMEOM from FARMNAME2 U where U.GID = x.GID)
+
+///
+
+
+declare a number  := 2000;
+begin
+WHILE (a<85146)
+LOOP
+ dbms_output.put_line (a);
+      update GISPARCEL a
+      set a.FARMNAME = (
+      select b.FARMNAMEOM
+      from FARMNAME2 b
+      where b.GID=(select GID from FARMNAME2 where OGR_FID = a)
+      )
+      where a.GID=(select GID from FARMNAME2 where OGR_FID = a);
+      COMMIT;
+   a := a + 1;
+END LOOP;
+end;
+
+
+
+update Categories_Test a
+set a.Picture = (select b.Picture from Categories b where b.Category_ID = a.Category_ID)
+
+
+
+update GISPARCEL a set a.TOWN_CODE = (select b."Town_code" from TOWNSHIP b where b.GID = a.GID and  b.OGR_FID < 2);
+
+
+update GISPARCEL a
+set a.TOWN_CODE = (select b."Town_code" from TOWNSHIP b where b.GID = a.GID and  b.OGR_FID < 2000); COMMIT;
+
+select count(*) from GISPARCEL where FARMNAME is not null and (PRCL_TYPE = 'F' or PRCL_TYPE = 'FP')

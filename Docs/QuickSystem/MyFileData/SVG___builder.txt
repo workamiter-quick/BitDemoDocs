@@ -1,0 +1,145 @@
+declare @xOffset varchar(42), @yOffset varchar(42);
+
+select	
+	@xOffset = CAST(-AVG(ZipCodeArea.STCentroid().STX) as DECIMAL(19,10)),
+	@yOffset = CAST(-AVG(ZipCodeArea.STCentroid().STY) as DECIMAL(19,10))
+from
+	MyZipCodeAreaTable
+where
+	left(ZipCode, 2) in ('41', '42', '43', '44');	
+
+
+declare @header varchar(max) = 
+'<?xml version="1.0" encoding="utf-8"?>' +
+'<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">' + 
+'<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' + 
+'<g id="viewport" transform="translate(' + @xOffset + ', ' + @yOffset + ')">' + 
+'<g stroke="black" fill-rule="evenodd">';
+
+declare @middler varchar(max) = 
+'</g>' + 
+'<g font-family="sans-serif" fill="black" text-anchor="middle" text-align="center" vertical-align="middle">';
+
+declare @footer varchar(max) = 
+'</g>' + 
+'</g>' + 
+'</svg>';
+
+declare @areas xml = (
+select
+	  ZipCode as [@id],
+	  case ZipCode % 9
+			when 0 then '#99CC33'
+			when 1 then '#66CC33'
+			when 2 then '#339900'
+			when 3 then '#336600'
+			when 4 then '#FF6600'
+			when 5 then '#CC9900'
+			when 6 then '#FFCC33'
+			when 7 then '#FF9933'
+			when 8 then '#FFCC66'
+	  end as [@fill],
+	  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(ZipCodeArea.STAsText(),
+	  'MULTIPOLYGON (((', 'M'),
+	  ')), ((', ' Z M'),
+	  '), (', ' Z M'),
+	  ', ', ' L'),
+	  ')))', ' Z') as [@d]
+from
+	  MyZipCodeAreaTable
+where
+	  left(ZipCode, 2) in ('41', '42', '43', '44')
+for xml path ('path')
+);
+
+declare @labels xml = (
+select
+	  cast(ZipCodeArea.STCentroid().STX as decimal(28,12)) as [@x],
+	  cast(ZipCodeArea.STCentroid().STY as decimal(28,12)) as [@y],
+	  cast(cast(case 
+		when sqrt(ZipCodeArea.STArea())/5 < 10 then 10
+		else sqrt(ZipCodeArea.STArea())/5
+	  end as int) as varchar(42)) + 'pt' as [@font-size],
+	  cast(ZipCode as char(5))
+from
+	  MyZipCodeAreaTable
+where
+	  left(ZipCode, 2) in ('41', '42', '43', '44')
+for xml path ('text')
+);
+
+select @header + cast(@areas as varchar(max)) + @middler + cast(@labels as
+varchar(max)) + @footer;
+
+
+
+
+
+https://social.msdn.microsoft.com/forums/sqlserver/en-US/4c1d8712-c22e-4265-a4ba-996c25cd8970/generating-svg-from-wkt
+
+
+###################################
+
+
+
+declare @xOffset varchar(42), @yOffset varchar(42);
+select	
+	@xOffset = CAST(-AVG(Location.STCentroid().STX) as DECIMAL(19,10)),
+	@yOffset = CAST(-AVG(Location.STCentroid().STY) as DECIMAL(19,10))
+from
+	PropertyRegistration
+where
+	ID = 1	
+	
+	--select @xOffset, @yOffset
+declare @header varchar(max) = 
+'<?xml version="1.0" encoding="utf-8"?>' +
+'<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">' + 
+'<svg xmlns="http://www.w3.org/2000/svg" version="1.1">' + 
+'<g id="viewport" transform="translate(' + @xOffset + ', ' + @yOffset + ')">' + 
+'<g stroke="black" fill-rule="evenodd">';
+
+declare @middler varchar(max) = 
+'</g>' + 
+'<g font-family="sans-serif" fill="black" text-anchor="middle" text-align="center" vertical-align="middle">';
+
+declare @footer varchar(max) = 
+'</g>' + 
+'</g>' + 
+'</svg>';
+
+declare @areas xml = (
+select
+	  ID as [@id],
+	  '#99CC33' as [@fill],
+	  REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Location.STAsText(),
+	  'POLYGON ((', 'M'),
+	  ')), ((', ' Z M'),
+	  '), (', ' Z M'),
+	  ', ', ' L'),
+	  '))', ' Z') as [@d]
+from
+	  PropertyRegistration
+where
+	  ID = 1
+for xml path ('path')
+);
+
+declare @labels xml = (
+select
+	  cast(Location.STCentroid().STX as decimal(28,12)) as [@x],
+	  cast(Location.STCentroid().STY as decimal(28,12)) as [@y],
+	  cast(cast(case 
+		when sqrt(Location.STArea())/5 < 10 then 10
+		else sqrt(Location.STArea())/5
+	  end as int) as varchar(42)) + 'pt' as [@font-size],
+	  cast(ID as char(5))
+from
+	  PropertyRegistration
+where
+	   ID = 1
+for xml path ('text')
+);
+
+select @header + cast(@areas as varchar(max)) + @middler + cast(@labels as
+varchar(max)) + @footer;

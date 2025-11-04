@@ -1,0 +1,3852 @@
+AdminBoundary_BCMM
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Cadastral_BCMM</Title>
+      <Abstract>Cadastral_BCMM</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Cadastral_BCMM</Title>
+          <Abstract>Cadastral_BCMM</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FFFFFF</CssParameter>
+               <CssParameter name="fill-opacity">0.1</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#efc82b</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-opacity">0.7</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+
+LocalMunicipality_BCMM
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Default Polygon</Title>
+      <Abstract>A sample style that draws a polygon</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Gray Polygon with Black Outline</Title>
+          <Abstract>A polygon with a gray fill and a 1 pixel black outline</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FFFFFF</CssParameter>
+               <CssParameter name="fill-opacity">0.1</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
+              <CssParameter name="stroke-opacity">0.9</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+
+Cadastral_BCMM
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Cadastral_BCMM</Title>
+      <Abstract>Cadastral_BCMM</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Cadastral_BCMM</Title>
+          <Abstract>Cadastral_BCMM</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FFFFFF</CssParameter>
+               <CssParameter name="fill-opacity">0.1</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#efc82b</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
+              <CssParameter name="stroke-opacity">0.9</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+Cadastral_Green
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Cadastral_BCMM</Title>
+      <Abstract>Cadastral_BCMM</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Cadastral_BCMM</Title>
+          <Abstract>Cadastral_BCMM</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#A3FF73</CssParameter>
+               <CssParameter name="fill-opacity">0.9</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#A3FF73</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
+              <CssParameter name="stroke-opacity">0.9</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+
+
+Highways_Bcmm
+
+<?xml version="1.0" encoding="UTF-8"?>
+<StyledLayerDescriptor version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd"
+  xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NamedLayer>
+    <Name>Simple Roads</Name>
+    <UserStyle>
+
+      <Title>Default Styler for simple road segments</Title>
+      <Abstract>Light red line, 2px wide</Abstract>
+      <FeatureTypeStyle>
+        <Rule>
+          <Title>Roads</Title>
+          <LineSymbolizer>
+            <Stroke>
+              <CssParameter name="stroke">
+                <ogc:Literal>#FF0000</ogc:Literal>
+              </CssParameter>
+              <CssParameter name="stroke-width">
+                <ogc:Literal>2</ogc:Literal>
+              </CssParameter>
+            </Stroke>
+          </LineSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+
+LocalMunicipality_Red
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Default Polygon</Title>
+      <Abstract>A sample style that draws a polygon</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>rule1</Name>
+          <Title>Gray Polygon with Black Outline</Title>
+          <Abstract>A polygon with a gray fill and a 1 pixel black outline</Abstract>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FF0000</CssParameter>
+               <CssParameter name="fill-opacity">0.9</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">1</CssParameter>
+              <CssParameter name="stroke-opacity">0.9</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
+
+PropertyRegistration
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<StyledLayerDescriptor version="1.0.0" 
+ xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" 
+ xmlns="http://www.opengis.net/sld" 
+ xmlns:ogc="http://www.opengis.net/ogc" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- a Named Layer is the basic building block of an SLD document -->
+  <NamedLayer>
+    <Name>default_polygon</Name>
+    <UserStyle>
+    <!-- Styles can have names, titles and abstracts -->
+      <Title>Default Polygon</Title>
+      <Abstract>A sample style that draws a polygon</Abstract>
+      <!-- FeatureTypeStyles describe how to render different features -->
+      <!-- A FeatureTypeStyle for rendering polygons -->
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>ABT</Name>
+          <Title>ABT</Title>
+          <Abstract>ABT</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>ABT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCFB6</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>APT</Name>
+          <Title>APT</Title>
+          <Abstract>APT</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>APT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F0FCB3</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BAR</Name>
+          <Title>BAR</Title>
+          <Abstract>BAR</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BAR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3FCB9</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BB</Name>
+          <Title>BB</Title>
+          <Abstract>BB</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C0DFFC</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BCB</Name>
+          <Title>BCB</Title>
+          <Abstract>BCB</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BCB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B7B3FC</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BH</Name>
+          <Title>BH</Title>
+          <Abstract>BH</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB8C8</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BK</Name>
+          <Title>BK</Title>
+          <Abstract>BK</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BK</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCF7D2</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BKS</Name>
+          <Title>BKS</Title>
+          <Abstract>BKS</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BKS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB8FB</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BNK</Name>
+          <Title>BNK</Title>
+          <Abstract>BNK</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BNK</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D5FCCA</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BP</Name>
+          <Title>BP</Title>
+          <Abstract>BP</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BP</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD4DE</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+         <Rule>
+          <Name>BPD</Name>
+          <Title>BPD</Title>
+          <Abstract>BPD</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BPD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BBF2FC</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BPF</Name>
+          <Title>BPF</Title>
+          <Abstract>BPF</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BPF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE4D7</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BST</Name>
+          <Title>BST</Title>
+          <Abstract>BST</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC4C0</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BUS</Name>
+          <Title>BUS</Title>
+          <Abstract>BUS</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BUS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CACAFC</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>BY</Name>
+          <Title>BY</Title>
+          <Abstract>BY</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>BY</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D8BDFC</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CAS</Name>
+          <Title>CAS</Title>
+          <Abstract>CAS</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CAS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC0E4</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CB</Name>
+          <Title>CB</Title>
+          <Abstract>CB</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE8B3</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CC</Name>
+          <Title>CC</Title>
+          <Abstract>CC</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3FCD2</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CEM</Name>
+          <Title>CEM</Title>
+          <Abstract>CEM</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CEM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D7FCF6</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CH</Name>
+          <Title>CH</Title>
+          <Abstract>CH</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD7F2</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CL</Name>
+          <Title>CL</Title>
+          <Abstract>CL</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCFAC5</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>COM</Name>
+          <Title>COM</Title>
+          <Abstract>COM</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>COM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8FCFB</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CON</Name>
+          <Title>CON</Title>
+          <Abstract>CON</Abstract>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CON</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CAFCBB</CssParameter>
+               <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+	          <Name>CON001</Name>
+	          <Title>CON001</Title>
+	          <ogc:Filter>
+	            <ogc:PropertyIsEqualTo>
+	              <ogc:PropertyName>UseCode</ogc:PropertyName>
+	              <ogc:Literal>CON001</ogc:Literal>
+	            </ogc:PropertyIsEqualTo>
+	          </ogc:Filter>
+	          <PolygonSymbolizer>
+	            <Fill>
+	              <CssParameter name="fill">#FCCAFC</CssParameter>
+	              <CssParameter name="fill-opacity">0.3</CssParameter>
+	            </Fill>
+	            <Stroke>
+	              <CssParameter name="stroke">#6E6E6E</CssParameter>
+	              <CssParameter name="stroke-width">0.4</CssParameter>
+	              <CssParameter name="stroke-opacity">1</CssParameter>
+	            </Stroke>
+	          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CP</Name>
+          <Title>CP</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CP</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE2C0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CRE</Name>
+          <Title>CRE</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CRE</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D7FCDC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>CT</Name>
+          <Title>CT</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>CT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D2DCFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DAM</Name>
+          <Title>DAM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DAM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EAFCC2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DE</Name>
+          <Title>DE</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DE</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D7EDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DF</Name>
+          <Title>DF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB7B3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DOF</Name>
+          <Title>DOF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DOF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C3BDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DSF</Name>
+          <Title>DSF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DSF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EAFCD7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DSQ</Name>
+          <Title>DSQ</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DSQ</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8CAFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>DW</Name>
+          <Title>DW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>DW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD2CA</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>EDUC</Name>
+          <Title>EDUC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>EDUC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB6EB</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>EH</Name>
+          <Title>EH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>EH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D8B3FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>ENT</Name>
+          <Title>ENT</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>ENT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#ECBDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>F</Name>
+          <Title>F</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>F</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C2FCDD</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>FAC</Name>
+          <Title>FAC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>FAC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8D4FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>FAR001</Name>
+          <Title>FAR001</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>FAR001</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC7E0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>FD</Name>
+          <Title>FD</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>FD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#DDFCB6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>FM</Name>
+          <Title>FM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>FM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BDE8FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>FOF</Name>
+          <Title>FOF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>FOF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3FCE5</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>G</Name>
+          <Title>G</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>G</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD7D7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GAL</Name>
+          <Title>GAL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GAL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EAD7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GB</Name>
+          <Title>GB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB3D9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GC</Name>
+          <Title>GC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C7FCFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GH</Name>
+          <Title>GH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FBFCBD</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GRES</Name>
+          <Title>GRES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GRES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C0FCC2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>GYM</Name>
+          <Title>GYM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>GYM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD7B6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HAL</Name>
+          <Title>HAL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HAL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCEBC0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HALL</Name>
+          <Title>HALL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HALL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCDAC5</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HARB</Name>
+          <Title>HARB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HARB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D5C7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HI</Name>
+          <Title>HI</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HI</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCD2FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HO</Name>
+          <Title>HO</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HO</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD2FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HOS</Name>
+          <Title>HOS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HOS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BEFCB3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>HS</Name>
+          <Title>HS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>HS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C5FCCE</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>IND</Name>
+          <Title>IND</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>IND</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BDC3FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>INS</Name>
+          <Title>INS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>INS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCEED4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>LAW</Name>
+          <Title>LAW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>LAW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBDC3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>LIB</Name>
+          <Title>LIB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>LIB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#DBFCC0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>LNLN</Name>
+          <Title>LNLN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>LNLN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D4FCE8</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>LTHS</Name>
+          <Title>LTHS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>LTHS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D4F8FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>LY</Name>
+          <Title>LY</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>LY</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC0F9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>MED</Name>
+          <Title>MED</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>MED</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBBD4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>MON</Name>
+          <Title>MON</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>MON</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3E0FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>MUN</Name>
+          <Title>MUN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>MUN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#DCD7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>MUN001</Name>
+          <Title>MUN001</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>MUN001</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EAC7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>MUS</Name>
+          <Title>MUS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>MUS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C6B6FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>N/A</Name>
+          <Title>N/A</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>N/A</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC2D2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>NEW</Name>
+          <Title>NEW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>NEW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B6FCCA</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>NSY</Name>
+          <Title>NSY</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>NSY</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCFCF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>OAH</Name>
+          <Title>OAH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>OAH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D7E3FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>OB</Name>
+          <Title>OB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>OB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD7E9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>OF</Name>
+          <Title>OF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>OF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCF3B6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>OFF</Name>
+          <Title>OFF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>OFF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE0B6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>ORP</Name>
+          <Title>ORP</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>ORP</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E0FCCF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>OTH</Name>
+          <Title>OTH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>OTH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F2FCCF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PFS</Name>
+          <Title>PFS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PFS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3BDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PGK</Name>
+          <Title>PGK</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PGK</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CAFCC7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PKG</Name>
+          <Title>PKG</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PKG</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D1FCB3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PO</Name>
+          <Title>PO</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PO</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCCD9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>POS</Name>
+          <Title>POS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>POS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBFB6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>POW</Name>
+          <Title>POW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>POW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CFE5FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>POWD</Name>
+          <Title>POWD</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>POWD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCEFFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PPH</Name>
+          <Title>PPH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PPH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E0CFFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PRN</Name>
+          <Title>PRN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PRN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CADEFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PRS</Name>
+          <Title>PRS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PRS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCFF0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PS</Name>
+          <Title>PS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CAFCD6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PSI</Name>
+          <Title>PSI</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PSI</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCF5C7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>PSPSP</Name>
+          <Title>PSPSP</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>PSPSP</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC7B6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>R</Name>
+          <Title>R</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>R</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EBB6FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RCL</Name>
+          <Title>RCL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RCL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC2F1</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RD</Name>
+          <Title>RD</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B3FCEE</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RDM</Name>
+          <Title>RDM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RDM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCDACF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RES</Name>
+          <Title>RES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCDC0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RES001</Name>
+          <Title>RES001</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RES001</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F2C5FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RLY</Name>
+          <Title>RLY</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RLY</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCFCF0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>ROW</Name>
+          <Title>ROW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>ROW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE6CC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RST</Name>
+          <Title>RST</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CEBDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>RUR</Name>
+          <Title>RUR</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>RUR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EAFCCA</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SAP</Name>
+          <Title>SAP</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SAP</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B6FCDF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SB</Name>
+          <Title>SB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8B9FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SCH</Name>
+          <Title>SCH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SCH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBBE9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SCX</Name>
+          <Title>SCX</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SCX</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC5FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SDW</Name>
+          <Title>SDW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SDW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCFCE8</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SH</Name>
+          <Title>SH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCF8FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SHC</Name>
+          <Title>SHC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SHC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EBFCD2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SHD</Name>
+          <Title>SHD</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SHD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E1FCBB</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SHF</Name>
+          <Title>SHF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SHF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCE8FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SHO</Name>
+          <Title>SHO</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SHO</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBBDC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SHR</Name>
+          <Title>SHR</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SHR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FBFCC2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SILO</Name>
+          <Title>SILO</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SILO</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D9FCD7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SM</Name>
+          <Title>SM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB3C9</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SPC</Name>
+          <Title>SPC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SPC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F5CAFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SPCA</Name>
+          <Title>SPCA</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SPCA</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E0FCD4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SPCB</Name>
+          <Title>SPCB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SPCB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E5FCB3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SPL</Name>
+          <Title>SPL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SPL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C0DAFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SPX</Name>
+          <Title>SPX</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SPX</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D3B6FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SR</Name>
+          <Title>SR</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F9FCB3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STDW</Name>
+          <Title>STDW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STDW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FAD7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STM</Name>
+          <Title>STM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8F7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STN</Name>
+          <Title>STN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC2DF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STOF</Name>
+          <Title>STOF</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STOF</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C5FCB6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STR</Name>
+          <Title>STR</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BDFCCB</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>STRES</Name>
+          <Title>STRES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>STRES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B8EBFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>SUB</Name>
+          <Title>SUB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>SUB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC7DA</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>TC</Name>
+          <Title>TC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>TC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F1FCD4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>TE</Name>
+          <Title>TE</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>TE</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD8D2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>TH</Name>
+          <Title>TH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>TH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C2FCD7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>TXR</Name>
+          <Title>TXR</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>TXR</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCD4B8</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>UN</Name>
+          <Title>UN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>UN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCFCCD</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VADMIN</Name>
+          <Title>VADMIN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VADMIN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB3BB</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VAG</Name>
+          <Title>VAG</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VAG</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCEDB3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VBUA</Name>
+          <Title>VBUA</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VBUA</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D4FCFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VBUS</Name>
+          <Title>VBUS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VBUS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCECCC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VED</Name>
+          <Title>VED</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VED</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CAFCE1</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VET</Name>
+          <Title>VET</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VET</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCEBD7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VGOV</Name>
+          <Title>VGOV</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VGOV</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C2F1FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VGRES</Name>
+          <Title>VGRES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VGRES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB3F3</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VIND</Name>
+          <Title>VIND</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VIND</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C4C2FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VINST</Name>
+          <Title>VINST</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VINST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC9C2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VL</Name>
+          <Title>VL</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VL</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D6D2FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLB</Name>
+          <Title>VLB</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLB</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCCAE8</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLBUS</Name>
+          <Title>VLBUS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLBUS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B6C4FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLIN</Name>
+          <Title>VLIN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLIN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#EBFCB6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLIND</Name>
+          <Title>VLIND</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLIND</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE1C5</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLINST</Name>
+          <Title>VLINST</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLINST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F8B3FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLM</Name>
+          <Title>VLM</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLM</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCC7D0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLMUN</Name>
+          <Title>VLMUN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLMUN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE4BD</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLRES</Name>
+          <Title>VLRES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLRES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F5FCC0</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLU</Name>
+          <Title>VLU</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLU</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCFCCF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VLZ</Name>
+          <Title>VLZ</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VLZ</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D7D9FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VMUN</Name>
+          <Title>VMUN</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VMUN</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BFB6FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VOTH</Name>
+          <Title>VOTH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VOTH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BDFCF4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VPOW</Name>
+          <Title>VPOW</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VPOW</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#D2CAFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VRES</Name>
+          <Title>VRES</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VRES</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#B6D7FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VSPZ</Name>
+          <Title>VSPZ</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VSPZ</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCE2CF</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VUND</Name>
+          <Title>VUND</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VUND</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C7FCC2</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>VUNK</Name>
+          <Title>VUNK</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>VUNK</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCF7B6</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>Vres</Name>
+          <Title>Vres</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>Vres</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BBFCEC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WC</Name>
+          <Title>WC</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WC</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#BBFCBB</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WH</Name>
+          <Title>WH</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WH</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCB3C4</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WS</Name>
+          <Title>WS</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WS</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FCBDFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WSD</Name>
+          <Title>WSD</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WSD</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#CCFCF7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WST</Name>
+          <Title>WST</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WST</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F2FCC7</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>WT</Name>
+          <Title>WT</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>WT</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C0CEFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>ZOO</Name>
+          <Title>ZOO</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>ZOO</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#F2BBFC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>dw</Name>
+          <Title>dw</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>dw</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#C0D4FC</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>vres</Name>
+          <Title>vres</Title>
+          <ogc:Filter>
+            <ogc:PropertyIsEqualTo>
+              <ogc:PropertyName>UseCode</ogc:PropertyName>
+              <ogc:Literal>vres</ogc:Literal>
+            </ogc:PropertyIsEqualTo>
+          </ogc:Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#E8FCBD</CssParameter>
+              <CssParameter name="fill-opacity">0.3</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#6E6E6E</CssParameter>
+              <CssParameter name="stroke-width">0.4</CssParameter>
+              <CssParameter name="stroke-opacity">1</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
